@@ -14,7 +14,7 @@
 #'
 #' # Training to find "WEF"
 #' data <- paste("This organisation is called the <START:wef> World Economic Forum <END>",
-#'   "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END>.")
+#'   "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END> .")
 #'
 #' # Save the above as file
 #' write(data, file = "input.txt")
@@ -82,7 +82,7 @@ tnf <- function(model, sentences, output = NULL){
 #'
 #' # Training to find "WEF"
 #' data <- paste("This organisation is called the <START:wef> World Economic Forum <END>",
-#'   "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END>.")
+#'   "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END> .")
 #'
 #' # Save the above as file
 #' write(data, file = "input.txt")
