@@ -2,6 +2,8 @@
 
 Tools to develop, build and train Natural Language processing models.
 
+![decypher sticker](decypher.png)
+
 ## Install
 
 ```r
