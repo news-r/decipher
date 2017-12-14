@@ -7,7 +7,7 @@ Tools to develop, build and train Natural Language processing models.
 ## Install
 
 ```r
-devtools::install_git("http://chlxintgitl01.weforum.local/JCOE/decypher.git",
+devtools::install_git("http://chlxintgitl01.weforum.local/JCOE/decipher.git",
   credentials = git2r::cred_user_pass("login", "password"))
 ```
 
