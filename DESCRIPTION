@@ -1,0 +1,9 @@
+Package: decipher
+Title: Natural Language Processing tools for R
+Version: 0.0.0.9000
+Authors@R: person("Jean-Philippe", "Coene", email = "Jean-Philippe.Coene@weforum.org", role = c("aut", "cre"))
+Description: Tools to develop, build and train Natural Language processing models.
+Depends: R (>= 3.4.2)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
