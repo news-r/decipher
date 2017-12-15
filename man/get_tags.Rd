@@ -10,9 +10,9 @@ get_names_(file)
 get_names(tag)
 }
 \arguments{
-\item{file}{file containing tagged names.}
+\item{file}{File containing tagged names.}
 
-\item{tag}{character vector containing tagged names.}
+\item{tag}{Character vector containing tagged names.}
 }
 \value{
 \code{data.frame} of of 3 columns:

@@ -72,6 +72,8 @@
 #' tnf_(model = model, sentences = paste0(wd, "/sentences.txt"))
 #' }
 #'
+#' @importFrom utils write.table
+#'
 #' @docType package
 #' @name decipher
 NULL

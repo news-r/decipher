@@ -10,7 +10,7 @@ tnf_(model, sentences, output = NULL)
 tnf(model, sentences)
 }
 \arguments{
-\item{model}{Model to use.}
+\item{model}{Model to use, generally returned by \code{\link{tnf_train}} or \code{\link{tnf_train}}.}
 
 \item{sentences}{Sentences containing entities to find, a character vector or full path to file, usually \code{.txt}.}
 
