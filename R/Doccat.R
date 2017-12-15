@@ -64,6 +64,7 @@ dc_train <- function(model, lang, data){
 #' # need to pass full path
 #' wd <- getwd()
 #'
+#' # create dummy data
 #' data <- data.frame(class = c("Sport", "Business", "Sport", "Sport"),
 #'   doc = c("Football, tennis, golf and, bowling and, score",
 #'           "Marketing, Finance, Legal and, Administration",
@@ -96,7 +97,7 @@ dc_ <- function(model, documents, output = NULL){
   if(missing(model) || missing(documents))
     stop("must pass model and documents", call. = FALSE)
 
-  cmd <- paste("TokenNameFinder",
+  cmd <- paste("Doccat",
                model, "<", documents)
 
   if(!is.null(output)) cmd <- paste(cmd, ">", output)

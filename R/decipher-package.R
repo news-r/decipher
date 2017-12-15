@@ -10,6 +10,9 @@
 #'   \item{\code{\link{tnf_train_}} train a name finder model from file.}
 #'   \item{\code{\link{get_names}} extract identified names from character vector.}
 #'   \item{\code{\link{get_names_}} extract identified names from file.}
+#'   \item{\code{\link{dc}} classify documents.}
+#'   \item{\code{\link{dc_train}} train document classifier from character vector.}
+#'   \item{\code{\link{dc_train_}} train document classifer from file.}
 #' }
 #'
 #' @examples
@@ -18,6 +21,7 @@
 #' # need to pass full path
 #' wd <- getwd()
 #'
+#' # Name extraction
 #' # Training to find "WEF"
 #' data <- paste("This organisation is called the <START:wef> World Economic Forum <END>",
 #'   "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END>.")
@@ -47,29 +51,31 @@
 #' # extract names
 #' (names <- get_names(output))
 #'
-#' # You can train slightly more sophisticated models too
-#' # Training to find sentiments
-#' data <- paste("This sentence is <START:sentiment.neg> very bad <END> !",
-#'   "This sentence is <START:sentiment.pos> rather good <END> .",
-#'   "This sentence on the other hand, is <START:sentiment.neg> horrible <END> .")
+#' # Classification
+#' # create dummy data
+#' data <- data.frame(class = c("Sport", "Business", "Sport", "Sport"),
+#'   doc = c("Football, tennis, golf and, bowling and, score",
+#'           "Marketing, Finance, Legal and, Administration",
+#'           "Tennis, Ski, Golf and, gym and, match",
+#'           "football, climbing and gym"))
 #'
-#' # Save the above as file
-#' write(data, file = "input.txt")
+#' # repeat data 50 times to have enough data
+#' # Obviously do not do that in te real world
+#' data <- do.call("rbind", replicate(50, data, simplify = FALSE))
 #'
-#' # Trains the model and returns the full path to the model
-#' model <- tnf_train_(model = paste0(wd, "/sentiment.bin"), lang = "en",
-#'   data = paste0(wd, "/input.txt"), type = "sentiment")
+#' # train model
+#' model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
 #'
-#' # Create sentences to test our model
-#' sentences <- paste("The first half of this sentence is a bad and negative while",
-#'   "the second half is great and positive.")
+#' # create documents to classify
+#' documents <- data.frame(
+#'   docs = c("This discusses golf which is a sport.",
+#'            "This documents is about business administration.",
+#'            "This is about people who do sport, go to the gym and play tennis.",
+#'            "Some play tennis and work in Finance")
+#' )
 #'
-#' # Save sentences
-#' write(data, file = "sentences.txt")
-#'
-#' # Extract names
-#' # Without specifying an output file the extracted names appear in the console
-#' tnf_(model = model, sentences = paste0(wd, "/sentences.txt"))
+#' # classify documents
+#' classified <- dc(model, documents)
 #' }
 #'
 #' @importFrom utils write.table

@@ -51,6 +51,13 @@
 #'   output = paste0(wd, "/output.txt"))
 #' }
 #'
+#' @details name tagging:
+#' \itemize{
+#'   \item{\code{<END>.} is invalid}
+#'   \item{\code{<END> .} is valid}
+#' }
+#' Use \code{\link{check_tags}}
+#'
 #' @rdname tnf
 #' @export
 tnf_ <- function(model, sentences, output = NULL){

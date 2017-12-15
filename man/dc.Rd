@@ -25,6 +25,7 @@ Classify document.
 # need to pass full path
 wd <- getwd()
 
+# create dummy data
 data <- data.frame(class = c("Sport", "Business", "Sport", "Sport"),
   doc = c("Football, tennis, golf and, bowling and, score",
           "Marketing, Finance, Legal and, Administration",

@@ -22,6 +22,14 @@ Full path to the \code{output} if specified.
 \description{
 Learnable name finder
 }
+\details{
+name tagging:
+\itemize{
+  \item{\code{<END>.} is invalid}
+  \item{\code{<END> .} is valid}
+}
+Use \code{\link{check_tags}}
+}
 \examples{
 \dontrun{
 # get working directory

@@ -28,6 +28,8 @@ You're good to go.
 
 ## Examples
 
+### Name Extraction
+
 ```r
 library(decipher)
 
@@ -105,7 +107,37 @@ write(data, file = "sentences.txt")
 tnf_(model = model, sentences = paste0(wd, "/sentences.txt"))
 ```
 
-## Tagging
+### Document Classification
+
+```r
+# Classification
+# create dummy data
+data <- data.frame(class = c("Sport", "Business", "Sport", "Sport"),
+  doc = c("Football, tennis, golf and, bowling and, score",
+          "Marketing, Finance, Legal and, Administration",
+          "Tennis, Ski, Golf and, gym and, match",
+          "football, climbing and gym"))
+
+# repeat data 50 times to have enough data
+# Obviously do not do that in te real world
+data <- do.call("rbind", replicate(50, data, simplify = FALSE))
+
+# train model
+model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
+
+# create documents to classify
+documents <- data.frame(
+  docs = c("This discusses golf which is a sport.",
+           "This documents is about business administration.",
+           "This is about people who do sport, go to the gym and play tennis.",
+           "Some play tennis and work in Finance")
+)
+
+# classify documents
+classified <- dc(model, documents)
+```
+
+## Name Tagging
 
 * `<END>.` is *invalid*
 * `<END> .` is *valid*
