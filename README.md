@@ -50,6 +50,9 @@ sentences <- paste("This sentence mentions the World Economic Forum the annual m
 # run model on sentences
 results <- tnf(model = model, sentences = sentences)
 
+# get names from results
+(names <- get_names(results))
+
 # same with .txt files
 # Training to find "WEF"
 data <- paste("This organisation is called the <START:wef> World Economic Forum <END>", 
@@ -59,7 +62,7 @@ data <- paste("This organisation is called the <START:wef> World Economic Forum 
 write(data, file = "input.txt")
 
 # Trains the model and returns the full path to the model
-model <- t_tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
+model <- tnf_train_(model = paste0(wd, "/wef.bin"), lang = "en",
   data = paste0(wd, "/input.txt"), type = "wef")
 
 # Create sentences to test our model
@@ -71,7 +74,7 @@ write(data, file = "sentences.txt")
 
 # Extract names
 # Without specifying an output file the extracted names appear in the console
-t_tnf(model = model, sentences = paste0(wd, "/sentences.txt"))
+model <- tnf_(model = model, sentences = paste0(wd, "/sentences.txt"))
 
 # returns path to output file
 output <- tnf(model = model, sentences = paste0(wd, "/sentences.txt"),
@@ -87,7 +90,7 @@ data <- paste("This sentence is <START:sentiment.neg> very bad <END> !",
 write(data, file = "input.txt")
 
 # Trains the model and returns the full path to the model
-model <- t_tnf_train(model = paste0(wd, "/sentiment.bin"), lang = "en",
+model <- tnf_train_(model = paste0(wd, "/sentiment.bin"), lang = "en",
   data = paste0(wd, "/input.txt"), type = "sentiment")
 
 # Create sentences to test our model
@@ -99,7 +102,7 @@ write(data, file = "sentences.txt")
 
 # Extract names
 # Without specifying an output file the extracted names appear in the console
-t_tnf(model = model, sentences = paste0(wd, "/sentences.txt"))
+tnf_(model = model, sentences = paste0(wd, "/sentences.txt"))
 ```
 
 ## Tagging

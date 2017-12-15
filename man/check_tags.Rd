@@ -14,12 +14,6 @@ Check OpenNLP tags
 }
 \examples{
 \dontrun{
-data <- paste("This organisation is called the <START:wef> World Economic Forum <END>.",
-  "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END>.")
-
-write(data, file = "input.txt")
-
-check_tags("input.txt")
 }
 
 }

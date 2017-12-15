@@ -32,7 +32,7 @@
 #' write(data, file = "input.txt")
 #'
 #' # Trains the model and returns the full path to the model
-#' model <- t_tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
+#' model <- tnf_train_(model = paste0(wd, "/wef.bin"), lang = "en",
 #'   data = paste0(wd, "/input.txt"), type = "wef")
 #'
 #' # Create sentences to test our model
@@ -47,13 +47,13 @@
 #' tnf(model = model, sentences = paste0(wd, "/sentences.txt"))
 #'
 #' # returns path to output file
-#' output <- t_tnf(model = model, sentences = paste0(wd, "/sentences.txt"),
+#' output <- tnf_(model = model, sentences = paste0(wd, "/sentences.txt"),
 #'   output = paste0(wd, "/output.txt"))
 #' }
 #'
 #' @rdname tnf
 #' @export
-t_tnf <- function(model, sentences, output = NULL){
+tnf_ <- function(model, sentences, output = NULL){
 
   if(missing(model) || missing(sentences))
     stop("must pass model and sentences", call. = FALSE)
@@ -79,7 +79,7 @@ tnf <- function(model, sentences){
   temp <- tempfile(fileext = ".txt")
   write(sentences, file = temp)
 
-  path <- t_tnf(model, temp, output = output)
+  path <- tnf_(model, temp, output = output)
 
   unlink("temp", recursive = TRUE)
 
@@ -127,13 +127,13 @@ tnf <- function(model, sentences){
 #' write(data, file = "input.txt")
 #'
 #' # Trains the model and returns the full path to the model
-#' model <- t_tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
+#' model <- tnf_train_(model = paste0(wd, "/wef.bin"), lang = "en",
 #'   data = paste0(wd, "/input.txt"), type = "wef")
 #' }
 #'
 #' @rdname tnf_train
 #' @export
-t_tnf_train <- function(model, lang, data, feature.gen = NULL, name.types = NULL,
+tnf_train_ <- function(model, lang, data, feature.gen = NULL, name.types = NULL,
                         sequence.codec = NULL, factory = NULL, resources = NULL, params = NULL,
                         encoding = NULL, type = NULL){
 
@@ -167,7 +167,7 @@ tnf_train <- function(model, lang, data, feature.gen = NULL, name.types = NULL,
   temp <- tempfile(fileext = ".txt") # create temp
   write(data, file = temp)
 
-  model <- t_tnf_train(model, lang, temp, feature.gen = NULL, name.types = NULL,
+  model <- tnf_train_(model, lang, temp, feature.gen = NULL, name.types = NULL,
               sequence.codec = NULL, factory = NULL, resources = NULL,
               params = NULL, encoding = NULL, type = NULL)
 

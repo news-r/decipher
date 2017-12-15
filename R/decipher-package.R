@@ -4,8 +4,12 @@
 #'
 #' @section functions:
 #' \itemize{
-#'   \item{\code{\link{tnf}} to use a model and extract names.}
-#'   \item{\code{\link{tnf_train}} train a name finder model.}
+#'   \item{\code{\link{tnf}} to use a model and extract names from character vector.}
+#'   \item{\code{\link{tnf_}} to use a model and extract names from file.}
+#'   \item{\code{\link{tnf_train}} train a name finder model from character vector.}
+#'   \item{\code{\link{tnf_train_}} train a name finder model from file.}
+#'   \item{\code{\link{get_names}} extract identified names from character vector.}
+#'   \item{\code{\link{get_names_}} extract identified names from file.}
 #' }
 #'
 #' @examples
@@ -22,7 +26,7 @@
 #' write(data, file = "input.txt")
 #'
 #' # Trains the model and returns the full path to the model
-#' model <- t_tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
+#' model <- tnf_train_(model = paste0(wd, "/wef.bin"), lang = "en",
 #'   data = paste0(wd, "/input.txt"), type = "wef")
 #'
 #' # Create sentences to test our model
@@ -37,8 +41,11 @@
 #' tnf(model = model, sentences = paste0(wd, "/sentences.txt"))
 #'
 #' # returns path to output file
-#' output <- t_tnf(model = model, sentences = paste0(wd, "/sentences.txt"),
+#' output <- tnf_(model = model, sentences = paste0(wd, "/sentences.txt"),
 #'   output = paste0(wd, "/output.txt"))
+#'
+#' # extract names
+#' (names <- get_names(output))
 #'
 #' # You can train slightly more sophisticated models too
 #' # Training to find sentiments
@@ -50,7 +57,7 @@
 #' write(data, file = "input.txt")
 #'
 #' # Trains the model and returns the full path to the model
-#' model <- t_tnf_train(model = paste0(wd, "/sentiment.bin"), lang = "en",
+#' model <- tnf_train_(model = paste0(wd, "/sentiment.bin"), lang = "en",
 #'   data = paste0(wd, "/input.txt"), type = "sentiment")
 #'
 #' # Create sentences to test our model
@@ -62,7 +69,7 @@
 #'
 #' # Extract names
 #' # Without specifying an output file the extracted names appear in the console
-#' t_tnf(model = model, sentences = paste0(wd, "/sentences.txt"))
+#' tnf_(model = model, sentences = paste0(wd, "/sentences.txt"))
 #' }
 #'
 #' @docType package
