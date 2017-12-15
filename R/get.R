@@ -1,7 +1,7 @@
 #' Get names
 #'
-#' @param file file containing tagged names.
-#' @param tag character vector containing tagged names.
+#' @param file File containing tagged names.
+#' @param tag Character vector containing tagged names.
 #'
 #' @return \code{data.frame} of of 3 columns:
 #' \enumerate{
