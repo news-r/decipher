@@ -1,7 +1,7 @@
 #' Learnable name finder
 #'
 #' @param model Model to use.
-#' @param sentences Sentences containing entities to find, full path to file, usually \code{.txt}.
+#' @param sentences Sentences containing entities to find, a character vector or full path to file, usually \code{.txt}.
 #' @param output An output file, generally \code{.txt}.
 #'
 #' @return Full path to the \code{output} if specified.
@@ -16,11 +16,23 @@
 #' data <- paste("This organisation is called the <START:wef> World Economic Forum <END>",
 #'   "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END> .")
 #'
+#' # train the model
+#' model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
+#'   data = data, type = "wef")
+#'
+#' # Create sentences to test our model
+#' sentences <- paste("This sentence mentions the World Economic Forum the annual meeting",
+#'   "of which takes place in Davos. Note that the forum is often called the WEF.")
+#'
+#' # run model on sentences
+#' results <- tnf(model = model, sentences = sentences)
+#'
+#' # same with text files
 #' # Save the above as file
 #' write(data, file = "input.txt")
 #'
 #' # Trains the model and returns the full path to the model
-#' model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
+#' model <- t_tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
 #'   data = paste0(wd, "/input.txt"), type = "wef")
 #'
 #' # Create sentences to test our model
@@ -35,13 +47,13 @@
 #' tnf(model = model, sentences = paste0(wd, "/sentences.txt"))
 #'
 #' # returns path to output file
-#' output <- tnf(model = model, sentences = paste0(wd, "/sentences.txt"),
+#' output <- t_tnf(model = model, sentences = paste0(wd, "/sentences.txt"),
 #'   output = paste0(wd, "/output.txt"))
 #' }
 #'
-#'
+#' @rdname tnf
 #' @export
-tnf <- function(model, sentences, output = NULL){
+t_tnf <- function(model, sentences, output = NULL){
 
   if(missing(model) || missing(sentences))
     stop("must pass model and sentences", call. = FALSE)
@@ -53,6 +65,29 @@ tnf <- function(model, sentences, output = NULL){
   if(!is.null(output)) cmd <- paste(cmd, ">", output)
 
   try(system2("opennlp", args = cmd))
+
+  if(!is.null(output))
+    return(output)
+
+}
+
+#' @rdname tnf
+#' @export
+tnf <- function(model, sentences){
+
+  output <- tempfile(fileext = ".txt")
+  temp <- tempfile(fileext = ".txt")
+  write(sentences, file = temp)
+
+  path <- t_tnf(model, temp, output = output)
+
+  unlink("temp", recursive = TRUE)
+
+  results <- readLines(path)
+
+  unlink("output", recursive = TRUE)
+
+  return(results)
 
 }
 
@@ -84,16 +119,21 @@ tnf <- function(model, sentences, output = NULL){
 #' data <- paste("This organisation is called the <START:wef> World Economic Forum <END>",
 #'   "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END> .")
 #'
+#' # train model
+#' tnf_train(model = paste0(wd, "/model.bin"), lang = "en", data = data)
+#'
+#' # Same with .txt files.
 #' # Save the above as file
 #' write(data, file = "input.txt")
 #'
 #' # Trains the model and returns the full path to the model
-#' model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
+#' model <- t_tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
 #'   data = paste0(wd, "/input.txt"), type = "wef")
 #' }
 #'
+#' @rdname tnf_train
 #' @export
-tnf_train <- function(model, lang, data, feature.gen = NULL, name.types = NULL,
+t_tnf_train <- function(model, lang, data, feature.gen = NULL, name.types = NULL,
                         sequence.codec = NULL, factory = NULL, resources = NULL, params = NULL,
                         encoding = NULL, type = NULL){
 
@@ -115,5 +155,23 @@ tnf_train <- function(model, lang, data, feature.gen = NULL, name.types = NULL,
 
   # opennlp tokenNameFinderTrainer -model /path/to/model/model.bin -lang en -data /path/to/input.txt
   try(system2("opennlp", args = cmd))
+  return(model)
+}
+
+#' @rdname tnf_train
+#' @export
+tnf_train <- function(model, lang, data, feature.gen = NULL, name.types = NULL,
+                      sequence.codec = NULL, factory = NULL, resources = NULL,
+                      params = NULL, encoding = NULL, type = NULL){
+
+  temp <- tempfile(fileext = ".txt") # create temp
+  write(data, file = temp)
+
+  model <- t_tnf_train(model, lang, temp, feature.gen = NULL, name.types = NULL,
+              sequence.codec = NULL, factory = NULL, resources = NULL,
+              params = NULL, encoding = NULL, type = NULL)
+
+  unlink("temp", recursive = TRUE) # delete temp once unzipped
+
   return(model)
 }

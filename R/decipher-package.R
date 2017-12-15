@@ -22,7 +22,7 @@
 #' write(data, file = "input.txt")
 #'
 #' # Trains the model and returns the full path to the model
-#' model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
+#' model <- t_tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
 #'   data = paste0(wd, "/input.txt"), type = "wef")
 #'
 #' # Create sentences to test our model
@@ -37,7 +37,7 @@
 #' tnf(model = model, sentences = paste0(wd, "/sentences.txt"))
 #'
 #' # returns path to output file
-#' output <- tnf(model = model, sentences = paste0(wd, "/sentences.txt"),
+#' output <- t_tnf(model = model, sentences = paste0(wd, "/sentences.txt"),
 #'   output = paste0(wd, "/output.txt"))
 #'
 #' # You can train slightly more sophisticated models too
@@ -50,7 +50,7 @@
 #' write(data, file = "input.txt")
 #'
 #' # Trains the model and returns the full path to the model
-#' model <- tnf_train(model = paste0(wd, "/sentiment.bin"), lang = "en",
+#' model <- t_tnf_train(model = paste0(wd, "/sentiment.bin"), lang = "en",
 #'   data = paste0(wd, "/input.txt"), type = "sentiment")
 #'
 #' # Create sentences to test our model
@@ -62,7 +62,7 @@
 #'
 #' # Extract names
 #' # Without specifying an output file the extracted names appear in the console
-#' tnf(model = model, sentences = paste0(wd, "/sentences.txt"))
+#' t_tnf(model = model, sentences = paste0(wd, "/sentences.txt"))
 #' }
 #'
 #' @docType package
