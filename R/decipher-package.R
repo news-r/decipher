@@ -10,9 +10,9 @@
 #'   \item{\code{\link{tnf_train_}} train a name finder model from file.}
 #'   \item{\code{\link{get_names}} extract identified names from character vector.}
 #'   \item{\code{\link{get_names_}} extract identified names from file.}
-#'   \item{\code{\link{dc}} classify documents.}
-#'   \item{\code{\link{dc_train}} train document classifier from character vector.}
-#'   \item{\code{\link{dc_train_}} train document classifer from file.}
+#'   \item{\code{\link{dc}} classify documents from character vector.}
+#'   \item{\code{\link{dc_}} classify document from on file.}
+#'   \item{\code{\link{dc_train}} train document classifer from file.}
 #' }
 #'
 #' @examples

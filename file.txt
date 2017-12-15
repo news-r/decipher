@@ -1,4 +1,0 @@
-"Sport" "Football, tennis, golf and, bowling"
-"Business" "Marketing, Finance, Legal and, Administration"
-"Sport" "Tennis, Ski, Golf and, gym"
-"Sport" "football, climbing and gym"

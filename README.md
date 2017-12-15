@@ -135,6 +135,7 @@ documents <- data.frame(
 
 # classify documents
 classified <- dc(model, documents)
+cat(classified)
 ```
 
 ## Name Tagging

@@ -19,6 +19,10 @@ Check OpenNLP tags
 }
 \examples{
 \dontrun{
+data <- "some sentence with <START:tag> erroneous tag <END>."
+
+# corrected tags
+data <- check_tags(data)
 }
 
 }
