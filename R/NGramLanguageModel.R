@@ -21,7 +21,7 @@ nglm <- function(model, output = NULL){
   if(is.null(output))
     output <- tempfile(fileext = ".txt")
 
-  cmd <- paste("NGramLanguageModel", model, ">", output)
+  cmd <- paste("NGramLanguageModel", model)
 
   try(system2("opennlp", args = cmd))
 
