@@ -167,6 +167,12 @@ model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
 
 ## Training data
 
+#### Token name finder
+
 You will need considerable training data for the name extraction; 15'000 sentences. However, this does not mean 15'000 tagged sentences, this means 15'000 sentences representative of the documents you will have to extract names from.
 
-Including sentences that do not contain tagged names reduces false positives; *the model learns what to extract as much as it learns what **not** to extract*
+Including sentences that do not contain tagged names reduces false positives; *the model learns what to extract as much as it learns what **not** to extract.*
+
+#### Document classifier
+
+In order to train a decent document classifier you are going to need 5'000 classified documents as training data with a *bare* minimum of 5 documents per category.

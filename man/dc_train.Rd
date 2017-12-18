@@ -29,18 +29,20 @@ Train document classifier.
 # need to pass full path
 wd <- getwd()
 
-data <- data.frame(class = c("Sport", "Business", "Sport", "Sport"),
+data <- data.frame(class = c("Sport", "Business", "Sport", "Sport", "Business"),
   doc = c("Football, tennis, golf and, bowling and, score",
           "Marketing, Finance, Legal and, Administration",
           "Tennis, Ski, Golf and, gym and, match",
-          "football, climbing and gym"))
+          "football, climbing and gym",
+          "Marketing, Business, Money and, Management"))
 
 # Error not enough data
 # model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
 
 # repeat data 50 times
 # Obviously do not do that in te real world
-data <- do.call("rbind", replicate(50, data, simplify = FALSE))
+data <- do.call("rbind", replicate(50, data[sample(nrow(data), 3),],
+                                   simplify = FALSE))
 
 # train model
 model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")

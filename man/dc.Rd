@@ -25,30 +25,33 @@ Classify document.
 # need to pass full path
 wd <- getwd()
 
-# create dummy data
-data <- data.frame(class = c("Sport", "Business", "Sport", "Sport"),
+data <- data.frame(class = c("Sport", "Business", "Sport", "Sport", "Business"),
   doc = c("Football, tennis, golf and, bowling and, score",
           "Marketing, Finance, Legal and, Administration",
           "Tennis, Ski, Golf and, gym and, match",
-          "football, climbing and gym"))
+          "football, climbing and gym",
+          "Marketing, Business, Money and, Management"))
 
-# repeat data 50 times to have enough data
+# repeat data 50 times
 # Obviously do not do that in te real world
-data <- do.call("rbind", replicate(50, data, simplify = FALSE))
+data <- do.call("rbind", replicate(20, data[sample(nrow(data), 3),],
+                                   simplify = FALSE))
 
 # train model
-model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
+model <- dc_train(paste0(wd, "/classifier.bin"), data, "en")
 
 # create documents to classify
 documents <- data.frame(
   docs = c("This discusses golf which is a sport.",
            "This documents is about business administration.",
            "This is about people who do sport, go to the gym and play tennis.",
-           "Some play tennis and work in Finance")
+           "Some play tennis and work in Finance",
+           "This documents discusses finance and money management.")
 )
 
 # classify documents
 classified <- dc(model, documents)
+cat(classified)
 }
 
 }

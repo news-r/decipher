@@ -12,24 +12,34 @@
 #'   \item{document - the document}
 #' }
 #'
+#' Note that you need a 5'000 classified document to train a decent model.
+#' The examples below are just to demonstrate how to run the code.
+#'
 #' @examples
 #' \dontrun{
 #' # get working directory
 #' # need to pass full path
 #' wd <- getwd()
 #'
-#' data <- data.frame(class = c("Sport", "Business", "Sport", "Sport"),
-#'   doc = c("Football, tennis, golf and, bowling and, score",
-#'           "Marketing, Finance, Legal and, Administration",
-#'           "Tennis, Ski, Golf and, gym and, match",
-#'           "football, climbing and gym"))
+#' data <- data.frame(
+#'   class = c("Sport", "Business", "Sport", "Sport", "Business", "Politics", "Politics", "Politics"),
+#'   doc = c("Football, tennis, golf and, bowling and, score.",
+#'           "Marketing, Finance, Legal and, Administration.",
+#'           "Tennis, Ski, Golf and, gym and, match.",
+#'           "football, climbing and gym.",
+#'           "Marketing, Business, Money and, Management.",
+#'           "This document talks politics and Donal Trump.",
+#'           "Donald Trump is the President of the US, sadly.",
+#'           "Article about politics and president Trump.")
+#' )
 #'
 #' # Error not enough data
 #' # model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
 #'
 #' # repeat data 50 times
 #' # Obviously do not do that in te real world
-#' data <- do.call("rbind", replicate(50, data, simplify = FALSE))
+#' data <- do.call("rbind", replicate(50, data[sample(nrow(data), 4),],
+#'                                    simplify = FALSE))
 #'
 #' # train model
 #' model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
@@ -38,8 +48,8 @@
 #' @export
 dc_train <- function(model, lang, data){
 
-  temp <- tempfile(fileext = ".txt")
-  write.table(data, file = temp, row.names = FALSE, col.names = FALSE)
+  temp <- tempfile(fileext = ".train")
+  write.table(data, file = temp, row.names = FALSE, col.names = FALSE, quote = FALSE)
 
   cmd <- paste("DoccatTrainer -model", model, "-lang", lang, "-data", temp)
 
@@ -64,30 +74,38 @@ dc_train <- function(model, lang, data){
 #' # need to pass full path
 #' wd <- getwd()
 #'
-#' # create dummy data
-#' data <- data.frame(class = c("Sport", "Business", "Sport", "Sport"),
-#'   doc = c("Football, tennis, golf and, bowling and, score",
-#'           "Marketing, Finance, Legal and, Administration",
-#'           "Tennis, Ski, Golf and, gym and, match",
-#'           "football, climbing and gym"))
+#' data <- data.frame(
+#'   class = c("Sport", "Business", "Sport", "Sport", "Business", "Politics", "Politics", "Politics"),
+#'   doc = c("Football, tennis, golf and, bowling and, score.",
+#'           "Marketing, Finance, Legal and, Administration.",
+#'           "Tennis, Ski, Golf and, gym and, match.",
+#'           "football, climbing and gym.",
+#'           "Marketing, Business, Money and, Management.",
+#'           "This document talks politics and Donal Trump.",
+#'           "Donald Trump is the President of the US, sadly.",
+#'           "Article about politics and president Trump.")
+#' )
 #'
-#' # repeat data 50 times to have enough data
+#' # repeat data 50 times
 #' # Obviously do not do that in te real world
-#' data <- do.call("rbind", replicate(50, data, simplify = FALSE))
+#' data <- do.call("rbind", replicate(20, data[sample(nrow(data), 3),],
+#'                                    simplify = FALSE))
 #'
 #' # train model
-#' model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
+#' model <- dc_train(paste0(wd, "/classifier.bin"),"en", data)
 #'
 #' # create documents to classify
 #' documents <- data.frame(
 #'   docs = c("This discusses golf which is a sport.",
 #'            "This documents is about business administration.",
 #'            "This is about people who do sport, go to the gym and play tennis.",
-#'            "Some play tennis and work in Finance")
+#'            "Some play tennis and work in Finance",
+#'            "This documents discusses finance and money management.")
 #' )
 #'
 #' # classify documents
 #' classified <- dc(model, documents)
+#' cat(classified)
 #' }
 #'
 #' @rdname dc
