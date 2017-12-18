@@ -138,7 +138,9 @@ classified <- dc(model, documents)
 cat(classified)
 ```
 
-## Name Tagging
+## Guide
+
+### Name Tagging
 
 * `<END>.` is *invalid*
 * `<END> .` is *valid*
@@ -162,3 +164,9 @@ check_tags(file = paste0(wd, "/input.txt"))
 model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
   data = paste0(wd, "/input.txt"), type = "wef")
 ```
+
+## Training data
+
+You will need considerable training data for the name extraction; 15'000 sentences. However, this does not mean 15'000 tagged sentences, this means 15'000 sentences representative of the documents you will have to extract names from.
+
+Including sentences that do not contain tagged names reduces false positives; **the model learns what to tag as much as it learns what not to tag**
