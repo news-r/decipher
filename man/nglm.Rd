@@ -10,6 +10,7 @@ nglm(model, output = NULL)
 N-gram language model
 }
 \examples{
+\dontrun{
 # get working directory
 # need to pass full path
 wd <- getwd()
@@ -23,6 +24,7 @@ model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
   data = data, type = "wef")
 
 ngram <- nglm(model)
+}
 
 }
 \keyword{internal}

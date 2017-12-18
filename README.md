@@ -4,10 +4,10 @@ Tools to develop, build and train Natural Language processing models.
 
 ![decipher sticker](decipher_sticker.png)
 
-* [install](#install)
-* [dependencies](#dependencies)
-* [models](#models)
-* [functions](#functions)
+* [Install](#install)
+* [Dependencies](#dependencies)
+* [Models](#models)
+* [Functions](#functions)
 * [Examples](#examples)
     * [Name extraction](#name-extraction)
     * [Document Classification](#document-classification)
@@ -125,6 +125,8 @@ tnf_(model = model, sentences = paste0(wd, "/sentences.txt"))
 ### Document Classification
 
 ```r
+library(decipher)
+
 # Classification
 # create dummy data
 data <- data.frame(class = c("Sport", "Business", "Sport", "Sport"),
@@ -163,21 +165,55 @@ cat(classified)
 Use `check_tags` to make sure they are correct.
 
 ```r
+library(decipher)
+
+# get working directory
+# need to pass full path
 wd <- getwd()
 
-# issue with tags
-# tnf_train
-data <- paste("This organisation is called the <START:wef> World Economic Forum <END>.", 
-  "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END>.")
+data <- data.frame(
+  class = c("Sport", "Business", "Sport", "Sport", "Business", "Politics", "Politics", "Politics"),
+  doc = c("Football, tennis, golf and, bowling and, score.",
+          "Marketing, Finance, Legal and, Administration.",
+          "Tennis, Ski, Golf and, gym and, match.",
+          "football, climbing and gym.",
+          "Marketing, Business, Money and, Management.",
+          "This document talks politics and Donal Trump.",
+          "Donald Trump is the President of the US, sadly.",
+          "Article about politics and president Trump.")
+)
 
-# Save the above as file
-write(data, file = "input.txt")
+# Error not enough data
+# model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
 
-check_tags(file = paste0(wd, "/input.txt"))
+# repeat data 50 times
+# Obviously do not do that in te real world
+data <- do.call("rbind", replicate(50, data[sample(nrow(data), 4),],
+                                   simplify = FALSE))
 
-# Trains the model and returns the full path to the model
-model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
-  data = paste0(wd, "/input.txt"), type = "wef")
+# train model
+model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
+```
+
+### Tagger
+
+A *currently* basic tagger to easily tag training data to train a token name finder (\code{tnf_train}).
+
+```r
+# Manually tagged
+manual <- paste("This organisation is called the <START:wef> World Economic Forum <END>",
+              "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END> .")
+
+# Create untagged string              
+data <- paste("This organisation is called the World Economic Forum",
+  "It is often referred to as Davos or the WEF.")
+
+# tag string
+auto <- tag_docs(data, "WEF", "wef")
+auto <- tag_docs(auto, "World Economic Forum", "wef")
+auto <- tag_docs(auto, "Davos", "wef")
+
+identical(manual, auto)
 ```
 
 ### Training data
@@ -186,8 +222,12 @@ model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
 
 You will need considerable training data for the name extraction; 15'000 sentences. However, this does not mean 15'000 tagged sentences, this means 15'000 sentences representative of the documents you will have to extract names from.
 
-Including sentences that do not contain tagged names reduces false positives; *the model learns what to extract as much as it learns what **not** to extract.*
+Including sentences that do not contain tagged names reduces false positives; *the model learns what to extract as much as it learns what not to extract.*
 
 #### Document classifier
 
 In order to train a decent document classifier you are going to need 5'000 classified documents as training data with a *bare* minimum of 5 documents per category.
+
+-------------------------------------
+
+Author & Maintainer: <Jean-Philippe.Coene@weforum.org>

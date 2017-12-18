@@ -1,6 +1,7 @@
 #' N-gram language model
 #'
 #' @examples
+#' \dontrun{
 #' # get working directory
 #' # need to pass full path
 #' wd <- getwd()
@@ -14,6 +15,7 @@
 #'   data = data, type = "wef")
 #'
 #' ngram <- nglm(model)
+#' }
 #'
 #' @keywords internal
 nglm <- function(model, output = NULL){
