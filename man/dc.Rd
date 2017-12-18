@@ -25,12 +25,17 @@ Classify document.
 # need to pass full path
 wd <- getwd()
 
-data <- data.frame(class = c("Sport", "Business", "Sport", "Sport", "Business"),
-  doc = c("Football, tennis, golf and, bowling and, score",
-          "Marketing, Finance, Legal and, Administration",
-          "Tennis, Ski, Golf and, gym and, match",
-          "football, climbing and gym",
-          "Marketing, Business, Money and, Management"))
+data <- data.frame(
+  class = c("Sport", "Business", "Sport", "Sport", "Business", "Politics", "Politics", "Politics"),
+  doc = c("Football, tennis, golf and, bowling and, score.",
+          "Marketing, Finance, Legal and, Administration.",
+          "Tennis, Ski, Golf and, gym and, match.",
+          "football, climbing and gym.",
+          "Marketing, Business, Money and, Management.",
+          "This document talks politics and Donal Trump.",
+          "Donald Trump is the President of the US, sadly.",
+          "Article about politics and president Trump.")
+)
 
 # repeat data 50 times
 # Obviously do not do that in te real world
@@ -38,7 +43,7 @@ data <- do.call("rbind", replicate(20, data[sample(nrow(data), 3),],
                                    simplify = FALSE))
 
 # train model
-model <- dc_train(paste0(wd, "/classifier.bin"), data, "en")
+model <- dc_train(paste0(wd, "/classifier.bin"),"en", data)
 
 # create documents to classify
 documents <- data.frame(

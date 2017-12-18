@@ -177,7 +177,7 @@ tnf_train <- function(model, lang, data, feature.gen = NULL, name.types = NULL,
               sequence.codec = NULL, factory = NULL, resources = NULL,
               params = NULL, encoding = NULL, type = NULL)
 
-  unlink("temp", recursive = TRUE) # delete temp once unzipped
+  unlink("temp", recursive = TRUE) # delete temp once uread
 
   return(model)
 }

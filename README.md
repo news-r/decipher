@@ -4,6 +4,17 @@ Tools to develop, build and train Natural Language processing models.
 
 ![decipher sticker](decipher_sticker.png)
 
+* [install](#install)
+* [dependencies](#dependencies)
+* [models](#models)
+* [functions](#functions)
+* [Examples](#examples)
+    * [Name extraction](#name-extraction)
+    * [Document Classification](#document-classification)
+* [Guide](#guide)
+    * [Name Tagging](#name-tagging)
+    * [Training Data](#training-data)
+
 ## Install
 
 ```r
@@ -20,6 +31,10 @@ This package relies on [openNLP](http://opennlp.apache.org/) CLI tools.
 3. Add `path/to/opennlp/bin` to path and make sure it is in R too with `Sys.getenv("PATH")`.
 
 You're good to go.
+
+## Models
+
+The packages focuses on the training and usage of models but one may also use it for [out-of-the-box](http://opennlp.sourceforge.net/models-1.5/) models.
 
 ## Functions
 
@@ -165,7 +180,7 @@ model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
   data = paste0(wd, "/input.txt"), type = "wef")
 ```
 
-## Training data
+### Training data
 
 #### Token name finder
 
