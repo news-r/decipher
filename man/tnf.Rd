@@ -3,7 +3,7 @@
 \name{tnf_}
 \alias{tnf_}
 \alias{tnf}
-\title{Learnable name finder}
+\title{Learnable Name Finder}
 \usage{
 tnf_(model, sentences, output = NULL)
 
@@ -20,7 +20,7 @@ tnf(model, sentences)
 Full path to the \code{output} if specified.
 }
 \description{
-Learnable name finder
+Learnable Name Finder
 }
 \details{
 name tagging:

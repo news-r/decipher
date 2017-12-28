@@ -3,7 +3,7 @@
 \name{get_names_}
 \alias{get_names_}
 \alias{get_names}
-\title{Get names}
+\title{Get Token Names}
 \usage{
 get_names_(file)
 
@@ -23,7 +23,7 @@ get_names(tag)
 }
 }
 \description{
-Get names
+Get Token Names
 }
 \examples{
 \dontrun{
