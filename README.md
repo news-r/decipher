@@ -237,7 +237,6 @@ data <- do.call("rbind", replicate(50, data[sample(nrow(data), 4),],
 # train model
 model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
 ```
-
 -------------------------------------
 
 Author & Maintainer: <Jean-Philippe.Coene@weforum.org>
