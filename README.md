@@ -164,37 +164,6 @@ cat(classified)
 
 Use `check_tags` to make sure they are correct.
 
-```r
-library(decipher)
-
-# get working directory
-# need to pass full path
-wd <- getwd()
-
-data <- data.frame(
-  class = c("Sport", "Business", "Sport", "Sport", "Business", "Politics", "Politics", "Politics"),
-  doc = c("Football, tennis, golf and, bowling and, score.",
-          "Marketing, Finance, Legal and, Administration.",
-          "Tennis, Ski, Golf and, gym and, match.",
-          "football, climbing and gym.",
-          "Marketing, Business, Money and, Management.",
-          "This document talks politics and Donal Trump.",
-          "Donald Trump is the President of the US, sadly.",
-          "Article about politics and president Trump.")
-)
-
-# Error not enough data
-# model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
-
-# repeat data 50 times
-# Obviously do not do that in te real world
-data <- do.call("rbind", replicate(50, data[sample(nrow(data), 4),],
-                                   simplify = FALSE))
-
-# train model
-model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
-```
-
 ### Tagger
 
 A *currently* basic tagger to easily tag training data to train a token name finder (\code{tnf_train}).
@@ -227,6 +196,39 @@ Including sentences that do not contain tagged names reduces false positives; *t
 #### Document classifier
 
 In order to train a decent document classifier you are going to need 5'000 classified documents as training data with a *bare* minimum of 5 documents per category.
+
+```r
+library(decipher)
+
+# get working directory
+# need to pass full path
+wd <- getwd()
+
+data <- data.frame(
+  class = c("Sport", "Business", "Sport", "Sport", "Business", "Politics", "Politics", "Politics"),
+  doc = c("Football, tennis, golf and, bowling and, score.",
+          "Marketing, Finance, Legal and, Administration.",
+          "Tennis, Ski, Golf and, gym and, match.",
+          "football, climbing and gym.",
+          "Marketing, Business, Money and, Management.",
+          "This document talks politics and Donal Trump.",
+          "Donald Trump is the President of the US, sadly.",
+          "Article about politics and president Trump.")
+)
+
+# Error not enough data
+model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
+
+Sys.sleep(15)
+
+# repeat data 50 times
+# Obviously do not do that in te real world
+data <- do.call("rbind", replicate(50, data[sample(nrow(data), 4),],
+                                   simplify = FALSE))
+
+# train model
+model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
+```
 
 -------------------------------------
 
