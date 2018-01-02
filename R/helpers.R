@@ -1,4 +1,4 @@
-#' Check OpenNLP tags
+#' Check OpenNLP Tags
 #'
 #' @param file Full path to file containing tagged sentences, ussually a \code{.txt} file.
 #' @param tag Tagged character vector.
@@ -37,7 +37,7 @@ check_tags <- function(tag){
   return(text)
 }
 
-#' Tag
+#' Tag Documents
 #'
 #' Tag terms for \code{\link{tnf_train}}.
 #'

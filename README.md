@@ -38,8 +38,16 @@ The packages focuses on the training and usage of models but one may also use it
 
 ## Functions
 
-* `tnf` Run model.
-* `tnf_trainer` Trains your model
+* `dc` Run Document classifier.
+* `dc_train` Train Document Classifer.
+* `tnf` Learnable Name Finder.
+* `tnf_trainer` Train Learnable Name Finder.
+* `get_names` Get Token Names.
+
+helpers:
+
+* `check_tags` Check OpenNLP Tags.
+* `tag_docs` Tag Documents.
 
 ## Examples
 
@@ -166,7 +174,7 @@ Use `check_tags` to make sure they are correct.
 
 ### Tagger
 
-A *currently* basic tagger to easily tag training data to train a token name finder (\code{tnf_train}).
+A *currently* basic tagger to easily tag training data to train a token name finder (`tnf_train`).
 
 ```r
 # Manually tagged

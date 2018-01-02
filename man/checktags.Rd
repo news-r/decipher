@@ -3,7 +3,7 @@
 \name{check_tags_}
 \alias{check_tags_}
 \alias{check_tags}
-\title{Check OpenNLP tags}
+\title{Check OpenNLP Tags}
 \usage{
 check_tags_(file)
 
@@ -15,7 +15,7 @@ check_tags(tag)
 \item{tag}{Tagged character vector.}
 }
 \description{
-Check OpenNLP tags
+Check OpenNLP Tags
 }
 \examples{
 \dontrun{

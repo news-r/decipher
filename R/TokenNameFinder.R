@@ -1,4 +1,4 @@
-#' Learnable name finder
+#' Learnable Name Finder
 #'
 #' @param model Model to use, generally returned by \code{\link{tnf_train}} or \code{\link{tnf_train}}.
 #' @param sentences Sentences containing entities to find, a character vector or full path to file, usually \code{.txt}.

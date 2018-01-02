@@ -1,4 +1,4 @@
-#' Get names
+#' Get Token Names
 #'
 #' @param file File containing tagged names.
 #' @param tag Character vector containing tagged names.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/helpers.R
 \name{tag_docs}
 \alias{tag_docs}
-\title{Tag}
+\title{Tag Documents}
 \usage{
 tag_docs(docs, terms, tag, check = TRUE)
 }
