@@ -1,6 +1,6 @@
 extract_tags <- function(x){
   x <- stringr::str_match_all(x, "<START(.*?)>(.*?)<END>")[[1]]
-  x <- as.data.frame(x)
+  x <- tibble::as.tibble(x)
   names(x) <- c("string", "type", "name")
 
   # clean

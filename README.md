@@ -7,6 +7,7 @@ Tools to develop, build and train Natural Language processing models.
 * [Install](#install)
 * [Dependencies](#dependencies)
 * [Models](#models)
+* [Extension](#extension)
 * [Functions](#functions)
 * [Examples](#examples)
     * [Name extraction](#name-extraction)
@@ -35,6 +36,10 @@ You're good to go.
 ## Models
 
 The packages focuses on the training and usage of models but one may also use it for [out-of-the-box](http://opennlp.sourceforge.net/models-1.5/) models.
+
+## Extension
+
+Also see the [decipher.models](http://chlxintgitl01.weforum.local/JCOE/decipher.models) extension which includes a few trained models that might be of use to you.
 
 ## Functions
 
