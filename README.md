@@ -39,7 +39,7 @@ The packages focuses on the training and usage of models but one may also use it
 
 ## Extension
 
-Also see the [decipher.models](http://chlxintgitl01.weforum.local/JCOE/decipher.models) extension which includes a few trained models that might be of use to you.
+Also see the [decipher.models](http://chlxintgitl01.weforum.local/JCOE/decipher.models) extension which includes a few trained models that might be of use to you, i.e.: extracting negative connotations of our Annual Meeting.
 
 ## Functions
 

@@ -3,7 +3,7 @@
 \name{get_names_}
 \alias{get_names_}
 \alias{get_names}
-\title{Get Token Names}
+\title{Get Tidy Token Names}
 \usage{
 get_names_(file)
 
@@ -21,9 +21,11 @@ get_names(tag)
   \item{type - type of name}
   \item{name - extracted name}
 }
+
+a \code{\link[tibble]{tibble}}
 }
 \description{
-Get Token Names
+Get Tidy Token Names
 }
 \examples{
 \dontrun{

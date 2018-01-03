@@ -1,4 +1,4 @@
-#' Get Token Names
+#' Get Tidy Token Names
 #'
 #' @param file File containing tagged names.
 #' @param tag Character vector containing tagged names.
@@ -34,6 +34,8 @@
 #' # extract strings
 #' (ext <- get_names(results))
 #' }
+#'
+#' @return a \code{\link[tibble]{tibble}}
 #'
 #' @rdname get_tags
 #' @export
