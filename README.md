@@ -1,6 +1,8 @@
-# decipher <img src="decipher_sticker.png" align="right" />
+# decipher
 
 Tools to develop, build and train Natural Language processing models.
+
+![decipher sticker](decipher_sticker.png)
 
 * [Install](#install)
 * [Dependencies](#dependencies)
