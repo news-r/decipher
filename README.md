@@ -1,4 +1,4 @@
-# decipher ![decipher sticker](decipher_sticker.png)
+# decipher <img src="decipher_sticker.png" align="right" />
 
 Tools to develop, build and train Natural Language processing models.
 
