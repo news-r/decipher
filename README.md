@@ -19,7 +19,7 @@ Tools to develop, build and train Natural Language processing models.
 ## Install
 
 ```r
-devtools::install_git("http://chlxintgitl01.weforum.local/JCOE/decipher",
+devtools::install_git("http://git.weforum.local/JCOE/decipher",
   credentials = git2r::cred_user_pass("login", "password"))
 ```
 
@@ -39,7 +39,7 @@ The packages focuses on the training and usage of models but one may also use it
 
 ## Extension
 
-Also see the [decipher.models](http://chlxintgitl01.weforum.local/JCOE/decipher.models) extension which includes a few trained models that might be of use to you, i.e.: extracting negative connotations of our Annual Meeting.
+Also see the [decipher.models](http://git.weforum.local/JCOE/decipher.models) extension which includes a few trained models that might be of use to you, i.e.: extracting negative connotations of our Annual Meeting.
 
 ## Functions
 

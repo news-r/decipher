@@ -11,3 +11,8 @@ extract_tags <- function(x){
   x$type <- gsub(":", "", x$type)
   x
 }
+
+check_start <- function(x){
+  pat <- "[[:punct:]]<START(.*?)|<START(.*?)>[[:punct:]]"
+  l <- stringr::str_locate_all(x, pat)
+}

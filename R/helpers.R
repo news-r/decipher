@@ -5,7 +5,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' data <- "some sentence with <START:tag> erroneous tag <END>."
+#' data <- 'some sentence with some "<START:tag> erroneous tag <END>." And <START:tag> here also<END>.'
 #'
 #' # corrected tags
 #' data <- check_tags(data)
@@ -19,7 +19,7 @@ check_tags_ <- function(file){
 
   text <- readLines(file)
 
-  text <- gsub("<END>[[:punct:]]", "<END> .", text)
+  text <- check_tags(text)
 
   write(text, file = file)
 
@@ -33,6 +33,8 @@ check_tags <- function(tag){
     stop("must pass tag", call. = FALSE)
 
   text <- gsub("<END>[[:punct:]]", "<END> .", tag)
+
+  text <- check_start(text)
 
   return(text)
 }
