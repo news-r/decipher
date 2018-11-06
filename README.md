@@ -2,9 +2,7 @@
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/decipher)](https://cran.r-project.org/package=decipher)
 
-Tools to develop, build and train Natural Language processing models.
-
-![decipher sticker](decipher_sticker.png)
+Tools to _easily_ develop, build and train Natural Language processing models with [openNLP](https://opennlp.apache.org/) CLI tools.
 
 * [Install](#install)
 * [Dependencies](#dependencies)
@@ -21,9 +19,10 @@ Tools to develop, build and train Natural Language processing models.
 ## Install
 
 ```r
-devtools::install_git("http://git.weforum.local/JCOE/decipher",
-  credentials = git2r::cred_user_pass("login", "password"))
+devtools::install_github("JohnCoene/decipher")
 ```
+
+`decipher` depends on [openNLP](https://opennlp.apache.org/), see the section below.
 
 ### Dependencies
 
@@ -45,11 +44,12 @@ Also see the [decipher.models](http://git.weforum.local/JCOE/decipher.models) ex
 
 ## Functions
 
-* `dc` Run Document classifier.
-* `dc_train` Train Document Classifer.
-* `tnf` Learnable Name Finder.
-* `tnf_trainer` Train Learnable Name Finder.
-* `get_names` Get Token Names.
+* `dc`: Run Document classifier.
+* `dc_train`: Train Document Classifer.
+* `tnf`: Learnable Name Finder.
+* `tnf_trainer`: Train Learnable Name Finder.
+* `get_names`: Get Token Names.
+* `nglm`: N-gram language model
 
 helpers:
 
