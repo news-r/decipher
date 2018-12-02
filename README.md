@@ -2,6 +2,8 @@
 
 # decipher
 
+<img src = "man/figures/logo.png" align = "right">
+
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/decipher)](https://cran.r-project.org/package=decipher)
 
 Tools to _easily_ develop, build and train Natural Language processing models with [openNLP](https://opennlp.apache.org/) CLI tools from R.
