@@ -8,6 +8,8 @@
 
 Tools to _easily_ develop, build and train Natural Language processing models with [openNLP](https://opennlp.apache.org/) CLI tools from R.
 
+See the [website](https://decipher.john-coene.com/) for more details.
+
 * [Installation](#install)
 * [Models](#models)
 * [Functions](#functions)
