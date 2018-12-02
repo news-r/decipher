@@ -137,33 +137,35 @@
 <div id="vector" class="section level2">
 <h2 class="hasAnchor">
 <a href="#vector" class="anchor"></a>Vector</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(decipher)
+<p>You can easily train and run you model from a vector of character.</p>
+<pre><code><a href="https://www.rdocumentation.org/packages/base/topics/library">library(decipher)
 
-<span class="co"># get working directory</span>
-<span class="co"># need to pass full path</span>
-wd &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/getwd">getwd</a></span>()
+# get working directory
+# need to pass full path
+wd &lt;- getwd()
 
-<span class="co"># Training to find "WEF"</span>
-data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste</a></span>(<span class="st">"This organisation is called the &lt;START:wef&gt; World Economic Forum &lt;END&gt;"</span>,
-  <span class="st">"It is often referred to as &lt;START:wef&gt; Davos &lt;END&gt; or the &lt;START:wef&gt; WEF &lt;END&gt; ."</span>)
+# Training to find "WEF"
+data &lt;- paste("This organisation is called the &lt;START:wef&gt; World Economic Forum &lt;END&gt;",
+  "It is often referred to as &lt;START:wef&gt; Davos &lt;END&gt; or the &lt;START:wef&gt; WEF &lt;END&gt; .")
 
-<span class="co"># train the model</span>
-model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/tnf_train">tnf_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/wef.bin"</span>), <span class="dt">lang =</span> <span class="st">"en"</span>,
-  <span class="dt">data =</span> data, <span class="dt">type =</span> <span class="st">"wef"</span>)
+# train the model
+model &lt;- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
+  data = data, type = "wef")
 
-<span class="co"># Create sentences to test our model</span>
-sentences &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste</a></span>(<span class="st">"This sentence mentions the World Economic Forum the annual meeting"</span>,
-  <span class="st">"of which takes place in Davos. Note that the forum is often shortened to WEF."</span>)
+# Create sentences to test our model
+sentences &lt;- paste("This sentence mentions the World Economic Forum the annual meeting",
+  "of which takes place in Davos. Note that the forum is often shortened to WEF.")
 
-<span class="co"># run model on sentences</span>
-results &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/tnf">tnf</a></span>(<span class="dt">model =</span> model, <span class="dt">sentences =</span> sentences)
+# run model on sentences
+results &lt;- tnf(model = model, sentences = sentences)
 
-<span class="co"># get names from results</span>
-(names &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/get_tags">get_names</a></span>(results))</code></pre></div>
+# get names from results
+(names &lt;- get_names(results))</a></code></pre>
 </div>
 <div id="txt-files" class="section level2">
 <h2 class="hasAnchor">
 <a href="#txt-files" class="anchor"></a>Txt files</h2>
+<p>You can also do train and run your model from <code>.txt</code> files.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># same with .txt files</span>
 <span class="co"># Training to find "WEF"</span>
 data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste</a></span>(<span class="st">"This organisation is called the &lt;START:wef&gt; World Economic Forum &lt;END&gt;"</span>, 
@@ -173,7 +175,7 @@ data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocume
 <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/write">write</a></span>(data, <span class="dt">file =</span> <span class="st">"input.txt"</span>)
 
 <span class="co"># Trains the model and returns the full path to the model</span>
-model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/tnf_train">tnf_train_</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/wef.bin"</span>), <span class="dt">lang =</span> <span class="st">"en"</span>,
+model &lt;-<span class="st"> </span><span class="kw">tnf_train_</span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/wef.bin"</span>), <span class="dt">lang =</span> <span class="st">"en"</span>,
   <span class="dt">data =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/input.txt"</span>), <span class="dt">type =</span> <span class="st">"wef"</span>)
 
 <span class="co"># Create sentences to test our model</span>
@@ -185,10 +187,10 @@ sentences &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rd
 
 <span class="co"># Extract names</span>
 <span class="co"># Without specifying an output file the extracted names appear in the console</span>
-model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/tnf">tnf_</a></span>(<span class="dt">model =</span> model, <span class="dt">sentences =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/sentences.txt"</span>))
+model &lt;-<span class="st"> </span><span class="kw">tnf_</span>(<span class="dt">model =</span> model, <span class="dt">sentences =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/sentences.txt"</span>))
 
 <span class="co"># returns path to output file</span>
-output &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/tnf">tnf</a></span>(<span class="dt">model =</span> model, <span class="dt">sentences =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/sentences.txt"</span>),
+output &lt;-<span class="st"> </span><span class="kw">tnf</span>(<span class="dt">model =</span> model, <span class="dt">sentences =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/sentences.txt"</span>),
   <span class="dt">output =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/output.txt"</span>))
   
 <span class="co"># You can train slightly more sophisticated models too</span>
@@ -201,7 +203,7 @@ data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocume
 <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/write">write</a></span>(data, <span class="dt">file =</span> <span class="st">"input.txt"</span>)
 
 <span class="co"># Trains the model and returns the full path to the model</span>
-model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/tnf_train">tnf_train_</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/sentiment.bin"</span>), <span class="dt">lang =</span> <span class="st">"en"</span>,
+model &lt;-<span class="st"> </span><span class="kw">tnf_train_</span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/sentiment.bin"</span>), <span class="dt">lang =</span> <span class="st">"en"</span>,
   <span class="dt">data =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/input.txt"</span>), <span class="dt">type =</span> <span class="st">"sentiment"</span>)
 
 <span class="co"># Create sentences to test our model</span>
@@ -213,7 +215,7 @@ sentences &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rd
 
 <span class="co"># Extract names</span>
 <span class="co"># Without specifying an output file the extracted names appear in the console</span>
-<span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/tnf">tnf_</a></span>(<span class="dt">model =</span> model, <span class="dt">sentences =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/sentences.txt"</span>))</code></pre></div>
+<span class="kw">tnf_</span>(<span class="dt">model =</span> model, <span class="dt">sentences =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/sentences.txt"</span>))</code></pre></div>
 </div>
   </div>
 

@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 You can easily train and run you model from a vector of character.
 
-```{r}
+```
 library(decipher)
 
 # get working directory
