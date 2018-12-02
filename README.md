@@ -4,8 +4,7 @@
 
 Tools to _easily_ develop, build and train Natural Language processing models with [openNLP](https://opennlp.apache.org/) CLI tools.
 
-* [Install](#install)
-* [Dependencies](#dependencies)
+* [Installation](#install)
 * [Models](#models)
 * [Extension](#extension)
 * [Functions](#functions)
@@ -19,12 +18,22 @@ Tools to _easily_ develop, build and train Natural Language processing models wi
 ## Install
 
 ```r
-devtools::install_github("JohnCoene/decipher")
+# install.packages("remotes")
+remotes::install_github("JohnCoene/decipher")
 ```
-
 `decipher` depends on [openNLP](https://opennlp.apache.org/), see the section below.
 
 ### Dependencies
+
+#### Mac
+
+With [Homebrew](https://brew.sh/).
+
+```
+brew install apache-opennlp
+```
+
+#### Windows
 
 This package relies on [openNLP](http://opennlp.apache.org/) CLI tools.
 
@@ -38,10 +47,6 @@ You're good to go.
 
 The packages focuses on the training and usage of models but one may also use it for [out-of-the-box](http://opennlp.sourceforge.net/models-1.5/) models.
 
-## Extension
-
-Also see the [decipher.models](http://git.weforum.local/JCOE/decipher.models) extension which includes a few trained models that might be of use to you, i.e.: extracting negative connotations of our Annual Meeting.
-
 ## Functions
 
 * `dc`: Run Document classifier.
@@ -53,12 +58,13 @@ Also see the [decipher.models](http://git.weforum.local/JCOE/decipher.models) ex
 
 helpers:
 
-* `check_tags` Check OpenNLP Tags.
-* `tag_docs` Tag Documents.
+* `check_tags` Ensure correct OpenNLP Tags.
 
 ## Examples
 
 ### Name Extraction
+
+__vector__
 
 ```r
 library(decipher)
@@ -77,14 +83,18 @@ model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
 
 # Create sentences to test our model
 sentences <- paste("This sentence mentions the World Economic Forum the annual meeting",
-  "of which takes place in Davos. Note that the forum is often called the WEF.")
+  "of which takes place in Davos. Note that the forum is often shortened to WEF.")
 
 # run model on sentences
 results <- tnf(model = model, sentences = sentences)
 
 # get names from results
 (names <- get_names(results))
+```
 
+__txt files__
+
+```r
 # same with .txt files
 # Training to find "WEF"
 data <- paste("This organisation is called the <START:wef> World Economic Forum <END>", 
@@ -244,6 +254,3 @@ data <- do.call("rbind", replicate(50, data[sample(nrow(data), 4),],
 # train model
 model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
 ```
--------------------------------------
-
-Author & Maintainer: <Jean-Philippe.Coene@weforum.org>

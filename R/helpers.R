@@ -38,38 +38,3 @@ check_tags <- function(tag){
 
   return(text)
 }
-
-#' Tag Documents
-#'
-#' Tag terms for \code{\link{tnf_train}}.
-#'
-#' @param docs Documents to tag.
-#' @param terms Regular expression to tag.
-#' @param tag Tag.
-#' @param check If \code{TRUE} checks the tags using \code{\link{check_tags}}.
-#'
-#' @examples
-#' data <- paste("This organisation is called the World Economic Forum",
-#'   "It is often referred to as Davos or the WEF.")
-#'
-#' data <- tag_docs(data, "WEF", "wef")
-#' data <- tag_docs(data, "World Economic Forum", "wef")
-#' data <- tag_docs(data, "Davos", "wef")
-#'
-#' cat(data)
-#'
-#' @export
-tag_docs <- function(docs, terms, tag, check = TRUE){
-
-  if(missing(docs) || missing(terms) || missing(tag))
-    stop("missing docs, regex or tag", call. = FALSE)
-
-  tagged <- paste0("<START:", tag, "> ", terms, " <END>")
-
-  docs <- gsub(terms, tagged, docs)
-
-  if(isTRUE(check))
-    docs <- check_tags(docs)
-
-  docs
-}
