@@ -6,7 +6,6 @@ Tools to _easily_ develop, build and train Natural Language processing models wi
 
 * [Installation](#install)
 * [Models](#models)
-* [Extension](#extension)
 * [Functions](#functions)
 * [Examples](#examples)
     * [Name extraction](#name-extraction)
@@ -27,7 +26,7 @@ remotes::install_github("JohnCoene/decipher")
 
 #### Mac
 
-With [Homebrew](https://brew.sh/).
+Install with [Homebrew](https://brew.sh/), also intall the Java SDK.
 
 ```
 brew install apache-opennlp
