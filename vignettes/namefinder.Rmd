@@ -19,7 +19,9 @@ knitr::opts_chunk$set(
 
 ## Vector
 
-```r
+You can easily train and run you model from a vector of character.
+
+```{r}
 library(decipher)
 
 # get working directory
@@ -46,6 +48,8 @@ results <- tnf(model = model, sentences = sentences)
 ```
 
 ## Txt files
+
+You can also do train and run your model from `.txt` files.
 
 ```r
 # same with .txt files
