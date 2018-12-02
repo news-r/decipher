@@ -2,7 +2,7 @@
 
 # decipher
 
-<img src = "man/figures/logo.png" align = "right">
+<img src = "man/figures/logo.png" align = "right" height="200px">
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/decipher)](https://cran.r-project.org/package=decipher)
 
