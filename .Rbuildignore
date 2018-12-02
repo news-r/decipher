@@ -5,3 +5,5 @@
 ^decypher_logo\.png$
 ^decipher_sticker\.png$
 index.Rmd
+docs
+pkgdown
