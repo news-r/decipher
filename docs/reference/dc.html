@@ -183,7 +183,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>model</th>
-      <td><p>Model to use, generally returned by <code>dc_train</code>.</p></td>
+      <td><p>Model to use, generally returned by <code><a href='dc_train.html'>dc_train</a></code>.</p></td>
     </tr>
     <tr>
       <th>documents</th>
@@ -220,7 +220,7 @@
                                    <span class='kw'>simplify</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>))
 
 <span class='co'># train model</span>
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>dc_train</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/classifier.bin"</span>),<span class='st'>"en"</span>, <span class='no'>data</span>)
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='dc_train.html'>dc_train</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/classifier.bin"</span>),<span class='st'>"en"</span>, <span class='no'>data</span>)
 
 <span class='co'># create documents to classify</span>
 <span class='no'>documents</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(

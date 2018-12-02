@@ -213,7 +213,7 @@
   <span class='st'>"It is often referred to as &lt;START:wef&gt; Davos &lt;END&gt; or the &lt;START:wef&gt; WEF &lt;END&gt; ."</span>)
 
 <span class='co'># train the model</span>
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>tnf_train</span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/wef.bin"</span>), <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>,
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='tnf_train.html'>tnf_train</a></span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/wef.bin"</span>), <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>,
   <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>data</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"wef"</span>)
 
 <span class='co'># Create sentences to test our model</span>
@@ -221,7 +221,7 @@
   <span class='st'>"of which takes place in Davos. Note that the forum is often called the WEF."</span>)
 
 <span class='co'># run model on sentences</span>
-<span class='no'>results</span> <span class='kw'>&lt;-</span> <span class='fu'>tnf</span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='no'>model</span>, <span class='kw'>sentences</span> <span class='kw'>=</span> <span class='no'>sentences</span>)
+<span class='no'>results</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='tnf.html'>tnf</a></span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='no'>model</span>, <span class='kw'>sentences</span> <span class='kw'>=</span> <span class='no'>sentences</span>)
 
 <span class='co'># extract strings</span>
 (<span class='no'>ext</span> <span class='kw'>&lt;-</span> <span class='fu'>get_names</span>(<span class='no'>results</span>))

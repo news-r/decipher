@@ -152,7 +152,7 @@ data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocume
 data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/do.call">do.call</a></span>(<span class="st">"rbind"</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">replicate</a></span>(<span class="dv">50</span>, data, <span class="dt">simplify =</span> <span class="ot">FALSE</span>))
 
 <span class="co"># train model</span>
-model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/dc_train">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)
+model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_train.html">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)
 
 <span class="co"># create documents to classify</span>
 documents &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(
@@ -163,7 +163,7 @@ documents &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rd
 )
 
 <span class="co"># classify documents</span>
-classified &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/dc">dc</a></span>(model, documents)
+classified &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc.html">dc</a></span>(model, documents)
 <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cat">cat</a></span>(classified)</code></pre></div>
 </div>
   </div>

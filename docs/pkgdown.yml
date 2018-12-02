@@ -1,7 +1,11 @@
 pandoc: 1.19.2.4
 pkgdown: 1.2.0.9000
 pkgdown_sha: c980e84a573614087c6e151d5e6e19a22748b761
-articles: []
+articles:
+  classifier: classifier.html
+  install: install.html
+  namefinder: namefinder.html
+  usage: usage.html
 urls:
   reference: http://decipher.john-coene.com/reference
   article: http://decipher.john-coene.com/articles

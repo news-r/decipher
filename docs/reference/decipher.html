@@ -179,15 +179,15 @@
 
     
     <ul>
-<li><p><code>tnf</code> to use a model and extract names from character vector.</p></li>
-<li><p><code>tnf_</code> to use a model and extract names from file.</p></li>
-<li><p><code>tnf_train</code> train a name finder model from character vector.</p></li>
-<li><p><code>tnf_train_</code> train a name finder model from file.</p></li>
-<li><p><code>get_names</code> extract identified names from character vector.</p></li>
-<li><p><code>get_names_</code> extract identified names from file.</p></li>
-<li><p><code>dc</code> classify documents from character vector.</p></li>
-<li><p><code>dc_</code> classify document from on file.</p></li>
-<li><p><code>dc_train</code> train document classifer from file.</p></li>
+<li><p><code><a href='tnf.html'>tnf</a></code> to use a model and extract names from character vector.</p></li>
+<li><p><code><a href='tnf.html'>tnf_</a></code> to use a model and extract names from file.</p></li>
+<li><p><code><a href='tnf_train.html'>tnf_train</a></code> train a name finder model from character vector.</p></li>
+<li><p><code><a href='tnf_train.html'>tnf_train_</a></code> train a name finder model from file.</p></li>
+<li><p><code><a href='get_tags.html'>get_names</a></code> extract identified names from character vector.</p></li>
+<li><p><code><a href='get_tags.html'>get_names_</a></code> extract identified names from file.</p></li>
+<li><p><code><a href='dc.html'>dc</a></code> classify documents from character vector.</p></li>
+<li><p><code><a href='dc.html'>dc_</a></code> classify document from on file.</p></li>
+<li><p><code><a href='dc_train.html'>dc_train</a></code> train document classifer from file.</p></li>
 </ul>
     
 
@@ -206,7 +206,7 @@
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/write'>write</a></span>(<span class='no'>data</span>, <span class='kw'>file</span> <span class='kw'>=</span> <span class='st'>"input.txt"</span>)
 
 <span class='co'># Trains the model and returns the full path to the model</span>
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>tnf_train_</span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/wef.bin"</span>), <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>,
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='tnf_train.html'>tnf_train_</a></span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/wef.bin"</span>), <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>,
   <span class='kw'>data</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/input.txt"</span>), <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"wef"</span>)
 
 <span class='co'># Create sentences to test our model</span>
@@ -218,14 +218,14 @@
 
 <span class='co'># Extract names</span>
 <span class='co'># Without specifying an output file the extracted names appear in the console</span>
-<span class='fu'>tnf</span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='no'>model</span>, <span class='kw'>sentences</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/sentences.txt"</span>))
+<span class='fu'><a href='tnf.html'>tnf</a></span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='no'>model</span>, <span class='kw'>sentences</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/sentences.txt"</span>))
 
 <span class='co'># returns path to output file</span>
-<span class='no'>output</span> <span class='kw'>&lt;-</span> <span class='fu'>tnf_</span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='no'>model</span>, <span class='kw'>sentences</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/sentences.txt"</span>),
+<span class='no'>output</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='tnf.html'>tnf_</a></span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='no'>model</span>, <span class='kw'>sentences</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/sentences.txt"</span>),
   <span class='kw'>output</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/output.txt"</span>))
 
 <span class='co'># extract names</span>
-(<span class='no'>names</span> <span class='kw'>&lt;-</span> <span class='fu'>get_names</span>(<span class='no'>output</span>))
+(<span class='no'>names</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='get_tags.html'>get_names</a></span>(<span class='no'>output</span>))
 
 <span class='co'># Classification</span>
 <span class='co'># create dummy data</span>
@@ -240,7 +240,7 @@
 <span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/do.call'>do.call</a></span>(<span class='st'>"rbind"</span>, <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/lapply'>replicate</a></span>(<span class='fl'>50</span>, <span class='no'>data</span>, <span class='kw'>simplify</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>))
 
 <span class='co'># train model</span>
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>dc_train</span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/model.bin"</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>data</span>, <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>)
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='dc_train.html'>dc_train</a></span>(<span class='kw'>model</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste0</a></span>(<span class='no'>wd</span>, <span class='st'>"/model.bin"</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>data</span>, <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>)
 
 <span class='co'># create documents to classify</span>
 <span class='no'>documents</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(
@@ -251,7 +251,7 @@
 )
 
 <span class='co'># classify documents</span>
-<span class='no'>classified</span> <span class='kw'>&lt;-</span> <span class='fu'>dc</span>(<span class='no'>model</span>, <span class='no'>documents</span>)
+<span class='no'>classified</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='dc.html'>dc</a></span>(<span class='no'>model</span>, <span class='no'>documents</span>)
 <span class='co'># }</span><div class='input'>
 </div></pre>
   </div>
