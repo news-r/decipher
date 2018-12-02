@@ -1,0 +1,45 @@
+---
+title: "Install"
+author: "John Coene"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Install}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Package
+
+```r
+# install.packages("remotes")
+remotes::install_github("JohnCoene/decipher")
+```
+`decipher` depends on [openNLP](https://opennlp.apache.org/), see the section below.
+
+### Dependencies
+
+#### Mac
+
+Install with [Homebrew](https://brew.sh/), also intall the Java SDK.
+
+```
+brew install apache-opennlp
+```
+
+#### Windows
+
+This package relies on [openNLP](http://opennlp.apache.org/) CLI tools.
+
+1. [Download](http://opennlp.apache.org/download.html) binary *AND* source files.
+2. Unzip both the binary and the source folders.
+3. Add `path/to/opennlp/bin` to path and make sure it is in R too with `Sys.getenv("PATH")`.
+
+You're good to go.

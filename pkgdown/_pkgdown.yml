@@ -1,0 +1,37 @@
+url: http://decipher.john-coene.com
+
+template:
+  params:
+    bootswatch: paper
+    ganalytics: UA-74544116-1
+
+navbar:
+  title: "decipher"
+  left:
+    - icon: fa-home
+      href: index.html
+    - icon: fa-balance-scale
+      href: LICENSE.html
+    - icon: fa-newspaper-o
+      href: news/index.html
+    - icon: fa-code
+      href: "reference/"
+    - icon: fa-download
+      text: "Install"
+      href: "articles/install.html"
+    - icon: fa-text-width
+      text: "Name finder"
+      href: "articles/namefinder.html"
+    - icon: fa-object-group
+      text: "Classifier"
+      href: "articles/classifier.html"
+    - icon: fa-rocket
+      text: "Usage"
+      href: "articles/usage.html"
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/JohnCoene/decipher
+
+authors:
+  John Coene:
+    href: http://john-coene.com

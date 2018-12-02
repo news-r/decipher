@@ -1,0 +1,90 @@
+---
+title: "Usage & tips"
+author: "John Coene"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Usage & tips}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Name Tagging
+
+* `<END>.` is *invalid*
+* `<END> .` is *valid*
+
+Use `check_tags` to make sure they are correct.
+
+## Tagger
+
+A *currently* basic tagger to easily tag training data to train a token name finder (`tnf_train`).
+
+```r
+# Manually tagged
+manual <- paste("This organisation is called the <START:wef> World Economic Forum <END>",
+              "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END> .")
+
+# Create untagged string              
+data <- paste("This organisation is called the World Economic Forum",
+  "It is often referred to as Davos or the WEF.")
+
+# tag string
+auto <- tag_docs(data, "WEF", "wef")
+auto <- tag_docs(auto, "World Economic Forum", "wef")
+auto <- tag_docs(auto, "Davos", "wef")
+
+identical(manual, auto)
+```
+
+## Training data
+
+### Token name finder
+
+You will need considerable training data for the name extraction; 15'000 sentences. However, this does not mean 15'000 tagged sentences, this means 15'000 sentences representative of the documents you will have to extract names from.
+
+Including sentences that do not contain tagged names reduces false positives; *the model learns what to extract as much as it learns what not to extract.*
+
+### Document classifier
+
+In order to train a decent document classifier you are going to need 5'000 classified documents as training data with a *bare* minimum of 5 documents per category.
+
+```r
+library(decipher)
+
+# get working directory
+# need to pass full path
+wd <- getwd()
+
+data <- data.frame(
+  class = c("Sport", "Business", "Sport", "Sport", "Business", "Politics", "Politics", "Politics"),
+  doc = c("Football, tennis, golf and, bowling and, score.",
+          "Marketing, Finance, Legal and, Administration.",
+          "Tennis, Ski, Golf and, gym and, match.",
+          "football, climbing and gym.",
+          "Marketing, Business, Money and, Management.",
+          "This document talks politics and Donal Trump.",
+          "Donald Trump is the President of the US, sadly.",
+          "Article about politics and president Trump.")
+)
+
+# Error not enough data
+model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
+
+Sys.sleep(15)
+
+# repeat data 50 times
+# Obviously do not do that in te real world
+data <- do.call("rbind", replicate(50, data[sample(nrow(data), 4),],
+                                   simplify = FALSE))
+
+# train model
+model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
+```
