@@ -49,6 +49,8 @@ sentences <- paste("This sentence mentions the World Economic Forum the annual m
 
 ## Txt files
 
+You can also do train and run your model from `.txt` files.
+
 ```{r}
 # same with .txt files
 # Training to find "WEF"

@@ -4,6 +4,7 @@ pkgdown_sha: fa9b7502e80401db4b410086b0a8f6ab444f0c66
 articles:
   classifier: classifier.html
   install: install.html
+  models: models.html
   namefinder: namefinder.html
   usage: usage.html
 urls:
