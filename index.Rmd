@@ -8,10 +8,6 @@
 
 Tools to _easily_ develop, build and train Natural Language processing models with [openNLP](https://opennlp.apache.org/) CLI tools from R.
 
-## Models
-
-The packages focuses on the training and usage of models but one may also use it for [out-of-the-box](http://opennlp.sourceforge.net/models-1.5/) models.
-
 ## Functions
 
 * `dc`: Run Document classifier.
@@ -24,3 +20,4 @@ The packages focuses on the training and usage of models but one may also use it
 helpers:
 
 * `check_tags` Ensure correct OpenNLP Tags.
+* `list_models` List existing models that can be downloaded.

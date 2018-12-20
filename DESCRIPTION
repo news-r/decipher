@@ -11,6 +11,8 @@ Imports: stringr, tibble
 URL: http://decipher.john-coene.com/
 BugReports: https://github.com/JohnCoene/decipher/issues
 Suggests: 
+    xml2,
+    rvest,
     knitr,
     rmarkdown
 VignetteBuilder: knitr

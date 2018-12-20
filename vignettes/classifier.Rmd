@@ -18,8 +18,10 @@ knitr::opts_chunk$set(
 
 ## Classify
 
-```r
+```{r}
 library(decipher)
+
+wd <- getwd()
 
 # Classification
 # create dummy data
@@ -34,7 +36,7 @@ data <- data.frame(class = c("Sport", "Business", "Sport", "Sport"),
 data <- do.call("rbind", replicate(50, data, simplify = FALSE))
 
 # train model
-model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en")
+(model <- dc_train(model = paste0(wd, "/model.bin"), data = data, lang = "en"))
 
 # create documents to classify
 documents <- data.frame(

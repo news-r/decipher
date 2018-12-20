@@ -125,7 +125,7 @@
       <h1>Document Classifier</h1>
                         <h4 class="author">John Coene</h4>
             
-            <h4 class="date">2018-12-02</h4>
+            <h4 class="date">2018-12-20</h4>
       
       
       <div class="hidden name"><code>classifier.Rmd</code></div>
@@ -137,34 +137,38 @@
 <div id="classify" class="section level2">
 <h2 class="hasAnchor">
 <a href="#classify" class="anchor"></a>Classify</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(decipher)
-
-<span class="co"># Classification</span>
-<span class="co"># create dummy data</span>
-data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(<span class="dt">class =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Sport"</span>, <span class="st">"Business"</span>, <span class="st">"Sport"</span>, <span class="st">"Sport"</span>),
-  <span class="dt">doc =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Football, tennis, golf and, bowling and, score"</span>,
-          <span class="st">"Marketing, Finance, Legal and, Administration"</span>,
-          <span class="st">"Tennis, Ski, Golf and, gym and, match"</span>,
-          <span class="st">"football, climbing and gym"</span>))
-
-<span class="co"># repeat data 50 times to have enough data</span>
-<span class="co"># Obviously do not do that in te real world</span>
-data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/do.call">do.call</a></span>(<span class="st">"rbind"</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">replicate</a></span>(<span class="dv">50</span>, data, <span class="dt">simplify =</span> <span class="ot">FALSE</span>))
-
-<span class="co"># train model</span>
-model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/dc_train">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)
-
-<span class="co"># create documents to classify</span>
-documents &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(
-  <span class="dt">docs =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"This discusses golf which is a sport."</span>,
-           <span class="st">"This documents is about business administration."</span>,
-           <span class="st">"This is about people who do sport, go to the gym and play tennis."</span>,
-           <span class="st">"Some play tennis and work in Finance"</span>)
-)
-
-<span class="co"># classify documents</span>
-classified &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/dc">dc</a></span>(model, documents)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cat">cat</a></span>(classified)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(decipher)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">wd &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/getwd">getwd</a></span>()</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co"># Classification</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co"># create dummy data</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(<span class="dt">class =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Sport"</span>, <span class="st">"Business"</span>, <span class="st">"Sport"</span>, <span class="st">"Sport"</span>),</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">  <span class="dt">doc =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Football, tennis, golf and, bowling and, score"</span>,</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">          <span class="st">"Marketing, Finance, Legal and, Administration"</span>,</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">          <span class="st">"Tennis, Ski, Golf and, gym and, match"</span>,</a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">          <span class="st">"football, climbing and gym"</span>))</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co"># repeat data 50 times to have enough data</span></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co"># Obviously do not do that in te real world</span></a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/do.call">do.call</a></span>(<span class="st">"rbind"</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">replicate</a></span>(<span class="dv">50</span>, data, <span class="dt">simplify =</span> <span class="ot">FALSE</span>))</a>
+<a class="sourceLine" id="cb1-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"><span class="co"># train model</span></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18">(model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_train.html">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>))</a>
+<a class="sourceLine" id="cb1-19" data-line-number="19"><span class="co">#&gt; [1] "/Users/jcoe/Documents/Packages/decipher/vignettes/model.bin"</span></a>
+<a class="sourceLine" id="cb1-20" data-line-number="20"></a>
+<a class="sourceLine" id="cb1-21" data-line-number="21"><span class="co"># create documents to classify</span></a>
+<a class="sourceLine" id="cb1-22" data-line-number="22">documents &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(</a>
+<a class="sourceLine" id="cb1-23" data-line-number="23">  <span class="dt">docs =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"This discusses golf which is a sport."</span>,</a>
+<a class="sourceLine" id="cb1-24" data-line-number="24">           <span class="st">"This documents is about business administration."</span>,</a>
+<a class="sourceLine" id="cb1-25" data-line-number="25">           <span class="st">"This is about people who do sport, go to the gym and play tennis."</span>,</a>
+<a class="sourceLine" id="cb1-26" data-line-number="26">           <span class="st">"Some play tennis and work in Finance"</span>)</a>
+<a class="sourceLine" id="cb1-27" data-line-number="27">)</a>
+<a class="sourceLine" id="cb1-28" data-line-number="28"></a>
+<a class="sourceLine" id="cb1-29" data-line-number="29"><span class="co"># classify documents</span></a>
+<a class="sourceLine" id="cb1-30" data-line-number="30">classified &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc.html">dc</a></span>(model, documents)</a>
+<a class="sourceLine" id="cb1-31" data-line-number="31"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cat">cat</a></span>(classified)</a>
+<a class="sourceLine" id="cb1-32" data-line-number="32"><span class="co">#&gt; Sport    "This discusses golf which is a sport." "This documents is about business administration." "This is about people who do sport, go to the gym and play tennis." "Some play tennis and work in Finance"</span></a></code></pre></div>
 </div>
   </div>
 
@@ -186,7 +190,7 @@ classified &lt;-<span class="st"> </span><span class="kw"><a href="https://www.r
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.2.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
 </div>
       </footer>
 </div>

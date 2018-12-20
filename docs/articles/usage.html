@@ -125,7 +125,7 @@
       <h1>Usage &amp; tips</h1>
                         <h4 class="author">John Coene</h4>
             
-            <h4 class="date">2018-12-02</h4>
+            <h4 class="date">2018-12-20</h4>
       
       
       <div class="hidden name"><code>usage.Rmd</code></div>
@@ -151,20 +151,20 @@
 <h2 class="hasAnchor">
 <a href="#tagger" class="anchor"></a>Tagger</h2>
 <p>A <em>currently</em> basic tagger to easily tag training data to train a token name finder (<code>tnf_train</code>).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Manually tagged</span>
-manual &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste</a></span>(<span class="st">"This organisation is called the &lt;START:wef&gt; World Economic Forum &lt;END&gt;"</span>,
-              <span class="st">"It is often referred to as &lt;START:wef&gt; Davos &lt;END&gt; or the &lt;START:wef&gt; WEF &lt;END&gt; ."</span>)
-
-<span class="co"># Create untagged string              </span>
-data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste</a></span>(<span class="st">"This organisation is called the World Economic Forum"</span>,
-  <span class="st">"It is often referred to as Davos or the WEF."</span>)
-
-<span class="co"># tag string</span>
-auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(data, <span class="st">"WEF"</span>, <span class="st">"wef"</span>)
-auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(auto, <span class="st">"World Economic Forum"</span>, <span class="st">"wef"</span>)
-auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(auto, <span class="st">"Davos"</span>, <span class="st">"wef"</span>)
-
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/identical">identical</a></span>(manual, auto)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># Manually tagged</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">manual &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste</a></span>(<span class="st">"This organisation is called the &lt;START:wef&gt; World Economic Forum &lt;END&gt;"</span>,</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">              <span class="st">"It is often referred to as &lt;START:wef&gt; Davos &lt;END&gt; or the &lt;START:wef&gt; WEF &lt;END&gt; ."</span>)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co"># Create untagged string              </span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste</a></span>(<span class="st">"This organisation is called the World Economic Forum"</span>,</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">  <span class="st">"It is often referred to as Davos or the WEF."</span>)</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co"># tag string</span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(data, <span class="st">"WEF"</span>, <span class="st">"wef"</span>)</a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(auto, <span class="st">"World Economic Forum"</span>, <span class="st">"wef"</span>)</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(auto, <span class="st">"Davos"</span>, <span class="st">"wef"</span>)</a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/identical">identical</a></span>(manual, auto)</a></code></pre></div>
 </div>
 <div id="training-data" class="section level2">
 <h2 class="hasAnchor">
@@ -179,36 +179,36 @@ auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(auto, <span 
 <h3 class="hasAnchor">
 <a href="#document-classifier" class="anchor"></a>Document classifier</h3>
 <p>In order to train a decent document classifier you are going to need 5’000 classified documents as training data with a <em>bare</em> minimum of 5 documents per category.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(decipher)
-
-<span class="co"># get working directory</span>
-<span class="co"># need to pass full path</span>
-wd &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/getwd">getwd</a></span>()
-
-data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(
-  <span class="dt">class =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Sport"</span>, <span class="st">"Business"</span>, <span class="st">"Sport"</span>, <span class="st">"Sport"</span>, <span class="st">"Business"</span>, <span class="st">"Politics"</span>, <span class="st">"Politics"</span>, <span class="st">"Politics"</span>),
-  <span class="dt">doc =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Football, tennis, golf and, bowling and, score."</span>,
-          <span class="st">"Marketing, Finance, Legal and, Administration."</span>,
-          <span class="st">"Tennis, Ski, Golf and, gym and, match."</span>,
-          <span class="st">"football, climbing and gym."</span>,
-          <span class="st">"Marketing, Business, Money and, Management."</span>,
-          <span class="st">"This document talks politics and Donal Trump."</span>,
-          <span class="st">"Donald Trump is the President of the US, sadly."</span>,
-          <span class="st">"Article about politics and president Trump."</span>)
-)
-
-<span class="co"># Error not enough data</span>
-model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/dc_train">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)
-
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Sys.sleep">Sys.sleep</a></span>(<span class="dv">15</span>)
-
-<span class="co"># repeat data 50 times</span>
-<span class="co"># Obviously do not do that in te real world</span>
-data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/do.call">do.call</a></span>(<span class="st">"rbind"</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">replicate</a></span>(<span class="dv">50</span>, data[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sample">sample</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(data), <span class="dv">4</span>),],
-                                   <span class="dt">simplify =</span> <span class="ot">FALSE</span>))
-
-<span class="co"># train model</span>
-model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/decipher/topics/dc_train">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(decipher)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co"># get working directory</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># need to pass full path</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">wd &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/getwd">getwd</a></span>()</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(</a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">  <span class="dt">class =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Sport"</span>, <span class="st">"Business"</span>, <span class="st">"Sport"</span>, <span class="st">"Sport"</span>, <span class="st">"Business"</span>, <span class="st">"Politics"</span>, <span class="st">"Politics"</span>, <span class="st">"Politics"</span>),</a>
+<a class="sourceLine" id="cb2-9" data-line-number="9">  <span class="dt">doc =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Football, tennis, golf and, bowling and, score."</span>,</a>
+<a class="sourceLine" id="cb2-10" data-line-number="10">          <span class="st">"Marketing, Finance, Legal and, Administration."</span>,</a>
+<a class="sourceLine" id="cb2-11" data-line-number="11">          <span class="st">"Tennis, Ski, Golf and, gym and, match."</span>,</a>
+<a class="sourceLine" id="cb2-12" data-line-number="12">          <span class="st">"football, climbing and gym."</span>,</a>
+<a class="sourceLine" id="cb2-13" data-line-number="13">          <span class="st">"Marketing, Business, Money and, Management."</span>,</a>
+<a class="sourceLine" id="cb2-14" data-line-number="14">          <span class="st">"This document talks politics and Donal Trump."</span>,</a>
+<a class="sourceLine" id="cb2-15" data-line-number="15">          <span class="st">"Donald Trump is the President of the US, sadly."</span>,</a>
+<a class="sourceLine" id="cb2-16" data-line-number="16">          <span class="st">"Article about politics and president Trump."</span>)</a>
+<a class="sourceLine" id="cb2-17" data-line-number="17">)</a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co"># Error not enough data</span></a>
+<a class="sourceLine" id="cb2-20" data-line-number="20">model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_train.html">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)</a>
+<a class="sourceLine" id="cb2-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb2-22" data-line-number="22"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Sys.sleep">Sys.sleep</a></span>(<span class="dv">15</span>)</a>
+<a class="sourceLine" id="cb2-23" data-line-number="23"></a>
+<a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co"># repeat data 50 times</span></a>
+<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co"># Obviously do not do that in te real world</span></a>
+<a class="sourceLine" id="cb2-26" data-line-number="26">data &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/do.call">do.call</a></span>(<span class="st">"rbind"</span>, <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">replicate</a></span>(<span class="dv">50</span>, data[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sample">sample</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(data), <span class="dv">4</span>),],</a>
+<a class="sourceLine" id="cb2-27" data-line-number="27">                                   <span class="dt">simplify =</span> <span class="ot">FALSE</span>))</a>
+<a class="sourceLine" id="cb2-28" data-line-number="28"></a>
+<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co"># train model</span></a>
+<a class="sourceLine" id="cb2-30" data-line-number="30">model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_train.html">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/paste">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)</a></code></pre></div>
 </div>
 </div>
   </div>
@@ -233,7 +233,7 @@ model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocum
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.2.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
 </div>
       </footer>
 </div>

@@ -64,6 +64,7 @@ The packages focuses on the training and usage of models but one may also use it
 helpers:
 
 * `check_tags` Ensure correct OpenNLP Tags.
+* `list_models` List existing models that can be downloaded.
 
 ## Examples
 
