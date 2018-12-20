@@ -70,7 +70,7 @@ tnf_ <- function(model, sentences, output = NULL){
 
   if(!is.null(output)) cmd <- paste(cmd, ">", output)
 
-  try(system2("opennlp", args = cmd))
+  cat(system2("opennlp", args = cmd, stdout = TRUE), sep = "\n", "\n")
 
   if(!is.null(output))
     return(output)
@@ -160,7 +160,7 @@ tnf_train_ <- function(model, lang, data, feature.gen = NULL, name.types = NULL,
   if(!is.null(type)) cmd <- paste(cmd, "-type", type)
 
   # opennlp tokenNameFinderTrainer -model /path/to/model/model.bin -lang en -data /path/to/input.txt
-  try(system2("opennlp", args = cmd))
+  cat(system2("opennlp", args = cmd, stdout = TRUE), sep = "\n", "\n")
   return(model)
 }
 

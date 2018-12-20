@@ -25,7 +25,7 @@ nglm <- function(model, output = NULL){
 
   cmd <- paste("NGramLanguageModel", model)
 
-  try(system2("opennlp", args = cmd))
+  cat(system2("opennlp", args = cmd, stdout = TRUE), sep = "\n", "\n")
 
   if(is.null(output))
     unlink("output", recursive = TRUE) # delete temp once read

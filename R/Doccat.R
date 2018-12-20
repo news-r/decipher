@@ -55,7 +55,7 @@ dc_train <- function(model, lang, data){
 
   unlink("temp", recursive = TRUE)
 
-  try(system2("opennlp", args = cmd))
+  cat(system2("opennlp", args = cmd, stdout = TRUE), sep = "\n", "\n")
 
   return(model)
 }
@@ -120,7 +120,7 @@ dc_ <- function(model, documents, output = NULL){
 
   if(!is.null(output)) cmd <- paste(cmd, ">", output)
 
-  try(system2("opennlp", args = cmd))
+  cat(system2("opennlp", args = cmd, stdout = TRUE), sep = "\n", "\n")
 
   if(!is.null(output))
     return(output)
