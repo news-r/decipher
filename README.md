@@ -1,24 +1,32 @@
-[![Travis build status](https://travis-ci.org/JohnCoene/decipher.svg?branch=master)](https://travis-ci.org/JohnCoene/decipher) [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/JohnCoene/decipher?branch=master&svg=true)](https://ci.appveyor.com/project/JohnCoene/decipher)
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/news-r/decipher.svg?branch=master)](https://travis-ci.org/news-r/decipher) [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+<!-- badges: end -->
 
 # decipher
 
 <img src = "man/figures/logo.png" align = "right" height="201px">
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/decipher)](https://cran.r-project.org/package=decipher)
-
 Tools to _easily_ develop, build and train Natural Language processing models with [openNLP](https://opennlp.apache.org/) CLI tools from R.
 
 See the [website](https://decipher.john-coene.com/) for more details.
 
-* [Installation](#install)
-* [Models](#models)
-* [Functions](#functions)
-* [Examples](#examples)
-    * [Name extraction](#name-extraction)
-    * [Document Classification](#document-classification)
-* [Guide](#guide)
-    * [Name Tagging](#name-tagging)
-    * [Training Data](#training-data)
+- [decipher](#decipher)
+  - [Install](#install)
+    - [Dependencies](#dependencies)
+      - [Mac](#mac)
+      - [Windows](#windows)
+      - [Ubuntu](#ubuntu)
+  - [Models](#models)
+  - [Functions](#functions)
+  - [Examples](#examples)
+    - [Name Extraction](#name-extraction)
+    - [Document Classification](#document-classification)
+  - [Guide](#guide)
+    - [Name Tagging](#name-tagging)
+    - [Tagger](#tagger)
+    - [Training data](#training-data)
+      - [Token name finder](#token-name-finder)
+      - [Document classifier](#document-classifier)
 
 ## Install
 
@@ -45,6 +53,10 @@ This package relies on [openNLP](http://opennlp.apache.org/) CLI tools.
 1. [Download](http://opennlp.apache.org/download.html) binary *AND* source files.
 2. Unzip both the binary and the source folders.
 3. Add `path/to/opennlp/bin` to path and make sure it is in R too with `Sys.getenv("PATH")`.
+
+#### Ubuntu
+
+Instructions can be found [here](http://pi19404.github.io/pyVision/software%20installation/2016/04/09/openNLPInstall/).
 
 You're good to go.
 
