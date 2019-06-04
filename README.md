@@ -56,7 +56,7 @@ This package relies on [openNLP](http://opennlp.apache.org/) CLI tools.
 
 #### Ubuntu
 
-Instructions can be found [here](http://pi19404.github.io/pyVision/software%20installation/2016/04/09/openNLPInstall/).
+Instructions can be found [here](https://opennlp.apache.org/building.html).
 
 You're good to go.
 
