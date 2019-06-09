@@ -1,7 +1,7 @@
 Package: decipher
 Title: Natural Language Processing tools for R
 Version: 1.0.0
-Authors@R: person("John", "Coene", email = "jcoenep@gmail.com", role = c("aut", "cre"))
+Authors@R: c(person("John", "Coene", email = "jcoenep@gmail.com", role = c("aut", "cre")), person(family = "news-r", role = "cph"))
 Description: Tools to develop, build and train Natural Language processing models.
 License: MIT + file LICENSE
 Encoding: UTF-8
