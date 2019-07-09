@@ -101,7 +101,7 @@
   </a>
 </li>
         <li>
-  <a href="https://github.com/JohnCoene/decipher">
+  <a href="https://github.com/news-r/decipher">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -131,6 +131,317 @@
 
     
     
+<div id="models" class="section level2">
+<h2 class="hasAnchor">
+<a href="#models" class="anchor"></a>Models</h2>
+<p>You can build your own models or, of course use pre-trained ones, simple download any of the models available.</p>
+<pre class="sourceCode r" id="cb1"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">knitr<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(<span class="kw"><a href="../reference/dl.html">list_models</a></span>())</a></code></pre>
+<table class="table">
+<thead><tr class="header">
+<th align="left">Language</th>
+<th align="left">Component</th>
+<th align="left">Description</th>
+<th align="left">Download</th>
+<th align="left">Link</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">da</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on conllx ddt data.</td>
+<td align="left">da-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/da-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/da-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">da</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on conllx ddt data.</td>
+<td align="left">da-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/da-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/da-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">da</td>
+<td align="left">Part of Speech Tagger</td>
+<td align="left">Maxent model trained on conllx ddt data.</td>
+<td align="left">da-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/da-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/da-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">da</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model trained on conllx ddt data.</td>
+<td align="left">da-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/da-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/da-pos-perceptron.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">de</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on tiger data.</td>
+<td align="left">de-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/de-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/de-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">de</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on tiger data.</td>
+<td align="left">de-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/de-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/de-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">de</td>
+<td align="left">POS Tagger</td>
+<td align="left">Maxent model trained on tiger corpus.</td>
+<td align="left">de-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/de-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/de-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">de</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model trained on tiger corpus.</td>
+<td align="left">de-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/de-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/de-pos-perceptron.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on opennlp training data.</td>
+<td align="left">en-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on opennlp training data.</td>
+<td align="left">en-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">POS Tagger</td>
+<td align="left">Maxent model with tag dictionary.</td>
+<td align="left">en-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model with tag dictionary.</td>
+<td align="left">en-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-pos-perceptron.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Date name finder model.</td>
+<td align="left">en-ner-date.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-date.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-date.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Location name finder model.</td>
+<td align="left">en-ner-location.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-location.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-location.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Money name finder model.</td>
+<td align="left">en-ner-money.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-money.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-money.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Organization name finder model.</td>
+<td align="left">en-ner-organization.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-organization.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-organization.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Percentage name finder model.</td>
+<td align="left">en-ner-percentage.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-percentage.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-percentage.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Person name finder model.</td>
+<td align="left">en-ner-person.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-person.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-person.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Time name finder model.</td>
+<td align="left">en-ner-time.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-time.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-time.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Chunker</td>
+<td align="left">Trained on conll2000 shared task data.</td>
+<td align="left">en-chunker.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-chunker.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-chunker.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Parser</td>
+<td align="left"></td>
+<td align="left">en-parser-chunking.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-parser-chunking.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-parser-chunking.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Coreference</td>
+<td align="left"></td>
+<td align="left">coref</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/coref" class="uri">http://opennlp.sourceforge.net/models-1.5/coref</a></td>
+</tr>
+<tr class="odd">
+<td align="left">es</td>
+<td align="left">Name Finder</td>
+<td align="left">Person name finder model. Trained on conll02 shared task data.</td>
+<td align="left">es-ner-person.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/es-ner-person.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/es-ner-person.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">es</td>
+<td align="left">Name Finder</td>
+<td align="left">Organization name finder model. Trained on conll02 shared task data.</td>
+<td align="left">es-ner-organization.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/es-ner-organization.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/es-ner-organization.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">es</td>
+<td align="left">Name Finder</td>
+<td align="left">Location name finder model. Trained on conll02 shared task data.</td>
+<td align="left">es-ner-location.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/es-ner-location.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/es-ner-location.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">es</td>
+<td align="left">Name Finder</td>
+<td align="left">Misc name finder model. Trained on conll02 shared task data.</td>
+<td align="left">es-ner-misc.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/es-ner-misc.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/es-ner-misc.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">nl</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on conllx alpino data.</td>
+<td align="left">nl-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">nl</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on conllx alpino data.</td>
+<td align="left">nl-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">nl</td>
+<td align="left">Name Finder</td>
+<td align="left">Person name finder model. Trained on conll02 shared task data.</td>
+<td align="left">nl-ner-person.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-ner-person.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-ner-person.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">nl</td>
+<td align="left">Name Finder</td>
+<td align="left">Organization name finder model. Trained on conll02 shared task data.</td>
+<td align="left">nl-ner-organization.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-ner-organization.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-ner-organization.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">nl</td>
+<td align="left">Name Finder</td>
+<td align="left">Location name finder model. Trained on conll02 shared task data.</td>
+<td align="left">nl-ner-location.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-ner-location.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-ner-location.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">nl</td>
+<td align="left">Name Finder</td>
+<td align="left">Misc name finder model. Trained on conll02 shared task data.</td>
+<td align="left">nl-ner-misc.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-ner-misc.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-ner-misc.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">nl</td>
+<td align="left">POS Tagger</td>
+<td align="left">Maxent model trained on conllx alpino data.</td>
+<td align="left">nl-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">nl</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model trained on conllx alpino data.</td>
+<td align="left">nl-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-pos-perceptron.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">pt</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on conllx bosque data.</td>
+<td align="left">pt-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/pt-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/pt-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">pt</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on conllx bosque data.</td>
+<td align="left">pt-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/pt-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/pt-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">pt</td>
+<td align="left">POS Tagger</td>
+<td align="left">Maxent model trained on conllx bosque data.</td>
+<td align="left">pt-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/pt-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/pt-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">pt</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model trained on conllx bosque data.</td>
+<td align="left">pt-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/pt-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/pt-pos-perceptron.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">se</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on conllx talbanken05 data.</td>
+<td align="left">se-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/se-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/se-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">se</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on conllx talbanken05 data.</td>
+<td align="left">se-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/se-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/se-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">se</td>
+<td align="left">POS Tagger</td>
+<td align="left">Maxent model trained on conllx talbanken05 data.</td>
+<td align="left">se-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/se-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/se-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">se</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model trained on conllx talbanken05 data.</td>
+<td align="left">se-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/se-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/se-pos-perceptron.bin</a></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="name-tagging" class="section level2">
 <h2 class="hasAnchor">
 <a href="#name-tagging" class="anchor"></a>Name Tagging</h2>
@@ -148,20 +459,20 @@
 <h2 class="hasAnchor">
 <a href="#tagger" class="anchor"></a>Tagger</h2>
 <p>A <em>currently</em> basic tagger to easily tag training data to train a token name finder (<code>tnf_train</code>).</p>
-<pre class="sourceCode r" id="cb1"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># Manually tagged</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">manual &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="st">"This organisation is called the &lt;START:wef&gt; World Economic Forum &lt;END&gt;"</span>,</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">              <span class="st">"It is often referred to as &lt;START:wef&gt; Davos &lt;END&gt; or the &lt;START:wef&gt; WEF &lt;END&gt; ."</span>)</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co"># Create untagged string              </span></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6">data &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="st">"This organisation is called the World Economic Forum"</span>,</a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">  <span class="st">"It is often referred to as Davos or the WEF."</span>)</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co"># tag string</span></a>
-<a class="sourceLine" id="cb1-10" data-line-number="10">auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(data, <span class="st">"WEF"</span>, <span class="st">"wef"</span>)</a>
-<a class="sourceLine" id="cb1-11" data-line-number="11">auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(auto, <span class="st">"World Economic Forum"</span>, <span class="st">"wef"</span>)</a>
-<a class="sourceLine" id="cb1-12" data-line-number="12">auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(auto, <span class="st">"Davos"</span>, <span class="st">"wef"</span>)</a>
-<a class="sourceLine" id="cb1-13" data-line-number="13"></a>
-<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="kw"><a href="https://rdrr.io/r/base/identical.html">identical</a></span>(manual, auto)</a></code></pre>
+<pre class="sourceCode r" id="cb2"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Manually tagged</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">manual &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="st">"This organisation is called the &lt;START:wef&gt; World Economic Forum &lt;END&gt;"</span>,</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">              <span class="st">"It is often referred to as &lt;START:wef&gt; Davos &lt;END&gt; or the &lt;START:wef&gt; WEF &lt;END&gt; ."</span>)</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co"># Create untagged string              </span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">data &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="st">"This organisation is called the World Economic Forum"</span>,</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">  <span class="st">"It is often referred to as Davos or the WEF."</span>)</a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co"># tag string</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10">auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(data, <span class="st">"WEF"</span>, <span class="st">"wef"</span>)</a>
+<a class="sourceLine" id="cb2-11" data-line-number="11">auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(auto, <span class="st">"World Economic Forum"</span>, <span class="st">"wef"</span>)</a>
+<a class="sourceLine" id="cb2-12" data-line-number="12">auto &lt;-<span class="st"> </span><span class="kw">tag_docs</span>(auto, <span class="st">"Davos"</span>, <span class="st">"wef"</span>)</a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="kw"><a href="https://rdrr.io/r/base/identical.html">identical</a></span>(manual, auto)</a></code></pre>
 </div>
 <div id="training-data" class="section level2">
 <h2 class="hasAnchor">
@@ -176,268 +487,268 @@
 <h3 class="hasAnchor">
 <a href="#document-classifier" class="anchor"></a>Document classifier</h3>
 <p>In order to train a decent document classifier you are going to need 5’000 classified documents as training data with a <em>bare</em> minimum of 5 documents per category.</p>
-<pre class="sourceCode r" id="cb2"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(decipher)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co"># get working directory</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># need to pass full path</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5">wd &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>()</a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7">data &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span>(</a>
-<a class="sourceLine" id="cb2-8" data-line-number="8">  <span class="dt">class =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Sport"</span>, <span class="st">"Business"</span>, <span class="st">"Sport"</span>, <span class="st">"Sport"</span>, <span class="st">"Business"</span>, <span class="st">"Politics"</span>, <span class="st">"Politics"</span>, <span class="st">"Politics"</span>),</a>
-<a class="sourceLine" id="cb2-9" data-line-number="9">  <span class="dt">doc =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Football, tennis, golf and, bowling and, score."</span>,</a>
-<a class="sourceLine" id="cb2-10" data-line-number="10">          <span class="st">"Marketing, Finance, Legal and, Administration."</span>,</a>
-<a class="sourceLine" id="cb2-11" data-line-number="11">          <span class="st">"Tennis, Ski, Golf and, gym and, match."</span>,</a>
-<a class="sourceLine" id="cb2-12" data-line-number="12">          <span class="st">"football, climbing and gym."</span>,</a>
-<a class="sourceLine" id="cb2-13" data-line-number="13">          <span class="st">"Marketing, Business, Money and, Management."</span>,</a>
-<a class="sourceLine" id="cb2-14" data-line-number="14">          <span class="st">"This document talks politics and Donal Trump."</span>,</a>
-<a class="sourceLine" id="cb2-15" data-line-number="15">          <span class="st">"Donald Trump is the President of the US, sadly."</span>,</a>
-<a class="sourceLine" id="cb2-16" data-line-number="16">          <span class="st">"Article about politics and president Trump."</span>)</a>
-<a class="sourceLine" id="cb2-17" data-line-number="17">)</a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"></a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co"># Error not enough data</span></a>
-<a class="sourceLine" id="cb2-20" data-line-number="20">model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_train.html">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)</a>
-<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt; Indexing events with TwoPass using cutoff of 5</span></a>
-<a class="sourceLine" id="cb2-22" data-line-number="22"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb2-23" data-line-number="23"><span class="co">#&gt;  Computing event counts...  done. 8 events</span></a>
-<a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co">#&gt;  Indexing...  Dropped event Sport:[bow=football,, bow=climbing, bow=and, bow=gym.]</span></a>
-<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt; Dropped event Politics:[bow=This, bow=document, bow=talks, bow=politics, bow=and, bow=Donal, bow=Trump.]</span></a>
-<a class="sourceLine" id="cb2-26" data-line-number="26"><span class="co">#&gt; Dropped event Politics:[bow=Donald, bow=Trump, bow=is, bow=the, bow=President, bow=of, bow=the, bow=US,, bow=sadly.]</span></a>
-<a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt; Dropped event Politics:[bow=Article, bow=about, bow=politics, bow=and, bow=president, bow=Trump.]</span></a>
-<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt; done.</span></a>
-<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt; Sorting and merging events... done. Reduced 4 events to 2.</span></a>
-<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt; Done indexing in 0,03 s.</span></a>
-<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt; Incorporating indexed data for training...  </span></a>
-<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt; done.</span></a>
-<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  Number of Event Tokens: 2</span></a>
-<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;      Number of Outcomes: 3</span></a>
-<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;    Number of Predicates: 1</span></a>
-<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt; ...done.</span></a>
-<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt; Computing model parameters ...</span></a>
-<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt; Performing 100 iterations.</span></a>
-<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt;   1:  ... loglikelihood=-4.394449154672439   0.5</span></a>
-<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt;   2:  ... loglikelihood=-3.8421887157189216  0.5</span></a>
-<a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt;   3:  ... loglikelihood=-3.6154430125057786  0.5</span></a>
-<a class="sourceLine" id="cb2-42" data-line-number="42"><span class="co">#&gt;   4:  ... loglikelihood=-3.465596155326559   0.5</span></a>
-<a class="sourceLine" id="cb2-43" data-line-number="43"><span class="co">#&gt;   5:  ... loglikelihood=-3.357105109210417   0.5</span></a>
-<a class="sourceLine" id="cb2-44" data-line-number="44"><span class="co">#&gt;   6:  ... loglikelihood=-3.274527687900086   0.5</span></a>
-<a class="sourceLine" id="cb2-45" data-line-number="45"><span class="co">#&gt;   7:  ... loglikelihood=-3.209347253794932   0.5</span></a>
-<a class="sourceLine" id="cb2-46" data-line-number="46"><span class="co">#&gt;   8:  ... loglikelihood=-3.1564421346077856  0.5</span></a>
-<a class="sourceLine" id="cb2-47" data-line-number="47"><span class="co">#&gt;   9:  ... loglikelihood=-3.1125409493265437  0.5</span></a>
-<a class="sourceLine" id="cb2-48" data-line-number="48"><span class="co">#&gt;  10:  ... loglikelihood=-3.075452811722954   0.5</span></a>
-<a class="sourceLine" id="cb2-49" data-line-number="49"><span class="co">#&gt;  11:  ... loglikelihood=-3.043653058837632   0.5</span></a>
-<a class="sourceLine" id="cb2-50" data-line-number="50"><span class="co">#&gt;  12:  ... loglikelihood=-3.0160464644888547  0.5</span></a>
-<a class="sourceLine" id="cb2-51" data-line-number="51"><span class="co">#&gt;  13:  ... loglikelihood=-2.991825031705967   0.5</span></a>
-<a class="sourceLine" id="cb2-52" data-line-number="52"><span class="co">#&gt;  14:  ... loglikelihood=-2.970378973443104   0.5</span></a>
-<a class="sourceLine" id="cb2-53" data-line-number="53"><span class="co">#&gt;  15:  ... loglikelihood=-2.951238991461673   0.5</span></a>
-<a class="sourceLine" id="cb2-54" data-line-number="54"><span class="co">#&gt;  16:  ... loglikelihood=-2.934037698521228   0.5</span></a>
-<a class="sourceLine" id="cb2-55" data-line-number="55"><span class="co">#&gt;  17:  ... loglikelihood=-2.918483147064785   0.5</span></a>
-<a class="sourceLine" id="cb2-56" data-line-number="56"><span class="co">#&gt;  18:  ... loglikelihood=-2.904340240566901   0.5</span></a>
-<a class="sourceLine" id="cb2-57" data-line-number="57"><span class="co">#&gt;  19:  ... loglikelihood=-2.8914174106886295  0.5</span></a>
-<a class="sourceLine" id="cb2-58" data-line-number="58"><span class="co">#&gt;  20:  ... loglikelihood=-2.879556893058896   0.5</span></a>
-<a class="sourceLine" id="cb2-59" data-line-number="59"><span class="co">#&gt;  21:  ... loglikelihood=-2.868627512822131   0.5</span></a>
-<a class="sourceLine" id="cb2-60" data-line-number="60"><span class="co">#&gt;  22:  ... loglikelihood=-2.858519252812046   0.5</span></a>
-<a class="sourceLine" id="cb2-61" data-line-number="61"><span class="co">#&gt;  23:  ... loglikelihood=-2.8491391089469005  0.5</span></a>
-<a class="sourceLine" id="cb2-62" data-line-number="62"><span class="co">#&gt;  24:  ... loglikelihood=-2.8404078891499767  0.5</span></a>
-<a class="sourceLine" id="cb2-63" data-line-number="63"><span class="co">#&gt;  25:  ... loglikelihood=-2.8322577133850033  0.5</span></a>
-<a class="sourceLine" id="cb2-64" data-line-number="64"><span class="co">#&gt;  26:  ... loglikelihood=-2.8246300412382315  0.5</span></a>
-<a class="sourceLine" id="cb2-65" data-line-number="65"><span class="co">#&gt;  27:  ... loglikelihood=-2.8174741010412983  0.5</span></a>
-<a class="sourceLine" id="cb2-66" data-line-number="66"><span class="co">#&gt;  28:  ... loglikelihood=-2.8107456278868233  0.5</span></a>
-<a class="sourceLine" id="cb2-67" data-line-number="67"><span class="co">#&gt;  29:  ... loglikelihood=-2.8044058416105955  0.5</span></a>
-<a class="sourceLine" id="cb2-68" data-line-number="68"><span class="co">#&gt;  30:  ... loglikelihood=-2.798420612901019   0.5</span></a>
-<a class="sourceLine" id="cb2-69" data-line-number="69"><span class="co">#&gt;  31:  ... loglikelihood=-2.7927597781512117  0.5</span></a>
-<a class="sourceLine" id="cb2-70" data-line-number="70"><span class="co">#&gt;  32:  ... loglikelihood=-2.787396572848336   0.5</span></a>
-<a class="sourceLine" id="cb2-71" data-line-number="71"><span class="co">#&gt;  33:  ... loglikelihood=-2.7823071601298786  0.5</span></a>
-<a class="sourceLine" id="cb2-72" data-line-number="72"><span class="co">#&gt;  34:  ... loglikelihood=-2.777470236275584   0.5</span></a>
-<a class="sourceLine" id="cb2-73" data-line-number="73"><span class="co">#&gt;  35:  ... loglikelihood=-2.7728666988024067  0.5</span></a>
-<a class="sourceLine" id="cb2-74" data-line-number="74"><span class="co">#&gt;  36:  ... loglikelihood=-2.7684793658127664  0.5</span></a>
-<a class="sourceLine" id="cb2-75" data-line-number="75"><span class="co">#&gt;  37:  ... loglikelihood=-2.7642927375468878  0.5</span></a>
-<a class="sourceLine" id="cb2-76" data-line-number="76"><span class="co">#&gt;  38:  ... loglikelihood=-2.760292792877533   0.5</span></a>
-<a class="sourceLine" id="cb2-77" data-line-number="77"><span class="co">#&gt;  39:  ... loglikelihood=-2.7564668148843223  0.5</span></a>
-<a class="sourceLine" id="cb2-78" data-line-number="78"><span class="co">#&gt;  40:  ... loglikelihood=-2.7528032407468404  0.5</span></a>
-<a class="sourceLine" id="cb2-79" data-line-number="79"><span class="co">#&gt;  41:  ... loglikelihood=-2.74929153206948    0.5</span></a>
-<a class="sourceLine" id="cb2-80" data-line-number="80"><span class="co">#&gt;  42:  ... loglikelihood=-2.7459220624478426  0.5</span></a>
-<a class="sourceLine" id="cb2-81" data-line-number="81"><span class="co">#&gt;  43:  ... loglikelihood=-2.742686019645536   0.5</span></a>
-<a class="sourceLine" id="cb2-82" data-line-number="82"><span class="co">#&gt;  44:  ... loglikelihood=-2.7395753202010997  0.5</span></a>
-<a class="sourceLine" id="cb2-83" data-line-number="83"><span class="co">#&gt;  45:  ... loglikelihood=-2.7365825346502968  0.5</span></a>
-<a class="sourceLine" id="cb2-84" data-line-number="84"><span class="co">#&gt;  46:  ... loglikelihood=-2.7337008218468335  0.5</span></a>
-<a class="sourceLine" id="cb2-85" data-line-number="85"><span class="co">#&gt;  47:  ... loglikelihood=-2.730923871108338   0.5</span></a>
-<a class="sourceLine" id="cb2-86" data-line-number="86"><span class="co">#&gt;  48:  ... loglikelihood=-2.72824585111486    0.5</span></a>
-<a class="sourceLine" id="cb2-87" data-line-number="87"><span class="co">#&gt;  49:  ... loglikelihood=-2.7256613646526846  0.5</span></a>
-<a class="sourceLine" id="cb2-88" data-line-number="88"><span class="co">#&gt;  50:  ... loglikelihood=-2.723165408433481   0.5</span></a>
-<a class="sourceLine" id="cb2-89" data-line-number="89"><span class="co">#&gt;  51:  ... loglikelihood=-2.720753337333093   0.5</span></a>
-<a class="sourceLine" id="cb2-90" data-line-number="90"><span class="co">#&gt;  52:  ... loglikelihood=-2.7184208324896924  0.5</span></a>
-<a class="sourceLine" id="cb2-91" data-line-number="91"><span class="co">#&gt;  53:  ... loglikelihood=-2.7161638727811193  0.5</span></a>
-<a class="sourceLine" id="cb2-92" data-line-number="92"><span class="co">#&gt;  54:  ... loglikelihood=-2.7139787092686083  0.5</span></a>
-<a class="sourceLine" id="cb2-93" data-line-number="93"><span class="co">#&gt;  55:  ... loglikelihood=-2.711861842250955   0.5</span></a>
-<a class="sourceLine" id="cb2-94" data-line-number="94"><span class="co">#&gt;  56:  ... loglikelihood=-2.709810000621419   0.5</span></a>
-<a class="sourceLine" id="cb2-95" data-line-number="95"><span class="co">#&gt;  57:  ... loglikelihood=-2.7078201232605617  0.5</span></a>
-<a class="sourceLine" id="cb2-96" data-line-number="96"><span class="co">#&gt;  58:  ... loglikelihood=-2.7058893422331587  0.5</span></a>
-<a class="sourceLine" id="cb2-97" data-line-number="97"><span class="co">#&gt;  59:  ... loglikelihood=-2.7040149675871263  0.5</span></a>
-<a class="sourceLine" id="cb2-98" data-line-number="98"><span class="co">#&gt;  60:  ... loglikelihood=-2.702194473577981   0.5</span></a>
-<a class="sourceLine" id="cb2-99" data-line-number="99"><span class="co">#&gt;  61:  ... loglikelihood=-2.7004254861643284  0.5</span></a>
-<a class="sourceLine" id="cb2-100" data-line-number="100"><span class="co">#&gt;  62:  ... loglikelihood=-2.6987057716388008  0.5</span></a>
-<a class="sourceLine" id="cb2-101" data-line-number="101"><span class="co">#&gt;  63:  ... loglikelihood=-2.6970332262752077  0.5</span></a>
-<a class="sourceLine" id="cb2-102" data-line-number="102"><span class="co">#&gt;  64:  ... loglikelihood=-2.695405866886859   0.5</span></a>
-<a class="sourceLine" id="cb2-103" data-line-number="103"><span class="co">#&gt;  65:  ... loglikelihood=-2.6938218222032515  0.5</span></a>
-<a class="sourceLine" id="cb2-104" data-line-number="104"><span class="co">#&gt;  66:  ... loglikelihood=-2.692279324983063   0.5</span></a>
-<a class="sourceLine" id="cb2-105" data-line-number="105"><span class="co">#&gt;  67:  ... loglikelihood=-2.6907767047906637  0.5</span></a>
-<a class="sourceLine" id="cb2-106" data-line-number="106"><span class="co">#&gt;  68:  ... loglikelihood=-2.68931238137153    0.5</span></a>
-<a class="sourceLine" id="cb2-107" data-line-number="107"><span class="co">#&gt;  69:  ... loglikelihood=-2.6878848585690607  0.5</span></a>
-<a class="sourceLine" id="cb2-108" data-line-number="108"><span class="co">#&gt;  70:  ... loglikelihood=-2.6864927187315444  0.5</span></a>
-<a class="sourceLine" id="cb2-109" data-line-number="109"><span class="co">#&gt;  71:  ... loglikelihood=-2.6851346175635373  0.5</span></a>
-<a class="sourceLine" id="cb2-110" data-line-number="110"><span class="co">#&gt;  72:  ... loglikelihood=-2.6838092793807213  0.5</span></a>
-<a class="sourceLine" id="cb2-111" data-line-number="111"><span class="co">#&gt;  73:  ... loglikelihood=-2.682515492731618   0.5</span></a>
-<a class="sourceLine" id="cb2-112" data-line-number="112"><span class="co">#&gt;  74:  ... loglikelihood=-2.681252106353268   0.5</span></a>
-<a class="sourceLine" id="cb2-113" data-line-number="113"><span class="co">#&gt;  75:  ... loglikelihood=-2.6800180254313566  0.5</span></a>
-<a class="sourceLine" id="cb2-114" data-line-number="114"><span class="co">#&gt;  76:  ... loglikelihood=-2.6788122081382024  0.5</span></a>
-<a class="sourceLine" id="cb2-115" data-line-number="115"><span class="co">#&gt;  77:  ... loglikelihood=-2.6776336624246775  0.5</span></a>
-<a class="sourceLine" id="cb2-116" data-line-number="116"><span class="co">#&gt;  78:  ... loglikelihood=-2.6764814430444503  0.5</span></a>
-<a class="sourceLine" id="cb2-117" data-line-number="117"><span class="co">#&gt;  79:  ... loglikelihood=-2.6753546487910365  0.5</span></a>
-<a class="sourceLine" id="cb2-118" data-line-number="118"><span class="co">#&gt;  80:  ... loglikelihood=-2.6742524199299984  0.5</span></a>
-<a class="sourceLine" id="cb2-119" data-line-number="119"><span class="co">#&gt;  81:  ... loglikelihood=-2.673173935810302   0.5</span></a>
-<a class="sourceLine" id="cb2-120" data-line-number="120"><span class="co">#&gt;  82:  ... loglikelihood=-2.672118412640326   0.5</span></a>
-<a class="sourceLine" id="cb2-121" data-line-number="121"><span class="co">#&gt;  83:  ... loglikelihood=-2.6710851014153434  0.5</span></a>
-<a class="sourceLine" id="cb2-122" data-line-number="122"><span class="co">#&gt;  84:  ... loglikelihood=-2.670073285984502   0.5</span></a>
-<a class="sourceLine" id="cb2-123" data-line-number="123"><span class="co">#&gt;  85:  ... loglikelihood=-2.669082281246406   0.5</span></a>
-<a class="sourceLine" id="cb2-124" data-line-number="124"><span class="co">#&gt;  86:  ... loglikelihood=-2.6681114314633576  0.5</span></a>
-<a class="sourceLine" id="cb2-125" data-line-number="125"><span class="co">#&gt;  87:  ... loglikelihood=-2.6671601086852044  0.5</span></a>
-<a class="sourceLine" id="cb2-126" data-line-number="126"><span class="co">#&gt;  88:  ... loglikelihood=-2.666227711274505   0.5</span></a>
-<a class="sourceLine" id="cb2-127" data-line-number="127"><span class="co">#&gt;  89:  ... loglikelihood=-2.6653136625254596  0.5</span></a>
-<a class="sourceLine" id="cb2-128" data-line-number="128"><span class="co">#&gt;  90:  ... loglikelihood=-2.6644174093696673  0.5</span></a>
-<a class="sourceLine" id="cb2-129" data-line-number="129"><span class="co">#&gt;  91:  ... loglikelihood=-2.663538421162381   0.5</span></a>
-<a class="sourceLine" id="cb2-130" data-line-number="130"><span class="co">#&gt;  92:  ... loglikelihood=-2.6626761885434305  0.5</span></a>
-<a class="sourceLine" id="cb2-131" data-line-number="131"><span class="co">#&gt;  93:  ... loglikelihood=-2.6618302223674837  0.5</span></a>
-<a class="sourceLine" id="cb2-132" data-line-number="132"><span class="co">#&gt;  94:  ... loglikelihood=-2.661000052698734   0.5</span></a>
-<a class="sourceLine" id="cb2-133" data-line-number="133"><span class="co">#&gt;  95:  ... loglikelihood=-2.6601852278655103  0.5</span></a>
-<a class="sourceLine" id="cb2-134" data-line-number="134"><span class="co">#&gt;  96:  ... loglikelihood=-2.6593853135706516  0.5</span></a>
-<a class="sourceLine" id="cb2-135" data-line-number="135"><span class="co">#&gt;  97:  ... loglikelihood=-2.6585998920538243  0.5</span></a>
-<a class="sourceLine" id="cb2-136" data-line-number="136"><span class="co">#&gt;  98:  ... loglikelihood=-2.657828561302261   0.5</span></a>
-<a class="sourceLine" id="cb2-137" data-line-number="137"><span class="co">#&gt;  99:  ... loglikelihood=-2.657070934306653   0.5</span></a>
-<a class="sourceLine" id="cb2-138" data-line-number="138"><span class="co">#&gt; 100:  ... loglikelihood=-2.656326638359206   0.5</span></a>
-<a class="sourceLine" id="cb2-139" data-line-number="139"></a>
-<a class="sourceLine" id="cb2-140" data-line-number="140"><span class="kw"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="dv">15</span>)</a>
-<a class="sourceLine" id="cb2-141" data-line-number="141"></a>
-<a class="sourceLine" id="cb2-142" data-line-number="142"><span class="co"># repeat data 50 times</span></a>
-<a class="sourceLine" id="cb2-143" data-line-number="143"><span class="co"># Obviously do not do that in te real world</span></a>
-<a class="sourceLine" id="cb2-144" data-line-number="144">data &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/do.call.html">do.call</a></span>(<span class="st">"rbind"</span>, <span class="kw"><a href="https://rdrr.io/r/base/lapply.html">replicate</a></span>(<span class="dv">50</span>, data[<span class="kw"><a href="https://rdrr.io/r/base/sample.html">sample</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(data), <span class="dv">4</span>),],</a>
-<a class="sourceLine" id="cb2-145" data-line-number="145">                                   <span class="dt">simplify =</span> <span class="ot">FALSE</span>))</a>
-<a class="sourceLine" id="cb2-146" data-line-number="146"></a>
-<a class="sourceLine" id="cb2-147" data-line-number="147"><span class="co"># train model</span></a>
-<a class="sourceLine" id="cb2-148" data-line-number="148">model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_train.html">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)</a>
-<a class="sourceLine" id="cb2-149" data-line-number="149"><span class="co">#&gt; Indexing events with TwoPass using cutoff of 5</span></a>
-<a class="sourceLine" id="cb2-150" data-line-number="150"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb2-151" data-line-number="151"><span class="co">#&gt;  Computing event counts...  done. 200 events</span></a>
-<a class="sourceLine" id="cb2-152" data-line-number="152"><span class="co">#&gt;  Indexing...  done.</span></a>
-<a class="sourceLine" id="cb2-153" data-line-number="153"><span class="co">#&gt; Sorting and merging events... done. Reduced 200 events to 8.</span></a>
-<a class="sourceLine" id="cb2-154" data-line-number="154"><span class="co">#&gt; Done indexing in 0,06 s.</span></a>
-<a class="sourceLine" id="cb2-155" data-line-number="155"><span class="co">#&gt; Incorporating indexed data for training...  </span></a>
-<a class="sourceLine" id="cb2-156" data-line-number="156"><span class="co">#&gt; done.</span></a>
-<a class="sourceLine" id="cb2-157" data-line-number="157"><span class="co">#&gt;  Number of Event Tokens: 8</span></a>
-<a class="sourceLine" id="cb2-158" data-line-number="158"><span class="co">#&gt;      Number of Outcomes: 3</span></a>
-<a class="sourceLine" id="cb2-159" data-line-number="159"><span class="co">#&gt;    Number of Predicates: 39</span></a>
-<a class="sourceLine" id="cb2-160" data-line-number="160"><span class="co">#&gt; ...done.</span></a>
-<a class="sourceLine" id="cb2-161" data-line-number="161"><span class="co">#&gt; Computing model parameters ...</span></a>
-<a class="sourceLine" id="cb2-162" data-line-number="162"><span class="co">#&gt; Performing 100 iterations.</span></a>
-<a class="sourceLine" id="cb2-163" data-line-number="163"><span class="co">#&gt;   1:  ... loglikelihood=-219.72245773362198  0.34</span></a>
-<a class="sourceLine" id="cb2-164" data-line-number="164"><span class="co">#&gt;   2:  ... loglikelihood=-143.04454024313557  1.0</span></a>
-<a class="sourceLine" id="cb2-165" data-line-number="165"><span class="co">#&gt;   3:  ... loglikelihood=-106.35685270477788  1.0</span></a>
-<a class="sourceLine" id="cb2-166" data-line-number="166"><span class="co">#&gt;   4:  ... loglikelihood=-84.41977717554602   1.0</span></a>
-<a class="sourceLine" id="cb2-167" data-line-number="167"><span class="co">#&gt;   5:  ... loglikelihood=-69.80761103215654   1.0</span></a>
-<a class="sourceLine" id="cb2-168" data-line-number="168"><span class="co">#&gt;   6:  ... loglikelihood=-59.396232720257956  1.0</span></a>
-<a class="sourceLine" id="cb2-169" data-line-number="169"><span class="co">#&gt;   7:  ... loglikelihood=-51.61870599974968   1.0</span></a>
-<a class="sourceLine" id="cb2-170" data-line-number="170"><span class="co">#&gt;   8:  ... loglikelihood=-45.598874833743785  1.0</span></a>
-<a class="sourceLine" id="cb2-171" data-line-number="171"><span class="co">#&gt;   9:  ... loglikelihood=-40.808332834406144  1.0</span></a>
-<a class="sourceLine" id="cb2-172" data-line-number="172"><span class="co">#&gt;  10:  ... loglikelihood=-36.90980255410413   1.0</span></a>
-<a class="sourceLine" id="cb2-173" data-line-number="173"><span class="co">#&gt;  11:  ... loglikelihood=-33.67817914259461   1.0</span></a>
-<a class="sourceLine" id="cb2-174" data-line-number="174"><span class="co">#&gt;  12:  ... loglikelihood=-30.957674451007634  1.0</span></a>
-<a class="sourceLine" id="cb2-175" data-line-number="175"><span class="co">#&gt;  13:  ... loglikelihood=-28.637168334275774  1.0</span></a>
-<a class="sourceLine" id="cb2-176" data-line-number="176"><span class="co">#&gt;  14:  ... loglikelihood=-26.6353485617988    1.0</span></a>
-<a class="sourceLine" id="cb2-177" data-line-number="177"><span class="co">#&gt;  15:  ... loglikelihood=-24.89139340558947   1.0</span></a>
-<a class="sourceLine" id="cb2-178" data-line-number="178"><span class="co">#&gt;  16:  ... loglikelihood=-23.358931327320743  1.0</span></a>
-<a class="sourceLine" id="cb2-179" data-line-number="179"><span class="co">#&gt;  17:  ... loglikelihood=-22.00201078368204   1.0</span></a>
-<a class="sourceLine" id="cb2-180" data-line-number="180"><span class="co">#&gt;  18:  ... loglikelihood=-20.79234276779054   1.0</span></a>
-<a class="sourceLine" id="cb2-181" data-line-number="181"><span class="co">#&gt;  19:  ... loglikelihood=-19.707371876561446  1.0</span></a>
-<a class="sourceLine" id="cb2-182" data-line-number="182"><span class="co">#&gt;  20:  ... loglikelihood=-18.728900110672495  1.0</span></a>
-<a class="sourceLine" id="cb2-183" data-line-number="183"><span class="co">#&gt;  21:  ... loglikelihood=-17.842087550842663  1.0</span></a>
-<a class="sourceLine" id="cb2-184" data-line-number="184"><span class="co">#&gt;  22:  ... loglikelihood=-17.034715080902846  1.0</span></a>
-<a class="sourceLine" id="cb2-185" data-line-number="185"><span class="co">#&gt;  23:  ... loglikelihood=-16.296632559819688  1.0</span></a>
-<a class="sourceLine" id="cb2-186" data-line-number="186"><span class="co">#&gt;  24:  ... loglikelihood=-15.619340352995273  1.0</span></a>
-<a class="sourceLine" id="cb2-187" data-line-number="187"><span class="co">#&gt;  25:  ... loglikelihood=-14.995668174013677  1.0</span></a>
-<a class="sourceLine" id="cb2-188" data-line-number="188"><span class="co">#&gt;  26:  ... loglikelihood=-14.419525887266673  1.0</span></a>
-<a class="sourceLine" id="cb2-189" data-line-number="189"><span class="co">#&gt;  27:  ... loglikelihood=-13.885708182635376  1.0</span></a>
-<a class="sourceLine" id="cb2-190" data-line-number="190"><span class="co">#&gt;  28:  ... loglikelihood=-13.38974003939786   1.0</span></a>
-<a class="sourceLine" id="cb2-191" data-line-number="191"><span class="co">#&gt;  29:  ... loglikelihood=-12.927753398706184  1.0</span></a>
-<a class="sourceLine" id="cb2-192" data-line-number="192"><span class="co">#&gt;  30:  ... loglikelihood=-12.496387947353444  1.0</span></a>
-<a class="sourceLine" id="cb2-193" data-line-number="193"><span class="co">#&gt;  31:  ... loglikelihood=-12.09271069865896   1.0</span></a>
-<a class="sourceLine" id="cb2-194" data-line-number="194"><span class="co">#&gt;  32:  ... loglikelihood=-11.714150351574547  1.0</span></a>
-<a class="sourceLine" id="cb2-195" data-line-number="195"><span class="co">#&gt;  33:  ... loglikelihood=-11.358443360270861  1.0</span></a>
-<a class="sourceLine" id="cb2-196" data-line-number="196"><span class="co">#&gt;  34:  ... loglikelihood=-11.0235893520319    1.0</span></a>
-<a class="sourceLine" id="cb2-197" data-line-number="197"><span class="co">#&gt;  35:  ... loglikelihood=-10.70781405966778   1.0</span></a>
-<a class="sourceLine" id="cb2-198" data-line-number="198"><span class="co">#&gt;  36:  ... loglikelihood=-10.409538333881336  1.0</span></a>
-<a class="sourceLine" id="cb2-199" data-line-number="199"><span class="co">#&gt;  37:  ... loglikelihood=-10.127352105203606  1.0</span></a>
-<a class="sourceLine" id="cb2-200" data-line-number="200"><span class="co">#&gt;  38:  ... loglikelihood=-9.859992398707135   1.0</span></a>
-<a class="sourceLine" id="cb2-201" data-line-number="201"><span class="co">#&gt;  39:  ... loglikelihood=-9.606324685434982   1.0</span></a>
-<a class="sourceLine" id="cb2-202" data-line-number="202"><span class="co">#&gt;  40:  ... loglikelihood=-9.36532699529955    1.0</span></a>
-<a class="sourceLine" id="cb2-203" data-line-number="203"><span class="co">#&gt;  41:  ... loglikelihood=-9.136076326655045   1.0</span></a>
-<a class="sourceLine" id="cb2-204" data-line-number="204"><span class="co">#&gt;  42:  ... loglikelihood=-8.917736974929555   1.0</span></a>
-<a class="sourceLine" id="cb2-205" data-line-number="205"><span class="co">#&gt;  43:  ... loglikelihood=-8.709550471931909   1.0</span></a>
-<a class="sourceLine" id="cb2-206" data-line-number="206"><span class="co">#&gt;  44:  ... loglikelihood=-8.510826882736534   1.0</span></a>
-<a class="sourceLine" id="cb2-207" data-line-number="207"><span class="co">#&gt;  45:  ... loglikelihood=-8.32093725144381    1.0</span></a>
-<a class="sourceLine" id="cb2-208" data-line-number="208"><span class="co">#&gt;  46:  ... loglikelihood=-8.139307022945724   1.0</span></a>
-<a class="sourceLine" id="cb2-209" data-line-number="209"><span class="co">#&gt;  47:  ... loglikelihood=-7.965410296891216   1.0</span></a>
-<a class="sourceLine" id="cb2-210" data-line-number="210"><span class="co">#&gt;  48:  ... loglikelihood=-7.798764793731411   1.0</span></a>
-<a class="sourceLine" id="cb2-211" data-line-number="211"><span class="co">#&gt;  49:  ... loglikelihood=-7.638927432116194   1.0</span></a>
-<a class="sourceLine" id="cb2-212" data-line-number="212"><span class="co">#&gt;  50:  ... loglikelihood=-7.485490432855432   1.0</span></a>
-<a class="sourceLine" id="cb2-213" data-line-number="213"><span class="co">#&gt;  51:  ... loglikelihood=-7.338077877820558   1.0</span></a>
-<a class="sourceLine" id="cb2-214" data-line-number="214"><span class="co">#&gt;  52:  ... loglikelihood=-7.19634266307151    1.0</span></a>
-<a class="sourceLine" id="cb2-215" data-line-number="215"><span class="co">#&gt;  53:  ... loglikelihood=-7.059963794570671   1.0</span></a>
-<a class="sourceLine" id="cb2-216" data-line-number="216"><span class="co">#&gt;  54:  ... loglikelihood=-6.928643982425504   1.0</span></a>
-<a class="sourceLine" id="cb2-217" data-line-number="217"><span class="co">#&gt;  55:  ... loglikelihood=-6.802107495953315   1.0</span></a>
-<a class="sourceLine" id="cb2-218" data-line-number="218"><span class="co">#&gt;  56:  ... loglikelihood=-6.6800982472021735  1.0</span></a>
-<a class="sourceLine" id="cb2-219" data-line-number="219"><span class="co">#&gt;  57:  ... loglikelihood=-6.562378075067798   1.0</span></a>
-<a class="sourceLine" id="cb2-220" data-line-number="220"><span class="co">#&gt;  58:  ... loglikelihood=-6.44872520595878    1.0</span></a>
-<a class="sourceLine" id="cb2-221" data-line-number="221"><span class="co">#&gt;  59:  ... loglikelihood=-6.338932870197735   1.0</span></a>
-<a class="sourceLine" id="cb2-222" data-line-number="222"><span class="co">#&gt;  60:  ... loglikelihood=-6.232808056101938   1.0</span></a>
-<a class="sourceLine" id="cb2-223" data-line-number="223"><span class="co">#&gt;  61:  ... loglikelihood=-6.130170386037195   1.0</span></a>
-<a class="sourceLine" id="cb2-224" data-line-number="224"><span class="co">#&gt;  62:  ... loglikelihood=-6.030851100752448   1.0</span></a>
-<a class="sourceLine" id="cb2-225" data-line-number="225"><span class="co">#&gt;  63:  ... loglikelihood=-5.934692140029416   1.0</span></a>
-<a class="sourceLine" id="cb2-226" data-line-number="226"><span class="co">#&gt;  64:  ... loglikelihood=-5.84154530916837    1.0</span></a>
-<a class="sourceLine" id="cb2-227" data-line-number="227"><span class="co">#&gt;  65:  ... loglikelihood=-5.751271522112518   1.0</span></a>
-<a class="sourceLine" id="cb2-228" data-line-number="228"><span class="co">#&gt;  66:  ... loglikelihood=-5.663740113122112   1.0</span></a>
-<a class="sourceLine" id="cb2-229" data-line-number="229"><span class="co">#&gt;  67:  ... loglikelihood=-5.578828209869902   1.0</span></a>
-<a class="sourceLine" id="cb2-230" data-line-number="230"><span class="co">#&gt;  68:  ... loglikelihood=-5.4964201616631625  1.0</span></a>
-<a class="sourceLine" id="cb2-231" data-line-number="231"><span class="co">#&gt;  69:  ... loglikelihood=-5.416407017223959   1.0</span></a>
-<a class="sourceLine" id="cb2-232" data-line-number="232"><span class="co">#&gt;  70:  ... loglikelihood=-5.33868604709229    1.0</span></a>
-<a class="sourceLine" id="cb2-233" data-line-number="233"><span class="co">#&gt;  71:  ... loglikelihood=-5.2631603062701044  1.0</span></a>
-<a class="sourceLine" id="cb2-234" data-line-number="234"><span class="co">#&gt;  72:  ... loglikelihood=-5.189738233208753   1.0</span></a>
-<a class="sourceLine" id="cb2-235" data-line-number="235"><span class="co">#&gt;  73:  ... loglikelihood=-5.1183332816679386  1.0</span></a>
-<a class="sourceLine" id="cb2-236" data-line-number="236"><span class="co">#&gt;  74:  ... loglikelihood=-5.048863582347224   1.0</span></a>
-<a class="sourceLine" id="cb2-237" data-line-number="237"><span class="co">#&gt;  75:  ... loglikelihood=-4.981251631521134   1.0</span></a>
-<a class="sourceLine" id="cb2-238" data-line-number="238"><span class="co">#&gt;  76:  ... loglikelihood=-4.915424004198586   1.0</span></a>
-<a class="sourceLine" id="cb2-239" data-line-number="239"><span class="co">#&gt;  77:  ... loglikelihood=-4.851311089584086   1.0</span></a>
-<a class="sourceLine" id="cb2-240" data-line-number="240"><span class="co">#&gt;  78:  ... loglikelihood=-4.788846846845369   1.0</span></a>
-<a class="sourceLine" id="cb2-241" data-line-number="241"><span class="co">#&gt;  79:  ... loglikelihood=-4.7279685793933695  1.0</span></a>
-<a class="sourceLine" id="cb2-242" data-line-number="242"><span class="co">#&gt;  80:  ... loglikelihood=-4.668616726059018   1.0</span></a>
-<a class="sourceLine" id="cb2-243" data-line-number="243"><span class="co">#&gt;  81:  ... loglikelihood=-4.610734667710682   1.0</span></a>
-<a class="sourceLine" id="cb2-244" data-line-number="244"><span class="co">#&gt;  82:  ... loglikelihood=-4.554268547997535   1.0</span></a>
-<a class="sourceLine" id="cb2-245" data-line-number="245"><span class="co">#&gt;  83:  ... loglikelihood=-4.499167107030166   1.0</span></a>
-<a class="sourceLine" id="cb2-246" data-line-number="246"><span class="co">#&gt;  84:  ... loglikelihood=-4.445381526923203   1.0</span></a>
-<a class="sourceLine" id="cb2-247" data-line-number="247"><span class="co">#&gt;  85:  ... loglikelihood=-4.392865288225082   1.0</span></a>
-<a class="sourceLine" id="cb2-248" data-line-number="248"><span class="co">#&gt;  86:  ... loglikelihood=-4.341574036350558   1.0</span></a>
-<a class="sourceLine" id="cb2-249" data-line-number="249"><span class="co">#&gt;  87:  ... loglikelihood=-4.2914654572132935  1.0</span></a>
-<a class="sourceLine" id="cb2-250" data-line-number="250"><span class="co">#&gt;  88:  ... loglikelihood=-4.242499161327525   1.0</span></a>
-<a class="sourceLine" id="cb2-251" data-line-number="251"><span class="co">#&gt;  89:  ... loglikelihood=-4.194636575714509   1.0</span></a>
-<a class="sourceLine" id="cb2-252" data-line-number="252"><span class="co">#&gt;  90:  ... loglikelihood=-4.147840843007355   1.0</span></a>
-<a class="sourceLine" id="cb2-253" data-line-number="253"><span class="co">#&gt;  91:  ... loglikelihood=-4.102076727201952   1.0</span></a>
-<a class="sourceLine" id="cb2-254" data-line-number="254"><span class="co">#&gt;  92:  ... loglikelihood=-4.057310525548667   1.0</span></a>
-<a class="sourceLine" id="cb2-255" data-line-number="255"><span class="co">#&gt;  93:  ... loglikelihood=-4.013509986123657   1.0</span></a>
-<a class="sourceLine" id="cb2-256" data-line-number="256"><span class="co">#&gt;  94:  ... loglikelihood=-3.970644230657471   1.0</span></a>
-<a class="sourceLine" id="cb2-257" data-line-number="257"><span class="co">#&gt;  95:  ... loglikelihood=-3.928683682233838   1.0</span></a>
-<a class="sourceLine" id="cb2-258" data-line-number="258"><span class="co">#&gt;  96:  ... loglikelihood=-3.887599997504487   1.0</span></a>
-<a class="sourceLine" id="cb2-259" data-line-number="259"><span class="co">#&gt;  97:  ... loglikelihood=-3.8473660030940007  1.0</span></a>
-<a class="sourceLine" id="cb2-260" data-line-number="260"><span class="co">#&gt;  98:  ... loglikelihood=-3.8079556358961613  1.0</span></a>
-<a class="sourceLine" id="cb2-261" data-line-number="261"><span class="co">#&gt;  99:  ... loglikelihood=-3.7693438869868965  1.0</span></a>
-<a class="sourceLine" id="cb2-262" data-line-number="262"><span class="co">#&gt; 100:  ... loglikelihood=-3.7315067489007165  1.0</span></a></code></pre>
+<pre class="sourceCode r" id="cb3"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(decipher)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co"># get working directory</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co"># need to pass full path</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">wd &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>()</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">data &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span>(</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">  <span class="dt">class =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Sport"</span>, <span class="st">"Business"</span>, <span class="st">"Sport"</span>, <span class="st">"Sport"</span>, <span class="st">"Business"</span>, <span class="st">"Politics"</span>, <span class="st">"Politics"</span>, <span class="st">"Politics"</span>),</a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">  <span class="dt">doc =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Football, tennis, golf and, bowling and, score."</span>,</a>
+<a class="sourceLine" id="cb3-10" data-line-number="10">          <span class="st">"Marketing, Finance, Legal and, Administration."</span>,</a>
+<a class="sourceLine" id="cb3-11" data-line-number="11">          <span class="st">"Tennis, Ski, Golf and, gym and, match."</span>,</a>
+<a class="sourceLine" id="cb3-12" data-line-number="12">          <span class="st">"football, climbing and gym."</span>,</a>
+<a class="sourceLine" id="cb3-13" data-line-number="13">          <span class="st">"Marketing, Business, Money and, Management."</span>,</a>
+<a class="sourceLine" id="cb3-14" data-line-number="14">          <span class="st">"This document talks politics and Donal Trump."</span>,</a>
+<a class="sourceLine" id="cb3-15" data-line-number="15">          <span class="st">"Donald Trump is the President of the US, sadly."</span>,</a>
+<a class="sourceLine" id="cb3-16" data-line-number="16">          <span class="st">"Article about politics and president Trump."</span>)</a>
+<a class="sourceLine" id="cb3-17" data-line-number="17">)</a>
+<a class="sourceLine" id="cb3-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb3-19" data-line-number="19"><span class="co"># Error not enough data</span></a>
+<a class="sourceLine" id="cb3-20" data-line-number="20">model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_train.html">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)</a>
+<a class="sourceLine" id="cb3-21" data-line-number="21"><span class="co">#&gt; Indexing events with TwoPass using cutoff of 5</span></a>
+<a class="sourceLine" id="cb3-22" data-line-number="22"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb3-23" data-line-number="23"><span class="co">#&gt;  Computing event counts...  done. 8 events</span></a>
+<a class="sourceLine" id="cb3-24" data-line-number="24"><span class="co">#&gt;  Indexing...  Dropped event Sport:[bow=football,, bow=climbing, bow=and, bow=gym.]</span></a>
+<a class="sourceLine" id="cb3-25" data-line-number="25"><span class="co">#&gt; Dropped event Politics:[bow=This, bow=document, bow=talks, bow=politics, bow=and, bow=Donal, bow=Trump.]</span></a>
+<a class="sourceLine" id="cb3-26" data-line-number="26"><span class="co">#&gt; Dropped event Politics:[bow=Donald, bow=Trump, bow=is, bow=the, bow=President, bow=of, bow=the, bow=US,, bow=sadly.]</span></a>
+<a class="sourceLine" id="cb3-27" data-line-number="27"><span class="co">#&gt; Dropped event Politics:[bow=Article, bow=about, bow=politics, bow=and, bow=president, bow=Trump.]</span></a>
+<a class="sourceLine" id="cb3-28" data-line-number="28"><span class="co">#&gt; done.</span></a>
+<a class="sourceLine" id="cb3-29" data-line-number="29"><span class="co">#&gt; Sorting and merging events... done. Reduced 4 events to 2.</span></a>
+<a class="sourceLine" id="cb3-30" data-line-number="30"><span class="co">#&gt; Done indexing in 0,03 s.</span></a>
+<a class="sourceLine" id="cb3-31" data-line-number="31"><span class="co">#&gt; Incorporating indexed data for training...  </span></a>
+<a class="sourceLine" id="cb3-32" data-line-number="32"><span class="co">#&gt; done.</span></a>
+<a class="sourceLine" id="cb3-33" data-line-number="33"><span class="co">#&gt;  Number of Event Tokens: 2</span></a>
+<a class="sourceLine" id="cb3-34" data-line-number="34"><span class="co">#&gt;      Number of Outcomes: 3</span></a>
+<a class="sourceLine" id="cb3-35" data-line-number="35"><span class="co">#&gt;    Number of Predicates: 1</span></a>
+<a class="sourceLine" id="cb3-36" data-line-number="36"><span class="co">#&gt; ...done.</span></a>
+<a class="sourceLine" id="cb3-37" data-line-number="37"><span class="co">#&gt; Computing model parameters ...</span></a>
+<a class="sourceLine" id="cb3-38" data-line-number="38"><span class="co">#&gt; Performing 100 iterations.</span></a>
+<a class="sourceLine" id="cb3-39" data-line-number="39"><span class="co">#&gt;   1:  ... loglikelihood=-4.394449154672439   0.5</span></a>
+<a class="sourceLine" id="cb3-40" data-line-number="40"><span class="co">#&gt;   2:  ... loglikelihood=-3.8421887157189216  0.5</span></a>
+<a class="sourceLine" id="cb3-41" data-line-number="41"><span class="co">#&gt;   3:  ... loglikelihood=-3.6154430125057786  0.5</span></a>
+<a class="sourceLine" id="cb3-42" data-line-number="42"><span class="co">#&gt;   4:  ... loglikelihood=-3.465596155326559   0.5</span></a>
+<a class="sourceLine" id="cb3-43" data-line-number="43"><span class="co">#&gt;   5:  ... loglikelihood=-3.357105109210417   0.5</span></a>
+<a class="sourceLine" id="cb3-44" data-line-number="44"><span class="co">#&gt;   6:  ... loglikelihood=-3.274527687900086   0.5</span></a>
+<a class="sourceLine" id="cb3-45" data-line-number="45"><span class="co">#&gt;   7:  ... loglikelihood=-3.209347253794932   0.5</span></a>
+<a class="sourceLine" id="cb3-46" data-line-number="46"><span class="co">#&gt;   8:  ... loglikelihood=-3.1564421346077856  0.5</span></a>
+<a class="sourceLine" id="cb3-47" data-line-number="47"><span class="co">#&gt;   9:  ... loglikelihood=-3.1125409493265437  0.5</span></a>
+<a class="sourceLine" id="cb3-48" data-line-number="48"><span class="co">#&gt;  10:  ... loglikelihood=-3.075452811722954   0.5</span></a>
+<a class="sourceLine" id="cb3-49" data-line-number="49"><span class="co">#&gt;  11:  ... loglikelihood=-3.043653058837632   0.5</span></a>
+<a class="sourceLine" id="cb3-50" data-line-number="50"><span class="co">#&gt;  12:  ... loglikelihood=-3.0160464644888547  0.5</span></a>
+<a class="sourceLine" id="cb3-51" data-line-number="51"><span class="co">#&gt;  13:  ... loglikelihood=-2.991825031705967   0.5</span></a>
+<a class="sourceLine" id="cb3-52" data-line-number="52"><span class="co">#&gt;  14:  ... loglikelihood=-2.970378973443104   0.5</span></a>
+<a class="sourceLine" id="cb3-53" data-line-number="53"><span class="co">#&gt;  15:  ... loglikelihood=-2.951238991461673   0.5</span></a>
+<a class="sourceLine" id="cb3-54" data-line-number="54"><span class="co">#&gt;  16:  ... loglikelihood=-2.934037698521228   0.5</span></a>
+<a class="sourceLine" id="cb3-55" data-line-number="55"><span class="co">#&gt;  17:  ... loglikelihood=-2.918483147064785   0.5</span></a>
+<a class="sourceLine" id="cb3-56" data-line-number="56"><span class="co">#&gt;  18:  ... loglikelihood=-2.904340240566901   0.5</span></a>
+<a class="sourceLine" id="cb3-57" data-line-number="57"><span class="co">#&gt;  19:  ... loglikelihood=-2.8914174106886295  0.5</span></a>
+<a class="sourceLine" id="cb3-58" data-line-number="58"><span class="co">#&gt;  20:  ... loglikelihood=-2.879556893058896   0.5</span></a>
+<a class="sourceLine" id="cb3-59" data-line-number="59"><span class="co">#&gt;  21:  ... loglikelihood=-2.868627512822131   0.5</span></a>
+<a class="sourceLine" id="cb3-60" data-line-number="60"><span class="co">#&gt;  22:  ... loglikelihood=-2.858519252812046   0.5</span></a>
+<a class="sourceLine" id="cb3-61" data-line-number="61"><span class="co">#&gt;  23:  ... loglikelihood=-2.8491391089469005  0.5</span></a>
+<a class="sourceLine" id="cb3-62" data-line-number="62"><span class="co">#&gt;  24:  ... loglikelihood=-2.8404078891499767  0.5</span></a>
+<a class="sourceLine" id="cb3-63" data-line-number="63"><span class="co">#&gt;  25:  ... loglikelihood=-2.8322577133850033  0.5</span></a>
+<a class="sourceLine" id="cb3-64" data-line-number="64"><span class="co">#&gt;  26:  ... loglikelihood=-2.8246300412382315  0.5</span></a>
+<a class="sourceLine" id="cb3-65" data-line-number="65"><span class="co">#&gt;  27:  ... loglikelihood=-2.8174741010412983  0.5</span></a>
+<a class="sourceLine" id="cb3-66" data-line-number="66"><span class="co">#&gt;  28:  ... loglikelihood=-2.8107456278868233  0.5</span></a>
+<a class="sourceLine" id="cb3-67" data-line-number="67"><span class="co">#&gt;  29:  ... loglikelihood=-2.8044058416105955  0.5</span></a>
+<a class="sourceLine" id="cb3-68" data-line-number="68"><span class="co">#&gt;  30:  ... loglikelihood=-2.798420612901019   0.5</span></a>
+<a class="sourceLine" id="cb3-69" data-line-number="69"><span class="co">#&gt;  31:  ... loglikelihood=-2.7927597781512117  0.5</span></a>
+<a class="sourceLine" id="cb3-70" data-line-number="70"><span class="co">#&gt;  32:  ... loglikelihood=-2.787396572848336   0.5</span></a>
+<a class="sourceLine" id="cb3-71" data-line-number="71"><span class="co">#&gt;  33:  ... loglikelihood=-2.7823071601298786  0.5</span></a>
+<a class="sourceLine" id="cb3-72" data-line-number="72"><span class="co">#&gt;  34:  ... loglikelihood=-2.777470236275584   0.5</span></a>
+<a class="sourceLine" id="cb3-73" data-line-number="73"><span class="co">#&gt;  35:  ... loglikelihood=-2.7728666988024067  0.5</span></a>
+<a class="sourceLine" id="cb3-74" data-line-number="74"><span class="co">#&gt;  36:  ... loglikelihood=-2.7684793658127664  0.5</span></a>
+<a class="sourceLine" id="cb3-75" data-line-number="75"><span class="co">#&gt;  37:  ... loglikelihood=-2.7642927375468878  0.5</span></a>
+<a class="sourceLine" id="cb3-76" data-line-number="76"><span class="co">#&gt;  38:  ... loglikelihood=-2.760292792877533   0.5</span></a>
+<a class="sourceLine" id="cb3-77" data-line-number="77"><span class="co">#&gt;  39:  ... loglikelihood=-2.7564668148843223  0.5</span></a>
+<a class="sourceLine" id="cb3-78" data-line-number="78"><span class="co">#&gt;  40:  ... loglikelihood=-2.7528032407468404  0.5</span></a>
+<a class="sourceLine" id="cb3-79" data-line-number="79"><span class="co">#&gt;  41:  ... loglikelihood=-2.74929153206948    0.5</span></a>
+<a class="sourceLine" id="cb3-80" data-line-number="80"><span class="co">#&gt;  42:  ... loglikelihood=-2.7459220624478426  0.5</span></a>
+<a class="sourceLine" id="cb3-81" data-line-number="81"><span class="co">#&gt;  43:  ... loglikelihood=-2.742686019645536   0.5</span></a>
+<a class="sourceLine" id="cb3-82" data-line-number="82"><span class="co">#&gt;  44:  ... loglikelihood=-2.7395753202010997  0.5</span></a>
+<a class="sourceLine" id="cb3-83" data-line-number="83"><span class="co">#&gt;  45:  ... loglikelihood=-2.7365825346502968  0.5</span></a>
+<a class="sourceLine" id="cb3-84" data-line-number="84"><span class="co">#&gt;  46:  ... loglikelihood=-2.7337008218468335  0.5</span></a>
+<a class="sourceLine" id="cb3-85" data-line-number="85"><span class="co">#&gt;  47:  ... loglikelihood=-2.730923871108338   0.5</span></a>
+<a class="sourceLine" id="cb3-86" data-line-number="86"><span class="co">#&gt;  48:  ... loglikelihood=-2.72824585111486    0.5</span></a>
+<a class="sourceLine" id="cb3-87" data-line-number="87"><span class="co">#&gt;  49:  ... loglikelihood=-2.7256613646526846  0.5</span></a>
+<a class="sourceLine" id="cb3-88" data-line-number="88"><span class="co">#&gt;  50:  ... loglikelihood=-2.723165408433481   0.5</span></a>
+<a class="sourceLine" id="cb3-89" data-line-number="89"><span class="co">#&gt;  51:  ... loglikelihood=-2.720753337333093   0.5</span></a>
+<a class="sourceLine" id="cb3-90" data-line-number="90"><span class="co">#&gt;  52:  ... loglikelihood=-2.7184208324896924  0.5</span></a>
+<a class="sourceLine" id="cb3-91" data-line-number="91"><span class="co">#&gt;  53:  ... loglikelihood=-2.7161638727811193  0.5</span></a>
+<a class="sourceLine" id="cb3-92" data-line-number="92"><span class="co">#&gt;  54:  ... loglikelihood=-2.7139787092686083  0.5</span></a>
+<a class="sourceLine" id="cb3-93" data-line-number="93"><span class="co">#&gt;  55:  ... loglikelihood=-2.711861842250955   0.5</span></a>
+<a class="sourceLine" id="cb3-94" data-line-number="94"><span class="co">#&gt;  56:  ... loglikelihood=-2.709810000621419   0.5</span></a>
+<a class="sourceLine" id="cb3-95" data-line-number="95"><span class="co">#&gt;  57:  ... loglikelihood=-2.7078201232605617  0.5</span></a>
+<a class="sourceLine" id="cb3-96" data-line-number="96"><span class="co">#&gt;  58:  ... loglikelihood=-2.7058893422331587  0.5</span></a>
+<a class="sourceLine" id="cb3-97" data-line-number="97"><span class="co">#&gt;  59:  ... loglikelihood=-2.7040149675871263  0.5</span></a>
+<a class="sourceLine" id="cb3-98" data-line-number="98"><span class="co">#&gt;  60:  ... loglikelihood=-2.702194473577981   0.5</span></a>
+<a class="sourceLine" id="cb3-99" data-line-number="99"><span class="co">#&gt;  61:  ... loglikelihood=-2.7004254861643284  0.5</span></a>
+<a class="sourceLine" id="cb3-100" data-line-number="100"><span class="co">#&gt;  62:  ... loglikelihood=-2.6987057716388008  0.5</span></a>
+<a class="sourceLine" id="cb3-101" data-line-number="101"><span class="co">#&gt;  63:  ... loglikelihood=-2.6970332262752077  0.5</span></a>
+<a class="sourceLine" id="cb3-102" data-line-number="102"><span class="co">#&gt;  64:  ... loglikelihood=-2.695405866886859   0.5</span></a>
+<a class="sourceLine" id="cb3-103" data-line-number="103"><span class="co">#&gt;  65:  ... loglikelihood=-2.6938218222032515  0.5</span></a>
+<a class="sourceLine" id="cb3-104" data-line-number="104"><span class="co">#&gt;  66:  ... loglikelihood=-2.692279324983063   0.5</span></a>
+<a class="sourceLine" id="cb3-105" data-line-number="105"><span class="co">#&gt;  67:  ... loglikelihood=-2.6907767047906637  0.5</span></a>
+<a class="sourceLine" id="cb3-106" data-line-number="106"><span class="co">#&gt;  68:  ... loglikelihood=-2.68931238137153    0.5</span></a>
+<a class="sourceLine" id="cb3-107" data-line-number="107"><span class="co">#&gt;  69:  ... loglikelihood=-2.6878848585690607  0.5</span></a>
+<a class="sourceLine" id="cb3-108" data-line-number="108"><span class="co">#&gt;  70:  ... loglikelihood=-2.6864927187315444  0.5</span></a>
+<a class="sourceLine" id="cb3-109" data-line-number="109"><span class="co">#&gt;  71:  ... loglikelihood=-2.6851346175635373  0.5</span></a>
+<a class="sourceLine" id="cb3-110" data-line-number="110"><span class="co">#&gt;  72:  ... loglikelihood=-2.6838092793807213  0.5</span></a>
+<a class="sourceLine" id="cb3-111" data-line-number="111"><span class="co">#&gt;  73:  ... loglikelihood=-2.682515492731618   0.5</span></a>
+<a class="sourceLine" id="cb3-112" data-line-number="112"><span class="co">#&gt;  74:  ... loglikelihood=-2.681252106353268   0.5</span></a>
+<a class="sourceLine" id="cb3-113" data-line-number="113"><span class="co">#&gt;  75:  ... loglikelihood=-2.6800180254313566  0.5</span></a>
+<a class="sourceLine" id="cb3-114" data-line-number="114"><span class="co">#&gt;  76:  ... loglikelihood=-2.6788122081382024  0.5</span></a>
+<a class="sourceLine" id="cb3-115" data-line-number="115"><span class="co">#&gt;  77:  ... loglikelihood=-2.6776336624246775  0.5</span></a>
+<a class="sourceLine" id="cb3-116" data-line-number="116"><span class="co">#&gt;  78:  ... loglikelihood=-2.6764814430444503  0.5</span></a>
+<a class="sourceLine" id="cb3-117" data-line-number="117"><span class="co">#&gt;  79:  ... loglikelihood=-2.6753546487910365  0.5</span></a>
+<a class="sourceLine" id="cb3-118" data-line-number="118"><span class="co">#&gt;  80:  ... loglikelihood=-2.6742524199299984  0.5</span></a>
+<a class="sourceLine" id="cb3-119" data-line-number="119"><span class="co">#&gt;  81:  ... loglikelihood=-2.673173935810302   0.5</span></a>
+<a class="sourceLine" id="cb3-120" data-line-number="120"><span class="co">#&gt;  82:  ... loglikelihood=-2.672118412640326   0.5</span></a>
+<a class="sourceLine" id="cb3-121" data-line-number="121"><span class="co">#&gt;  83:  ... loglikelihood=-2.6710851014153434  0.5</span></a>
+<a class="sourceLine" id="cb3-122" data-line-number="122"><span class="co">#&gt;  84:  ... loglikelihood=-2.670073285984502   0.5</span></a>
+<a class="sourceLine" id="cb3-123" data-line-number="123"><span class="co">#&gt;  85:  ... loglikelihood=-2.669082281246406   0.5</span></a>
+<a class="sourceLine" id="cb3-124" data-line-number="124"><span class="co">#&gt;  86:  ... loglikelihood=-2.6681114314633576  0.5</span></a>
+<a class="sourceLine" id="cb3-125" data-line-number="125"><span class="co">#&gt;  87:  ... loglikelihood=-2.6671601086852044  0.5</span></a>
+<a class="sourceLine" id="cb3-126" data-line-number="126"><span class="co">#&gt;  88:  ... loglikelihood=-2.666227711274505   0.5</span></a>
+<a class="sourceLine" id="cb3-127" data-line-number="127"><span class="co">#&gt;  89:  ... loglikelihood=-2.6653136625254596  0.5</span></a>
+<a class="sourceLine" id="cb3-128" data-line-number="128"><span class="co">#&gt;  90:  ... loglikelihood=-2.6644174093696673  0.5</span></a>
+<a class="sourceLine" id="cb3-129" data-line-number="129"><span class="co">#&gt;  91:  ... loglikelihood=-2.663538421162381   0.5</span></a>
+<a class="sourceLine" id="cb3-130" data-line-number="130"><span class="co">#&gt;  92:  ... loglikelihood=-2.6626761885434305  0.5</span></a>
+<a class="sourceLine" id="cb3-131" data-line-number="131"><span class="co">#&gt;  93:  ... loglikelihood=-2.6618302223674837  0.5</span></a>
+<a class="sourceLine" id="cb3-132" data-line-number="132"><span class="co">#&gt;  94:  ... loglikelihood=-2.661000052698734   0.5</span></a>
+<a class="sourceLine" id="cb3-133" data-line-number="133"><span class="co">#&gt;  95:  ... loglikelihood=-2.6601852278655103  0.5</span></a>
+<a class="sourceLine" id="cb3-134" data-line-number="134"><span class="co">#&gt;  96:  ... loglikelihood=-2.6593853135706516  0.5</span></a>
+<a class="sourceLine" id="cb3-135" data-line-number="135"><span class="co">#&gt;  97:  ... loglikelihood=-2.6585998920538243  0.5</span></a>
+<a class="sourceLine" id="cb3-136" data-line-number="136"><span class="co">#&gt;  98:  ... loglikelihood=-2.657828561302261   0.5</span></a>
+<a class="sourceLine" id="cb3-137" data-line-number="137"><span class="co">#&gt;  99:  ... loglikelihood=-2.657070934306653   0.5</span></a>
+<a class="sourceLine" id="cb3-138" data-line-number="138"><span class="co">#&gt; 100:  ... loglikelihood=-2.656326638359206   0.5</span></a>
+<a class="sourceLine" id="cb3-139" data-line-number="139"></a>
+<a class="sourceLine" id="cb3-140" data-line-number="140"><span class="kw"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="dv">15</span>)</a>
+<a class="sourceLine" id="cb3-141" data-line-number="141"></a>
+<a class="sourceLine" id="cb3-142" data-line-number="142"><span class="co"># repeat data 50 times</span></a>
+<a class="sourceLine" id="cb3-143" data-line-number="143"><span class="co"># Obviously do not do that in te real world</span></a>
+<a class="sourceLine" id="cb3-144" data-line-number="144">data &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/do.call.html">do.call</a></span>(<span class="st">"rbind"</span>, <span class="kw"><a href="https://rdrr.io/r/base/lapply.html">replicate</a></span>(<span class="dv">50</span>, data[<span class="kw"><a href="https://rdrr.io/r/base/sample.html">sample</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(data), <span class="dv">4</span>),],</a>
+<a class="sourceLine" id="cb3-145" data-line-number="145">                                   <span class="dt">simplify =</span> <span class="ot">FALSE</span>))</a>
+<a class="sourceLine" id="cb3-146" data-line-number="146"></a>
+<a class="sourceLine" id="cb3-147" data-line-number="147"><span class="co"># train model</span></a>
+<a class="sourceLine" id="cb3-148" data-line-number="148">model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_train.html">dc_train</a></span>(<span class="dt">model =</span> <span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(wd, <span class="st">"/model.bin"</span>), <span class="dt">data =</span> data, <span class="dt">lang =</span> <span class="st">"en"</span>)</a>
+<a class="sourceLine" id="cb3-149" data-line-number="149"><span class="co">#&gt; Indexing events with TwoPass using cutoff of 5</span></a>
+<a class="sourceLine" id="cb3-150" data-line-number="150"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb3-151" data-line-number="151"><span class="co">#&gt;  Computing event counts...  done. 200 events</span></a>
+<a class="sourceLine" id="cb3-152" data-line-number="152"><span class="co">#&gt;  Indexing...  done.</span></a>
+<a class="sourceLine" id="cb3-153" data-line-number="153"><span class="co">#&gt; Sorting and merging events... done. Reduced 200 events to 8.</span></a>
+<a class="sourceLine" id="cb3-154" data-line-number="154"><span class="co">#&gt; Done indexing in 0,07 s.</span></a>
+<a class="sourceLine" id="cb3-155" data-line-number="155"><span class="co">#&gt; Incorporating indexed data for training...  </span></a>
+<a class="sourceLine" id="cb3-156" data-line-number="156"><span class="co">#&gt; done.</span></a>
+<a class="sourceLine" id="cb3-157" data-line-number="157"><span class="co">#&gt;  Number of Event Tokens: 8</span></a>
+<a class="sourceLine" id="cb3-158" data-line-number="158"><span class="co">#&gt;      Number of Outcomes: 3</span></a>
+<a class="sourceLine" id="cb3-159" data-line-number="159"><span class="co">#&gt;    Number of Predicates: 39</span></a>
+<a class="sourceLine" id="cb3-160" data-line-number="160"><span class="co">#&gt; ...done.</span></a>
+<a class="sourceLine" id="cb3-161" data-line-number="161"><span class="co">#&gt; Computing model parameters ...</span></a>
+<a class="sourceLine" id="cb3-162" data-line-number="162"><span class="co">#&gt; Performing 100 iterations.</span></a>
+<a class="sourceLine" id="cb3-163" data-line-number="163"><span class="co">#&gt;   1:  ... loglikelihood=-219.72245773362195  0.405</span></a>
+<a class="sourceLine" id="cb3-164" data-line-number="164"><span class="co">#&gt;   2:  ... loglikelihood=-142.02147765395847  1.0</span></a>
+<a class="sourceLine" id="cb3-165" data-line-number="165"><span class="co">#&gt;   3:  ... loglikelihood=-105.45354448731149  1.0</span></a>
+<a class="sourceLine" id="cb3-166" data-line-number="166"><span class="co">#&gt;   4:  ... loglikelihood=-83.67772755726178   1.0</span></a>
+<a class="sourceLine" id="cb3-167" data-line-number="167"><span class="co">#&gt;   5:  ... loglikelihood=-69.1928993853296    1.0</span></a>
+<a class="sourceLine" id="cb3-168" data-line-number="168"><span class="co">#&gt;   6:  ... loglikelihood=-58.876922837537975  1.0</span></a>
+<a class="sourceLine" id="cb3-169" data-line-number="169"><span class="co">#&gt;   7:  ... loglikelihood=-51.17149559992227   1.0</span></a>
+<a class="sourceLine" id="cb3-170" data-line-number="170"><span class="co">#&gt;   8:  ... loglikelihood=-45.20732591529445   1.0</span></a>
+<a class="sourceLine" id="cb3-171" data-line-number="171"><span class="co">#&gt;   9:  ... loglikelihood=-40.460735481414154  1.0</span></a>
+<a class="sourceLine" id="cb3-172" data-line-number="172"><span class="co">#&gt;  10:  ... loglikelihood=-36.59763921837197   1.0</span></a>
+<a class="sourceLine" id="cb3-173" data-line-number="173"><span class="co">#&gt;  11:  ... loglikelihood=-33.39511175059154   1.0</span></a>
+<a class="sourceLine" id="cb3-174" data-line-number="174"><span class="co">#&gt;  12:  ... loglikelihood=-30.698883152041564  1.0</span></a>
+<a class="sourceLine" id="cb3-175" data-line-number="175"><span class="co">#&gt;  13:  ... loglikelihood=-28.398914516512264  1.0</span></a>
+<a class="sourceLine" id="cb3-176" data-line-number="176"><span class="co">#&gt;  14:  ... loglikelihood=-26.414680404716833  1.0</span></a>
+<a class="sourceLine" id="cb3-177" data-line-number="177"><span class="co">#&gt;  15:  ... loglikelihood=-24.685943212933697  1.0</span></a>
+<a class="sourceLine" id="cb3-178" data-line-number="178"><span class="co">#&gt;  16:  ... loglikelihood=-23.16677308054268   1.0</span></a>
+<a class="sourceLine" id="cb3-179" data-line-number="179"><span class="co">#&gt;  17:  ... loglikelihood=-21.821558022254123  1.0</span></a>
+<a class="sourceLine" id="cb3-180" data-line-number="180"><span class="co">#&gt;  18:  ... loglikelihood=-20.622274025881875  1.0</span></a>
+<a class="sourceLine" id="cb3-181" data-line-number="181"><span class="co">#&gt;  19:  ... loglikelihood=-19.546575316161114  1.0</span></a>
+<a class="sourceLine" id="cb3-182" data-line-number="182"><span class="co">#&gt;  20:  ... loglikelihood=-18.576431771021714  1.0</span></a>
+<a class="sourceLine" id="cb3-183" data-line-number="183"><span class="co">#&gt;  21:  ... loglikelihood=-17.697139419246067  1.0</span></a>
+<a class="sourceLine" id="cb3-184" data-line-number="184"><span class="co">#&gt;  22:  ... loglikelihood=-16.89659035814156   1.0</span></a>
+<a class="sourceLine" id="cb3-185" data-line-number="185"><span class="co">#&gt;  23:  ... loglikelihood=-16.164726271708226  1.0</span></a>
+<a class="sourceLine" id="cb3-186" data-line-number="186"><span class="co">#&gt;  24:  ... loglikelihood=-15.49312398718465   1.0</span></a>
+<a class="sourceLine" id="cb3-187" data-line-number="187"><span class="co">#&gt;  25:  ... loglikelihood=-14.87467738455899   1.0</span></a>
+<a class="sourceLine" id="cb3-188" data-line-number="188"><span class="co">#&gt;  26:  ... loglikelihood=-14.303350563642788  1.0</span></a>
+<a class="sourceLine" id="cb3-189" data-line-number="189"><span class="co">#&gt;  27:  ... loglikelihood=-13.773984360176872  1.0</span></a>
+<a class="sourceLine" id="cb3-190" data-line-number="190"><span class="co">#&gt;  28:  ... loglikelihood=-13.282143257733118  1.0</span></a>
+<a class="sourceLine" id="cb3-191" data-line-number="191"><span class="co">#&gt;  29:  ... loglikelihood=-12.823993209066401  1.0</span></a>
+<a class="sourceLine" id="cb3-192" data-line-number="192"><span class="co">#&gt;  30:  ... loglikelihood=-12.396203339067359  1.0</span></a>
+<a class="sourceLine" id="cb3-193" data-line-number="193"><span class="co">#&gt;  31:  ... loglikelihood=-11.99586626681379   1.0</span></a>
+<a class="sourceLine" id="cb3-194" data-line-number="194"><span class="co">#&gt;  32:  ... loglikelihood=-11.620433066666395  1.0</span></a>
+<a class="sourceLine" id="cb3-195" data-line-number="195"><span class="co">#&gt;  33:  ... loglikelihood=-11.267659830146284  1.0</span></a>
+<a class="sourceLine" id="cb3-196" data-line-number="196"><span class="co">#&gt;  34:  ... loglikelihood=-10.935563488995415  1.0</span></a>
+<a class="sourceLine" id="cb3-197" data-line-number="197"><span class="co">#&gt;  35:  ... loglikelihood=-10.622385083058504  1.0</span></a>
+<a class="sourceLine" id="cb3-198" data-line-number="198"><span class="co">#&gt;  36:  ... loglikelihood=-10.326559051987783  1.0</span></a>
+<a class="sourceLine" id="cb3-199" data-line-number="199"><span class="co">#&gt;  37:  ... loglikelihood=-10.046687431021084  1.0</span></a>
+<a class="sourceLine" id="cb3-200" data-line-number="200"><span class="co">#&gt;  38:  ... loglikelihood=-9.781518062440593   1.0</span></a>
+<a class="sourceLine" id="cb3-201" data-line-number="201"><span class="co">#&gt;  39:  ... loglikelihood=-9.529926113325743   1.0</span></a>
+<a class="sourceLine" id="cb3-202" data-line-number="202"><span class="co">#&gt;  40:  ... loglikelihood=-9.290898329694073   1.0</span></a>
+<a class="sourceLine" id="cb3-203" data-line-number="203"><span class="co">#&gt;  41:  ... loglikelihood=-9.06351956653041    1.0</span></a>
+<a class="sourceLine" id="cb3-204" data-line-number="204"><span class="co">#&gt;  42:  ... loglikelihood=-8.846961219567293   1.0</span></a>
+<a class="sourceLine" id="cb3-205" data-line-number="205"><span class="co">#&gt;  43:  ... loglikelihood=-8.640471253260984   1.0</span></a>
+<a class="sourceLine" id="cb3-206" data-line-number="206"><span class="co">#&gt;  44:  ... loglikelihood=-8.443365574178866   1.0</span></a>
+<a class="sourceLine" id="cb3-207" data-line-number="207"><span class="co">#&gt;  45:  ... loglikelihood=-8.25502054299761    1.0</span></a>
+<a class="sourceLine" id="cb3-208" data-line-number="208"><span class="co">#&gt;  46:  ... loglikelihood=-8.074866453810628   1.0</span></a>
+<a class="sourceLine" id="cb3-209" data-line-number="209"><span class="co">#&gt;  47:  ... loglikelihood=-7.902381838240747   1.0</span></a>
+<a class="sourceLine" id="cb3-210" data-line-number="210"><span class="co">#&gt;  48:  ... loglikelihood=-7.7370884753224605  1.0</span></a>
+<a class="sourceLine" id="cb3-211" data-line-number="211"><span class="co">#&gt;  49:  ... loglikelihood=-7.5785470073307355  1.0</span></a>
+<a class="sourceLine" id="cb3-212" data-line-number="212"><span class="co">#&gt;  50:  ... loglikelihood=-7.42635307753101    1.0</span></a>
+<a class="sourceLine" id="cb3-213" data-line-number="213"><span class="co">#&gt;  51:  ... loglikelihood=-7.280133918866488   1.0</span></a>
+<a class="sourceLine" id="cb3-214" data-line-number="214"><span class="co">#&gt;  52:  ... loglikelihood=-7.139545333409687   1.0</span></a>
+<a class="sourceLine" id="cb3-215" data-line-number="215"><span class="co">#&gt;  53:  ... loglikelihood=-7.004269011399585   1.0</span></a>
+<a class="sourceLine" id="cb3-216" data-line-number="216"><span class="co">#&gt;  54:  ... loglikelihood=-6.874010146197536   1.0</span></a>
+<a class="sourceLine" id="cb3-217" data-line-number="217"><span class="co">#&gt;  55:  ... loglikelihood=-6.748495307789122   1.0</span></a>
+<a class="sourceLine" id="cb3-218" data-line-number="218"><span class="co">#&gt;  56:  ... loglikelihood=-6.627470542752638   1.0</span></a>
+<a class="sourceLine" id="cb3-219" data-line-number="219"><span class="co">#&gt;  57:  ... loglikelihood=-6.510699673079442   1.0</span></a>
+<a class="sourceLine" id="cb3-220" data-line-number="220"><span class="co">#&gt;  58:  ... loglikelihood=-6.397962770010292   1.0</span></a>
+<a class="sourceLine" id="cb3-221" data-line-number="221"><span class="co">#&gt;  59:  ... loglikelihood=-6.289054782258636   1.0</span></a>
+<a class="sourceLine" id="cb3-222" data-line-number="222"><span class="co">#&gt;  60:  ... loglikelihood=-6.183784300722028   1.0</span></a>
+<a class="sourceLine" id="cb3-223" data-line-number="223"><span class="co">#&gt;  61:  ... loglikelihood=-6.081972444113704   1.0</span></a>
+<a class="sourceLine" id="cb3-224" data-line-number="224"><span class="co">#&gt;  62:  ... loglikelihood=-5.983451851940824   1.0</span></a>
+<a class="sourceLine" id="cb3-225" data-line-number="225"><span class="co">#&gt;  63:  ... loglikelihood=-5.888065772968738   1.0</span></a>
+<a class="sourceLine" id="cb3-226" data-line-number="226"><span class="co">#&gt;  64:  ... loglikelihood=-5.795667238782908   1.0</span></a>
+<a class="sourceLine" id="cb3-227" data-line-number="227"><span class="co">#&gt;  65:  ... loglikelihood=-5.706118313331627   1.0</span></a>
+<a class="sourceLine" id="cb3-228" data-line-number="228"><span class="co">#&gt;  66:  ... loglikelihood=-5.619289410430597   1.0</span></a>
+<a class="sourceLine" id="cb3-229" data-line-number="229"><span class="co">#&gt;  67:  ... loglikelihood=-5.5350586721626165  1.0</span></a>
+<a class="sourceLine" id="cb3-230" data-line-number="230"><span class="co">#&gt;  68:  ... loglikelihood=-5.453311401932435   1.0</span></a>
+<a class="sourceLine" id="cb3-231" data-line-number="231"><span class="co">#&gt;  69:  ... loglikelihood=-5.3739395466565405  1.0</span></a>
+<a class="sourceLine" id="cb3-232" data-line-number="232"><span class="co">#&gt;  70:  ... loglikelihood=-5.296841223194772   1.0</span></a>
+<a class="sourceLine" id="cb3-233" data-line-number="233"><span class="co">#&gt;  71:  ... loglikelihood=-5.221920284679941   1.0</span></a>
+<a class="sourceLine" id="cb3-234" data-line-number="234"><span class="co">#&gt;  72:  ... loglikelihood=-5.149085922881547   1.0</span></a>
+<a class="sourceLine" id="cb3-235" data-line-number="235"><span class="co">#&gt;  73:  ... loglikelihood=-5.078252303161186   1.0</span></a>
+<a class="sourceLine" id="cb3-236" data-line-number="236"><span class="co">#&gt;  74:  ... loglikelihood=-5.009338228947749   1.0</span></a>
+<a class="sourceLine" id="cb3-237" data-line-number="237"><span class="co">#&gt;  75:  ... loglikelihood=-4.942266832986875   1.0</span></a>
+<a class="sourceLine" id="cb3-238" data-line-number="238"><span class="co">#&gt;  76:  ... loglikelihood=-4.876965292906876   1.0</span></a>
+<a class="sourceLine" id="cb3-239" data-line-number="239"><span class="co">#&gt;  77:  ... loglikelihood=-4.813364568897454   1.0</span></a>
+<a class="sourceLine" id="cb3-240" data-line-number="240"><span class="co">#&gt;  78:  ... loglikelihood=-4.751399161522993   1.0</span></a>
+<a class="sourceLine" id="cb3-241" data-line-number="241"><span class="co">#&gt;  79:  ... loglikelihood=-4.691006887891713   1.0</span></a>
+<a class="sourceLine" id="cb3-242" data-line-number="242"><span class="co">#&gt;  80:  ... loglikelihood=-4.63212867457876    1.0</span></a>
+<a class="sourceLine" id="cb3-243" data-line-number="243"><span class="co">#&gt;  81:  ... loglikelihood=-4.574708365859827   1.0</span></a>
+<a class="sourceLine" id="cb3-244" data-line-number="244"><span class="co">#&gt;  82:  ... loglikelihood=-4.518692545951314   1.0</span></a>
+<a class="sourceLine" id="cb3-245" data-line-number="245"><span class="co">#&gt;  83:  ... loglikelihood=-4.464030374078968   1.0</span></a>
+<a class="sourceLine" id="cb3-246" data-line-number="246"><span class="co">#&gt;  84:  ... loglikelihood=-4.410673431308454   1.0</span></a>
+<a class="sourceLine" id="cb3-247" data-line-number="247"><span class="co">#&gt;  85:  ... loglikelihood=-4.35857557817148    1.0</span></a>
+<a class="sourceLine" id="cb3-248" data-line-number="248"><span class="co">#&gt;  86:  ... loglikelihood=-4.307692822210859   1.0</span></a>
+<a class="sourceLine" id="cb3-249" data-line-number="249"><span class="co">#&gt;  87:  ... loglikelihood=-4.257983194647905   1.0</span></a>
+<a class="sourceLine" id="cb3-250" data-line-number="250"><span class="co">#&gt;  88:  ... loglikelihood=-4.209406635448198   1.0</span></a>
+<a class="sourceLine" id="cb3-251" data-line-number="251"><span class="co">#&gt;  89:  ... loglikelihood=-4.161924886126419   1.0</span></a>
+<a class="sourceLine" id="cb3-252" data-line-number="252"><span class="co">#&gt;  90:  ... loglikelihood=-4.115501389689492   1.0</span></a>
+<a class="sourceLine" id="cb3-253" data-line-number="253"><span class="co">#&gt;  91:  ... loglikelihood=-4.070101197169722   1.0</span></a>
+<a class="sourceLine" id="cb3-254" data-line-number="254"><span class="co">#&gt;  92:  ... loglikelihood=-4.025690880247766   1.0</span></a>
+<a class="sourceLine" id="cb3-255" data-line-number="255"><span class="co">#&gt;  93:  ... loglikelihood=-3.9822384495074195  1.0</span></a>
+<a class="sourceLine" id="cb3-256" data-line-number="256"><span class="co">#&gt;  94:  ... loglikelihood=-3.939713277903765   1.0</span></a>
+<a class="sourceLine" id="cb3-257" data-line-number="257"><span class="co">#&gt;  95:  ... loglikelihood=-3.898086029060988   1.0</span></a>
+<a class="sourceLine" id="cb3-258" data-line-number="258"><span class="co">#&gt;  96:  ... loglikelihood=-3.8573285900482066  1.0</span></a>
+<a class="sourceLine" id="cb3-259" data-line-number="259"><span class="co">#&gt;  97:  ... loglikelihood=-3.8174140083107186  1.0</span></a>
+<a class="sourceLine" id="cb3-260" data-line-number="260"><span class="co">#&gt;  98:  ... loglikelihood=-3.7783164324600698  1.0</span></a>
+<a class="sourceLine" id="cb3-261" data-line-number="261"><span class="co">#&gt;  99:  ... loglikelihood=-3.7400110566505838  1.0</span></a>
+<a class="sourceLine" id="cb3-262" data-line-number="262"><span class="co">#&gt; 100:  ... loglikelihood=-3.7024740682914383  1.0</span></a></code></pre>
 </div>
 </div>
   </div>
@@ -447,7 +758,8 @@
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-<li><a href="#name-tagging">Name Tagging</a></li>
+<li><a href="#models">Models</a></li>
+      <li><a href="#name-tagging">Name Tagging</a></li>
       <li><a href="#tagger">Tagger</a></li>
       <li><a href="#training-data">Training data</a></li>
       </ul>

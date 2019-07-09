@@ -1,4 +1,8 @@
-[![Travis build status](https://travis-ci.org/JohnCoene/decipher.svg?branch=master)](https://travis-ci.org/JohnCoene/decipher) [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/JohnCoene/decipher?branch=master&svg=true)](https://ci.appveyor.com/project/JohnCoene/decipher)
+[![Travis build status](https://travis-ci.org/JohnCoene/decipher.svg?branch=master)](https://travis-ci.org/JohnCoene/decipher) [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/JohnCoene/decipher?branch=master&svg=true)](https://ci.appveyor.com/project/JohnCoene/decipher) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/JohnCoene)
+
+```{r, echo=FALSE}
+htmltools::br()
+```
 
 <img src = "man/figures/logo.png" align = "right" height="201px">
 
@@ -9,7 +13,7 @@ Tools to _easily_ develop, build and train Natural Language processing models wi
 ## Functions
 
 * `dc`: Run Document classifier.
-* `dc_train`: Train Document Classifer.
+* `dc_train`: Train Document Classifier.
 * `tnf`: Learnable Name Finder.
 * `tnf_trainer`: Train Learnable Name Finder.
 * `get_names`: Get Token Names.
