@@ -15,7 +15,7 @@ See the [website](https://decipher.john-coene.com/) for more details.
     - [Dependencies](#dependencies)
       - [Mac](#mac)
       - [Windows](#windows)
-      - [Ubuntu](#ubuntu)
+      - [Linux](#linux)
   - [Models](#models)
   - [Functions](#functions)
   - [Examples](#examples)
@@ -32,7 +32,7 @@ See the [website](https://decipher.john-coene.com/) for more details.
 
 ```r
 # install.packages("remotes")
-remotes::install_github("JohnCoene/decipher")
+remotes::install_github("news-r/decipher")
 ```
 `decipher` depends on [openNLP](https://opennlp.apache.org/), see the section below.
 
@@ -54,7 +54,7 @@ This package relies on [openNLP](http://opennlp.apache.org/) CLI tools.
 2. Unzip both the binary and the source folders.
 3. Add `path/to/opennlp/bin` to path and make sure it is in R too with `Sys.getenv("PATH")`.
 
-#### Ubuntu
+#### Linux
 
 Instructions can be found [here](https://opennlp.apache.org/building.html).
 

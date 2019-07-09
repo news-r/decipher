@@ -97,7 +97,7 @@ dc_train <- function(model, lang, data){
 #' # create documents to classify
 #' documents <- data.frame(
 #'   docs = c("This discusses golf which is a sport.",
-#'            "This documents is about business administration.",
+#'            "This document is about business administration.",
 #'            "This is about people who do sport, go to the gym and play tennis.",
 #'            "Some play tennis and work in Finance",
 #'            "This documents discusses finance and money management.")

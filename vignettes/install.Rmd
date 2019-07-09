@@ -20,8 +20,9 @@ knitr::opts_chunk$set(
 
 ```r
 # install.packages("remotes")
-remotes::install_github("JohnCoene/decipher")
+remotes::install_github("news-r/decipher")
 ```
+
 `decipher` depends on [openNLP](https://opennlp.apache.org/), see the section below.
 
 ### Dependencies
@@ -43,3 +44,7 @@ This package relies on [openNLP](http://opennlp.apache.org/) CLI tools.
 3. Add `path/to/opennlp/bin` to path and make sure it is in R too with `Sys.getenv("PATH")`.
 
 You're good to go.
+
+#### Linux
+
+Download [openNLP](http://opennlp.apache.org/) and add to path.
