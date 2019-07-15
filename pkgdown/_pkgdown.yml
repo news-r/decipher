@@ -1,9 +1,7 @@
 url: http://decipher.john-coene.com
 
 template:
-  params:
-    bootswatch: paper
-    ganalytics: UA-74544116-1
+  package: newsrdown
 
 navbar:
   title: "decipher"
