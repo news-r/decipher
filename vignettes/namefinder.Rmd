@@ -1,0 +1,104 @@
+---
+title: "Token Name Finder"
+author: "John Coene"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Models}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+##  Vectors
+
+```{r}
+library(decipher)
+
+# get working directory
+# need to pass full path
+wd <- getwd()
+
+# Training to find "WEF"
+data <- paste("This organisation is called the <START:wef> World Economic Forum <END>",
+  "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END> .")
+
+# train the model
+(
+  model <- tnf_train(model = paste0(wd, "/wef.bin"), lang = "en",
+    data = data, type = "wef")
+)
+
+# Create sentences to test our model
+sentences <- paste("This sentence mentions the World Economic Forum the annual meeting",
+  "of which takes place in Davos. Note that the forum is often shortened to WEF.")
+
+# run model on sentences
+(results <- tnf(model = model, sentences = sentences))
+#> [1] "This sentence mentions the <START:wef> World Economic <END> Forum the annual meeting of which takes place in <START:wef> Davos. <END> Note that the forum is often shortened to <START:wef> WEF. <END>"
+
+# get names from results
+(names <- get_names(results))
+```
+
+##  Text files
+
+You can also do train and run your model from `.txt` files.
+
+```{r}
+# same with .txt files
+# Training to find "WEF"
+data <- paste("This organisation is called the <START:wef> World Economic Forum <END>", 
+  "It is often referred to as <START:wef> Davos <END> or the <START:wef> WEF <END> .")
+
+# Save the above as file
+write(data, file = "input.txt")
+
+# Trains the model and returns the full path to the model
+(
+  model <- tnf_train_(model = paste0(wd, "/wef.bin"), lang = "en",
+    data = paste0(wd, "/input.txt"), type = "wef")
+)
+
+# Create sentences to test our model
+sentences <- paste("This sentence mentions the World Economic Forum the annual meeting",
+  "of which takes place in Davos. Note that the forum is often called the WEF.")
+
+# Save sentences
+write(data, file = "sentences.txt")
+
+# Extract names
+# Without specifying an output file the extracted names appear in the console
+(model <- tnf_(model = model, sentences = paste0(wd, "/sentences.txt")))
+  
+# You can train slightly more sophisticated models too
+# Training to find sentiments
+data <- paste("This sentence is <START:sentiment.neg> very bad <END> !",
+  "This sentence is <START:sentiment.pos> rather good <END> .",
+  "This sentence on the other hand, is <START:sentiment.neg> horrible <END> .")
+
+# Save the above as file
+write(data, file = "input.txt")
+
+# Trains the model and returns the full path to the model
+(
+  model <- tnf_train_(model = paste0(wd, "/sentiment.bin"), lang = "en",
+    data = paste0(wd, "/input.txt"), type = "sentiment")
+)
+
+sentences <- paste("The first half of this sentence is a bad and negative while",
+  "the second half is great and positive.")
+
+# Save sentences
+write(data, file = "sentences.txt")
+
+# Extract names
+# Without specifying an output file the extracted names appear in the console
+(tnf_(model = model, sentences = paste0(wd, "/sentences.txt")))
+```

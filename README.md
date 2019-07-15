@@ -11,28 +11,29 @@ Tools to _easily_ develop, build and train Natural Language processing models wi
 See the [website](https://decipher.john-coene.com/) for more details.
 
 - [decipher](#decipher)
-  - [Install](#Install)
-    - [Dependencies](#Dependencies)
-      - [Mac](#Mac)
-      - [Windows](#Windows)
-      - [Ubuntu](#Ubuntu)
-  - [Models](#Models)
-  - [Functions](#Functions)
-  - [Examples](#Examples)
-    - [Name Extraction](#Name-Extraction)
-    - [Document Classification](#Document-Classification)
-  - [Guide](#Guide)
-    - [Name Tagging](#Name-Tagging)
-    - [Tagger](#Tagger)
-    - [Training data](#Training-data)
-      - [Token name finder](#Token-name-finder)
-      - [Document classifier](#Document-classifier)
+
+  - [Install](#install)
+    - [Dependencies](#dependencies)
+      - [Mac](#mac)
+      - [Windows](#windows)
+      - [Linux](#linux)
+  - [Models](#models)
+  - [Functions](#functions)
+  - [Examples](#examples)
+    - [Name Extraction](#name-extraction)
+    - [Document Classification](#document-classification)
+  - [Guide](#guide)
+    - [Name Tagging](#name-tagging)
+    - [Tagger](#tagger)
+    - [Training data](#training-data)
+      - [Token name finder](#token-name-finder)
+      - [Document classifier](#document-classifier)
 
 ## Install
 
 ```r
 # install.packages("remotes")
-remotes::install_github("JohnCoene/decipher")
+remotes::install_github("news-r/decipher")
 ```
 `decipher` depends on [openNLP](https://opennlp.apache.org/), see the section below.
 
@@ -54,7 +55,7 @@ This package relies on [openNLP](http://opennlp.apache.org/) CLI tools.
 2. Unzip both the binary and the source folders.
 3. Add `path/to/opennlp/bin` to path and make sure it is in R too with `Sys.getenv("PATH")`.
 
-#### Ubuntu
+#### Linux
 
 Instructions can be found [here](https://opennlp.apache.org/building.html).
 

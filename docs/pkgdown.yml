@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   classifier: classifier.html
   install: install.html
-  models: models.html
+  namefinder: namefinder.html
   usage: usage.html
 urls:
   reference: http://decipher.john-coene.com/reference

@@ -101,7 +101,7 @@
   </a>
 </li>
         <li>
-  <a href="https://github.com/JohnCoene/decipher">
+  <a href="https://github.com/news-r/decipher">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -130,6 +130,317 @@
 
     
     
+<div id="models" class="section level2">
+<h2 class="hasAnchor">
+<a href="#models" class="anchor"></a>Models</h2>
+<p>You can build your own models or, of course use pre-trained ones, simple download any of the models available.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/knitr/topics/kable">kable</a></span>(<span class="kw"><a href="../reference/dl.html">list_models</a></span>())</code></pre></div>
+<table class="table">
+<thead><tr class="header">
+<th align="left">Language</th>
+<th align="left">Component</th>
+<th align="left">Description</th>
+<th align="left">Download</th>
+<th align="left">Link</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">da</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on conllx ddt data.</td>
+<td align="left">da-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/da-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/da-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">da</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on conllx ddt data.</td>
+<td align="left">da-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/da-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/da-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">da</td>
+<td align="left">Part of Speech Tagger</td>
+<td align="left">Maxent model trained on conllx ddt data.</td>
+<td align="left">da-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/da-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/da-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">da</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model trained on conllx ddt data.</td>
+<td align="left">da-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/da-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/da-pos-perceptron.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">de</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on tiger data.</td>
+<td align="left">de-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/de-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/de-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">de</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on tiger data.</td>
+<td align="left">de-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/de-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/de-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">de</td>
+<td align="left">POS Tagger</td>
+<td align="left">Maxent model trained on tiger corpus.</td>
+<td align="left">de-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/de-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/de-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">de</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model trained on tiger corpus.</td>
+<td align="left">de-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/de-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/de-pos-perceptron.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on opennlp training data.</td>
+<td align="left">en-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on opennlp training data.</td>
+<td align="left">en-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">POS Tagger</td>
+<td align="left">Maxent model with tag dictionary.</td>
+<td align="left">en-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model with tag dictionary.</td>
+<td align="left">en-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-pos-perceptron.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Date name finder model.</td>
+<td align="left">en-ner-date.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-date.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-date.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Location name finder model.</td>
+<td align="left">en-ner-location.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-location.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-location.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Money name finder model.</td>
+<td align="left">en-ner-money.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-money.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-money.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Organization name finder model.</td>
+<td align="left">en-ner-organization.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-organization.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-organization.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Percentage name finder model.</td>
+<td align="left">en-ner-percentage.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-percentage.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-percentage.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Person name finder model.</td>
+<td align="left">en-ner-person.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-person.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-person.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Name Finder</td>
+<td align="left">Time name finder model.</td>
+<td align="left">en-ner-time.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-ner-time.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-ner-time.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Chunker</td>
+<td align="left">Trained on conll2000 shared task data.</td>
+<td align="left">en-chunker.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-chunker.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-chunker.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">en</td>
+<td align="left">Parser</td>
+<td align="left"></td>
+<td align="left">en-parser-chunking.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/en-parser-chunking.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/en-parser-chunking.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">en</td>
+<td align="left">Coreference</td>
+<td align="left"></td>
+<td align="left">coref</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/coref" class="uri">http://opennlp.sourceforge.net/models-1.5/coref</a></td>
+</tr>
+<tr class="odd">
+<td align="left">es</td>
+<td align="left">Name Finder</td>
+<td align="left">Person name finder model. Trained on conll02 shared task data.</td>
+<td align="left">es-ner-person.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/es-ner-person.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/es-ner-person.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">es</td>
+<td align="left">Name Finder</td>
+<td align="left">Organization name finder model. Trained on conll02 shared task data.</td>
+<td align="left">es-ner-organization.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/es-ner-organization.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/es-ner-organization.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">es</td>
+<td align="left">Name Finder</td>
+<td align="left">Location name finder model. Trained on conll02 shared task data.</td>
+<td align="left">es-ner-location.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/es-ner-location.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/es-ner-location.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">es</td>
+<td align="left">Name Finder</td>
+<td align="left">Misc name finder model. Trained on conll02 shared task data.</td>
+<td align="left">es-ner-misc.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/es-ner-misc.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/es-ner-misc.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">nl</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on conllx alpino data.</td>
+<td align="left">nl-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">nl</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on conllx alpino data.</td>
+<td align="left">nl-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">nl</td>
+<td align="left">Name Finder</td>
+<td align="left">Person name finder model. Trained on conll02 shared task data.</td>
+<td align="left">nl-ner-person.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-ner-person.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-ner-person.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">nl</td>
+<td align="left">Name Finder</td>
+<td align="left">Organization name finder model. Trained on conll02 shared task data.</td>
+<td align="left">nl-ner-organization.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-ner-organization.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-ner-organization.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">nl</td>
+<td align="left">Name Finder</td>
+<td align="left">Location name finder model. Trained on conll02 shared task data.</td>
+<td align="left">nl-ner-location.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-ner-location.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-ner-location.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">nl</td>
+<td align="left">Name Finder</td>
+<td align="left">Misc name finder model. Trained on conll02 shared task data.</td>
+<td align="left">nl-ner-misc.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-ner-misc.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-ner-misc.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">nl</td>
+<td align="left">POS Tagger</td>
+<td align="left">Maxent model trained on conllx alpino data.</td>
+<td align="left">nl-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">nl</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model trained on conllx alpino data.</td>
+<td align="left">nl-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/nl-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/nl-pos-perceptron.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">pt</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on conllx bosque data.</td>
+<td align="left">pt-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/pt-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/pt-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">pt</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on conllx bosque data.</td>
+<td align="left">pt-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/pt-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/pt-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">pt</td>
+<td align="left">POS Tagger</td>
+<td align="left">Maxent model trained on conllx bosque data.</td>
+<td align="left">pt-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/pt-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/pt-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">pt</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model trained on conllx bosque data.</td>
+<td align="left">pt-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/pt-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/pt-pos-perceptron.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">se</td>
+<td align="left">Tokenizer</td>
+<td align="left">Trained on conllx talbanken05 data.</td>
+<td align="left">se-token.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/se-token.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/se-token.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">se</td>
+<td align="left">Sentence Detector</td>
+<td align="left">Trained on conllx talbanken05 data.</td>
+<td align="left">se-sent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/se-sent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/se-sent.bin</a></td>
+</tr>
+<tr class="odd">
+<td align="left">se</td>
+<td align="left">POS Tagger</td>
+<td align="left">Maxent model trained on conllx talbanken05 data.</td>
+<td align="left">se-pos-maxent.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/se-pos-maxent.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/se-pos-maxent.bin</a></td>
+</tr>
+<tr class="even">
+<td align="left">se</td>
+<td align="left">POS Tagger</td>
+<td align="left">Perceptron model trained on conllx talbanken05 data.</td>
+<td align="left">se-pos-perceptron.bin</td>
+<td align="left"><a href="http://opennlp.sourceforge.net/models-1.5/se-pos-perceptron.bin" class="uri">http://opennlp.sourceforge.net/models-1.5/se-pos-perceptron.bin</a></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="name-tagging" class="section level2">
 <h2 class="hasAnchor">
 <a href="#name-tagging" class="anchor"></a>Name Tagging</h2>
@@ -328,7 +639,7 @@ model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_tr
 <span class="co">#&gt;  Computing event counts...  done. 200 events</span>
 <span class="co">#&gt;  Indexing...  done.</span>
 <span class="co">#&gt; Sorting and merging events... done. Reduced 200 events to 8.</span>
-<span class="co">#&gt; Done indexing in 0.03 s.</span>
+<span class="co">#&gt; Done indexing in 0.04 s.</span>
 <span class="co">#&gt; Incorporating indexed data for training...  </span>
 <span class="co">#&gt; done.</span>
 <span class="co">#&gt;  Number of Event Tokens: 8</span>
@@ -337,106 +648,106 @@ model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_tr
 <span class="co">#&gt; ...done.</span>
 <span class="co">#&gt; Computing model parameters ...</span>
 <span class="co">#&gt; Performing 100 iterations.</span>
-<span class="co">#&gt;   1:  ... loglikelihood=-219.72245773362198  0.335</span>
-<span class="co">#&gt;   2:  ... loglikelihood=-142.76885823300913  1.0</span>
-<span class="co">#&gt;   3:  ... loglikelihood=-106.29097336322258  1.0</span>
-<span class="co">#&gt;   4:  ... loglikelihood=-84.43757709963789   1.0</span>
-<span class="co">#&gt;   5:  ... loglikelihood=-69.85367128263356   1.0</span>
-<span class="co">#&gt;   6:  ... loglikelihood=-59.45005102797324   1.0</span>
-<span class="co">#&gt;   7:  ... loglikelihood=-51.67275249907435   1.0</span>
-<span class="co">#&gt;   8:  ... loglikelihood=-45.650449488460595  1.0</span>
-<span class="co">#&gt;   9:  ... loglikelihood=-40.85659506953429   1.0</span>
-<span class="co">#&gt;  10:  ... loglikelihood=-36.95464227363285   1.0</span>
-<span class="co">#&gt;  11:  ... loglikelihood=-33.71976748309374   1.0</span>
-<span class="co">#&gt;  12:  ... loglikelihood=-30.99627871517206   1.0</span>
-<span class="co">#&gt;  13:  ... loglikelihood=-28.673074732238543  1.0</span>
-<span class="co">#&gt;  14:  ... loglikelihood=-26.66883071089583   1.0</span>
-<span class="co">#&gt;  15:  ... loglikelihood=-24.92270075251294   1.0</span>
-<span class="co">#&gt;  16:  ... loglikelihood=-23.388286294649042  1.0</span>
-<span class="co">#&gt;  17:  ... loglikelihood=-22.02960963915925   1.0</span>
-<span class="co">#&gt;  18:  ... loglikelihood=-20.818357942882837  1.0</span>
-<span class="co">#&gt;  19:  ... loglikelihood=-19.731954700449855  1.0</span>
-<span class="co">#&gt;  20:  ... loglikelihood=-18.75218350198803   1.0</span>
-<span class="co">#&gt;  21:  ... loglikelihood=-17.864188480375446  1.0</span>
-<span class="co">#&gt;  22:  ... loglikelihood=-17.055736745516402  1.0</span>
-<span class="co">#&gt;  23:  ... loglikelihood=-16.31666626576502   1.0</span>
-<span class="co">#&gt;  24:  ... loglikelihood=-15.638467131422487  1.0</span>
-<span class="co">#&gt;  25:  ... loglikelihood=-15.013960160045325  1.0</span>
-<span class="co">#&gt;  26:  ... loglikelihood=-14.437047495055015  1.0</span>
-<span class="co">#&gt;  27:  ... loglikelihood=-13.902517106586984  1.0</span>
-<span class="co">#&gt;  28:  ... loglikelihood=-13.40588810828373   1.0</span>
-<span class="co">#&gt;  29:  ... loglikelihood=-12.943287305673227  1.0</span>
-<span class="co">#&gt;  30:  ... loglikelihood=-12.511349875360649  1.0</span>
-<span class="co">#&gt;  31:  ... loglikelihood=-12.107138857756732  1.0</span>
-<span class="co">#&gt;  32:  ... loglikelihood=-11.728079441769601  1.0</span>
-<span class="co">#&gt;  33:  ... loglikelihood=-11.371904971455205  1.0</span>
-<span class="co">#&gt;  34:  ... loglikelihood=-11.036612310559963  1.0</span>
-<span class="co">#&gt;  35:  ... loglikelihood=-10.720424729588522  1.0</span>
-<span class="co">#&gt;  36:  ... loglikelihood=-10.421760879524966  1.0</span>
-<span class="co">#&gt;  37:  ... loglikelihood=-10.13920872073902   1.0</span>
-<span class="co">#&gt;  38:  ... loglikelihood=-9.87150350938905    1.0</span>
-<span class="co">#&gt;  39:  ... loglikelihood=-9.61750912451567    1.0</span>
-<span class="co">#&gt;  40:  ... loglikelihood=-9.376202159962235   1.0</span>
-<span class="co">#&gt;  41:  ... loglikelihood=-9.14665831581204    1.0</span>
-<span class="co">#&gt;  42:  ... loglikelihood=-8.92804071129951    1.0</span>
-<span class="co">#&gt;  43:  ... loglikelihood=-8.719589810452328   1.0</span>
-<span class="co">#&gt;  44:  ... loglikelihood=-8.520614707067258   1.0</span>
-<span class="co">#&gt;  45:  ... loglikelihood=-8.330485560064982   1.0</span>
-<span class="co">#&gt;  46:  ... loglikelihood=-8.148627006141233   1.0</span>
-<span class="co">#&gt;  47:  ... loglikelihood=-7.9745124057287216  1.0</span>
-<span class="co">#&gt;  48:  ... loglikelihood=-7.8076588019984055  1.0</span>
-<span class="co">#&gt;  49:  ... loglikelihood=-7.647622492041834   1.0</span>
-<span class="co">#&gt;  50:  ... loglikelihood=-7.493995125338299   1.0</span>
-<span class="co">#&gt;  51:  ... loglikelihood=-7.346400257788412   1.0</span>
-<span class="co">#&gt;  52:  ... loglikelihood=-7.204490300518654   1.0</span>
-<span class="co">#&gt;  53:  ... loglikelihood=-7.06794381174957    1.0</span>
-<span class="co">#&gt;  54:  ... loglikelihood=-6.936463087610248   1.0</span>
-<span class="co">#&gt;  55:  ... loglikelihood=-6.809772014140867   1.0</span>
-<span class="co">#&gt;  56:  ... loglikelihood=-6.687614148073633   1.0</span>
-<span class="co">#&gt;  57:  ... loglikelihood=-6.569750998493367   1.0</span>
-<span class="co">#&gt;  58:  ... loglikelihood=-6.455960485296822   1.0</span>
-<span class="co">#&gt;  59:  ... loglikelihood=-6.346035553609638   1.0</span>
-<span class="co">#&gt;  60:  ... loglikelihood=-6.239782926079081   1.0</span>
-<span class="co">#&gt;  61:  ... loglikelihood=-6.137021977314365   1.0</span>
-<span class="co">#&gt;  62:  ... loglikelihood=-6.037583716762859   1.0</span>
-<span class="co">#&gt;  63:  ... loglikelihood=-5.941309868039479   1.0</span>
-<span class="co">#&gt;  64:  ... loglikelihood=-5.848052034215437   1.0</span>
-<span class="co">#&gt;  65:  ... loglikelihood=-5.757670939855999   1.0</span>
-<span class="co">#&gt;  66:  ... loglikelihood=-5.670035741706702   1.0</span>
-<span class="co">#&gt;  67:  ... loglikelihood=-5.5850234008892 1.0</span>
-<span class="co">#&gt;  68:  ... loglikelihood=-5.502518110303518   1.0</span>
-<span class="co">#&gt;  69:  ... loglikelihood=-5.42241077165993    1.0</span>
-<span class="co">#&gt;  70:  ... loglikelihood=-5.344598517198036   1.0</span>
-<span class="co">#&gt;  71:  ... loglikelihood=-5.26898427170507    1.0</span>
-<span class="co">#&gt;  72:  ... loglikelihood=-5.195476350929972   1.0</span>
-<span class="co">#&gt;  73:  ... loglikelihood=-5.123988092916453   1.0</span>
-<span class="co">#&gt;  74:  ... loglikelihood=-5.054437519151799   1.0</span>
-<span class="co">#&gt;  75:  ... loglikelihood=-4.9867470227580055  1.0</span>
-<span class="co">#&gt;  76:  ... loglikelihood=-4.9208430812429 1.0</span>
-<span class="co">#&gt;  77:  ... loglikelihood=-4.85665599158507    1.0</span>
-<span class="co">#&gt;  78:  ... loglikelihood=-4.794119625654639   1.0</span>
-<span class="co">#&gt;  79:  ... loglikelihood=-4.733171204172977   1.0</span>
-<span class="co">#&gt;  80:  ... loglikelihood=-4.673751087593627   1.0</span>
-<span class="co">#&gt;  81:  ... loglikelihood=-4.615802582446218   1.0</span>
-<span class="co">#&gt;  82:  ... loglikelihood=-4.55927176182644    1.0</span>
-<span class="co">#&gt;  83:  ... loglikelihood=-4.50410729884209    1.0</span>
-<span class="co">#&gt;  84:  ... loglikelihood=-4.450260311938004   1.0</span>
-<span class="co">#&gt;  85:  ... loglikelihood=-4.397684221123859   1.0</span>
-<span class="co">#&gt;  86:  ... loglikelihood=-4.346334614219131   1.0</span>
-<span class="co">#&gt;  87:  ... loglikelihood=-4.296169122311085   1.0</span>
-<span class="co">#&gt;  88:  ... loglikelihood=-4.247147303694211   1.0</span>
-<span class="co">#&gt;  89:  ... loglikelihood=-4.199230535625551   1.0</span>
-<span class="co">#&gt;  90:  ... loglikelihood=-4.1523819132886235  1.0</span>
-<span class="co">#&gt;  91:  ... loglikelihood=-4.106566155412973   1.0</span>
-<span class="co">#&gt;  92:  ... loglikelihood=-4.061749516043215   1.0</span>
-<span class="co">#&gt;  93:  ... loglikelihood=-4.017899701995919   1.0</span>
-<span class="co">#&gt;  94:  ... loglikelihood=-3.974985795580983   1.0</span>
-<span class="co">#&gt;  95:  ... loglikelihood=-3.932978182200494   1.0</span>
-<span class="co">#&gt;  96:  ... loglikelihood=-3.8918484824695994  1.0</span>
-<span class="co">#&gt;  97:  ... loglikelihood=-3.8515694885337384  1.0</span>
-<span class="co">#&gt;  98:  ... loglikelihood=-3.812115104282652   1.0</span>
-<span class="co">#&gt;  99:  ... loglikelihood=-3.7734602891861 1.0</span>
-<span class="co">#&gt; 100:  ... loglikelihood=-3.7355810054979894  1.0</span></code></pre></div>
+<span class="co">#&gt;   1:  ... loglikelihood=-219.72245773362195  0.335</span>
+<span class="co">#&gt;   2:  ... loglikelihood=-142.88196406072186  1.0</span>
+<span class="co">#&gt;   3:  ... loglikelihood=-106.34647714324419  1.0</span>
+<span class="co">#&gt;   4:  ... loglikelihood=-84.4755805526073    1.0</span>
+<span class="co">#&gt;   5:  ... loglikelihood=-69.8854447064422    1.0</span>
+<span class="co">#&gt;   6:  ... loglikelihood=-59.478523742925404  1.0</span>
+<span class="co">#&gt;   7:  ... loglikelihood=-51.69879250162104   1.0</span>
+<span class="co">#&gt;   8:  ... loglikelihood=-45.67441939631744   1.0</span>
+<span class="co">#&gt;   9:  ... loglikelihood=-40.87873008584082   1.0</span>
+<span class="co">#&gt;  10:  ... loglikelihood=-36.9751384439237    1.0</span>
+<span class="co">#&gt;  11:  ... loglikelihood=-33.73879993427859   1.0</span>
+<span class="co">#&gt;  12:  ... loglikelihood=-31.01400451535654   1.0</span>
+<span class="co">#&gt;  13:  ... loglikelihood=-28.68963344487269   1.0</span>
+<span class="co">#&gt;  14:  ... loglikelihood=-26.684345273926482  1.0</span>
+<span class="co">#&gt;  15:  ... loglikelihood=-24.937278865062638  1.0</span>
+<span class="co">#&gt;  16:  ... loglikelihood=-23.402022062667086  1.0</span>
+<span class="co">#&gt;  17:  ... loglikelihood=-22.04258525730783   1.0</span>
+<span class="co">#&gt;  18:  ... loglikelihood=-20.830645280266495  1.0</span>
+<span class="co">#&gt;  19:  ... loglikelihood=-19.743616728368874  1.0</span>
+<span class="co">#&gt;  20:  ... loglikelihood=-18.7632755449706    1.0</span>
+<span class="co">#&gt;  21:  ... loglikelihood=-17.8747592947954    1.0</span>
+<span class="co">#&gt;  22:  ... loglikelihood=-17.065829440884418  1.0</span>
+<span class="co">#&gt;  23:  ... loglikelihood=-16.326319087680915  1.0</span>
+<span class="co">#&gt;  24:  ... loglikelihood=-15.647714125489163  1.0</span>
+<span class="co">#&gt;  25:  ... loglikelihood=-15.02283173465646   1.0</span>
+<span class="co">#&gt;  26:  ... loglikelihood=-14.445570898905896  1.0</span>
+<span class="co">#&gt;  27:  ... loglikelihood=-13.91071683455445   1.0</span>
+<span class="co">#&gt;  28:  ... loglikelihood=-13.413786247233787  1.0</span>
+<span class="co">#&gt;  29:  ... loglikelihood=-12.950903829891859  1.0</span>
+<span class="co">#&gt;  30:  ... loglikelihood=-12.518702899695455  1.0</span>
+<span class="co">#&gt;  31:  ... loglikelihood=-12.114244855196077  1.0</span>
+<span class="co">#&gt;  32:  ... loglikelihood=-11.734953431048229  1.0</span>
+<span class="co">#&gt;  33:  ... loglikelihood=-11.378560679331837  1.0</span>
+<span class="co">#&gt;  34:  ... loglikelihood=-11.043062312631536  1.0</span>
+<span class="co">#&gt;  35:  ... loglikelihood=-10.726680572862678  1.0</span>
+<span class="co">#&gt;  36:  ... loglikelihood=-10.427833189441525  1.0</span>
+<span class="co">#&gt;  37:  ... loglikelihood=-10.145107294894169  1.0</span>
+<span class="co">#&gt;  38:  ... loglikelihood=-9.877237399853936   1.0</span>
+<span class="co">#&gt;  39:  ... loglikelihood=-9.623086710342822   1.0</span>
+<span class="co">#&gt;  40:  ... loglikelihood=-9.381631211225155   1.0</span>
+<span class="co">#&gt;  41:  ... loglikelihood=-9.151946050317257   1.0</span>
+<span class="co">#&gt;  42:  ... loglikelihood=-8.933193844939263   1.0</span>
+<span class="co">#&gt;  43:  ... loglikelihood=-8.724614602022037   1.0</span>
+<span class="co">#&gt;  44:  ... loglikelihood=-8.525516998252673   1.0</span>
+<span class="co">#&gt;  45:  ... loglikelihood=-8.335270811202298   1.0</span>
+<span class="co">#&gt;  46:  ... loglikelihood=-8.153300328268987   1.0</span>
+<span class="co">#&gt;  47:  ... loglikelihood=-7.979078589378311   1.0</span>
+<span class="co">#&gt;  48:  ... loglikelihood=-7.812122343109141   1.0</span>
+<span class="co">#&gt;  49:  ... loglikelihood=-7.651987615334983   1.0</span>
+<span class="co">#&gt;  50:  ... loglikelihood=-7.498265805440456   1.0</span>
+<span class="co">#&gt;  51:  ... loglikelihood=-7.3505802383570025  1.0</span>
+<span class="co">#&gt;  52:  ... loglikelihood=-7.208583111589921   1.0</span>
+<span class="co">#&gt;  53:  ... loglikelihood=-7.071952785502366   1.0</span>
+<span class="co">#&gt;  54:  ... loglikelihood=-6.940391372714274   1.0</span>
+<span class="co">#&gt;  55:  ... loglikelihood=-6.813622588838412   1.0</span>
+<span class="co">#&gt;  56:  ... loglikelihood=-6.691389832125446   1.0</span>
+<span class="co">#&gt;  57:  ... loglikelihood=-6.573454464104223   1.0</span>
+<span class="co">#&gt;  58:  ... loglikelihood=-6.459594267122684   1.0</span>
+<span class="co">#&gt;  59:  ... loglikelihood=-6.349602057937263   1.0</span>
+<span class="co">#&gt;  60:  ... loglikelihood=-6.243284439257992   1.0</span>
+<span class="co">#&gt;  61:  ... loglikelihood=-6.140460673512784   1.0</span>
+<span class="co">#&gt;  62:  ... loglikelihood=-6.040961665111191   1.0</span>
+<span class="co">#&gt;  63:  ... loglikelihood=-5.944629039218141   1.0</span>
+<span class="co">#&gt;  64:  ... loglikelihood=-5.851314306537801   1.0</span>
+<span class="co">#&gt;  65:  ... loglikelihood=-5.760878104891887   1.0</span>
+<span class="co">#&gt;  66:  ... loglikelihood=-5.673189509487204   1.0</span>
+<span class="co">#&gt;  67:  ... loglikelihood=-5.588125404729695   1.0</span>
+<span class="co">#&gt;  68:  ... loglikelihood=-5.505569911277434   1.0</span>
+<span class="co">#&gt;  69:  ... loglikelihood=-5.425413862753372   1.0</span>
+<span class="co">#&gt;  70:  ... loglikelihood=-5.347554327171909   1.0</span>
+<span class="co">#&gt;  71:  ... loglikelihood=-5.2718941686889345  1.0</span>
+<span class="co">#&gt;  72:  ... loglikelihood=-5.19834164576965    1.0</span>
+<span class="co">#&gt;  73:  ... loglikelihood=-5.1268100422952125  1.0</span>
+<span class="co">#&gt;  74:  ... loglikelihood=-5.057217328503126   1.0</span>
+<span class="co">#&gt;  75:  ... loglikelihood=-4.989485848986482   1.0</span>
+<span class="co">#&gt;  76:  ... loglikelihood=-4.923542035267944   1.0</span>
+<span class="co">#&gt;  77:  ... loglikelihood=-4.859316140721235   1.0</span>
+<span class="co">#&gt;  78:  ... loglikelihood=-4.796741995840829   1.0</span>
+<span class="co">#&gt;  79:  ... loglikelihood=-4.73575678206189    1.0</span>
+<span class="co">#&gt;  80:  ... loglikelihood=-4.676300822511777   1.0</span>
+<span class="co">#&gt;  81:  ... loglikelihood=-4.618317388233948   1.0</span>
+<span class="co">#&gt;  82:  ... loglikelihood=-4.561752518566649   1.0</span>
+<span class="co">#&gt;  83:  ... loglikelihood=-4.506554854485603   1.0</span>
+<span class="co">#&gt;  84:  ... loglikelihood=-4.452675483832905   1.0</span>
+<span class="co">#&gt;  85:  ... loglikelihood=-4.4000677974554 1.0</span>
+<span class="co">#&gt;  86:  ... loglikelihood=-4.348687355366514   1.0</span>
+<span class="co">#&gt;  87:  ... loglikelihood=-4.298491762126714   1.0</span>
+<span class="co">#&gt;  88:  ... loglikelihood=-4.24944055071064    1.0</span>
+<span class="co">#&gt;  89:  ... loglikelihood=-4.201495074195  1.0</span>
+<span class="co">#&gt;  90:  ... loglikelihood=-4.154618404659525   1.0</span>
+<span class="co">#&gt;  91:  ... loglikelihood=-4.108775238747462   1.0</span>
+<span class="co">#&gt;  92:  ... loglikelihood=-4.063931809379816   1.0</span>
+<span class="co">#&gt;  93:  ... loglikelihood=-4.0200558031604725  1.0</span>
+<span class="co">#&gt;  94:  ... loglikelihood=-3.977116283049374   1.0</span>
+<span class="co">#&gt;  95:  ... loglikelihood=-3.9350836159160716  1.0</span>
+<span class="co">#&gt;  96:  ... loglikelihood=-3.893929404618151   1.0</span>
+<span class="co">#&gt;  97:  ... loglikelihood=-3.853626424278687   1.0</span>
+<span class="co">#&gt;  98:  ... loglikelihood=-3.8141485624627203  1.0</span>
+<span class="co">#&gt;  99:  ... loglikelihood=-3.7754707629779007  1.0</span>
+<span class="co">#&gt; 100:  ... loglikelihood=-3.737568973045476   1.0</span></code></pre></div>
 </div>
 </div>
   </div>
@@ -446,7 +757,8 @@ model &lt;-<span class="st"> </span><span class="kw"><a href="../reference/dc_tr
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-<li><a href="#name-tagging">Name Tagging</a></li>
+<li><a href="#models">Models</a></li>
+      <li><a href="#name-tagging">Name Tagging</a></li>
       <li><a href="#tagger">Tagger</a></li>
       <li><a href="#training-data">Training data</a></li>
       </ul>
