@@ -1,4 +1,4 @@
-[![Travis build status](https://travis-ci.org/JohnCoene/decipher.svg?branch=master)](https://travis-ci.org/JohnCoene/decipher) [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/JohnCoene/decipher?branch=master&svg=true)](https://ci.appveyor.com/project/JohnCoene/decipher) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/JohnCoene)
+[![Travis build status](https://travis-ci.org/news-r/decipher.svg?branch=master)](https://travis-ci.org/news-r/decipher) [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/JohnCoene/decipher?branch=master&svg=true)](https://ci.appveyor.com/project/JohnCoene/decipher) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/JohnCoene) [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
 ```{r, echo=FALSE}
 htmltools::br()
